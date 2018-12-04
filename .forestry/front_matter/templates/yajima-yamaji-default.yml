@@ -7,4 +7,5 @@ fields:
 - type: text
 pages:
 - content/contact.md
+- content/posts/テスト.md
 - content/posts/test-1.md
