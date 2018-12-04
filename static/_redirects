@@ -4,10 +4,8 @@
 # その他 HTTPステータスコードの301・302・200リダイレクトなども定義できる
 
 Redirect with a 301
-/home         /              301
+https://2001y-blog.netlify.com/* https://2001y.me/:splat 301!
 
 Redirect with a 302
-/my-redirect  /              302
 
 Rewrite a path
-/pass-through /index.html    200
