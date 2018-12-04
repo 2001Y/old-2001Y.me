@@ -5,3 +5,4 @@ is_partial: false
 fields: []
 pages:
 - content/contact.md
+- content/posts/test-1.md
