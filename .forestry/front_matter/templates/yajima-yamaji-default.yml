@@ -3,3 +3,5 @@ label: yajima yamaji Default
 hide_body: false
 is_partial: false
 fields: []
+pages:
+- content/contact.md
