@@ -1,8 +1,10 @@
 ---
-label: yajima yamaji Default
+label: default
 hide_body: false
 is_partial: false
-fields: []
+fields:
+- type: datetime
+- type: text
 pages:
 - content/contact.md
 - content/posts/test-1.md
