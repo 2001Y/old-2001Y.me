@@ -1,0 +1,13 @@
+# 404 Redirects
+/*  /404/  404
+
+# その他 HTTPステータスコードの301・302・200リダイレクトなども定義できる
+
+Redirect with a 301
+/home         /              301
+
+Redirect with a 302
+/my-redirect  /              302
+
+Rewrite a path
+/pass-through /index.html    200
