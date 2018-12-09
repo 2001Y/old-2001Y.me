@@ -9,3 +9,5 @@ fields:
 - type: textarea
   label: 記事
   name: body
+pages:
+- content/posts/forestryのテスト記事.md
