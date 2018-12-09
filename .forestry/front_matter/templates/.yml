@@ -1,0 +1,11 @@
+---
+label: お試し
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: タイトル
+  name: Title
+- type: textarea
+  label: 記事
+  name: body
