@@ -1,5 +1,9 @@
-baseURL = "https://2001y.me/"
-languageCode = "ja"
-title = "2001Y Blog"
-pygmentsUseClasses = true
-pygmentsCodefences = true
+baseurl = "https://gohugo.io/"
+title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+canonifyurls = true
+paginate = 3
+
+googleAnalytics = "UA-123-45"
+disqusShortname = "XYW"
