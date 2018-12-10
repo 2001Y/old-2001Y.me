@@ -1,5 +1,5 @@
 baseURL = "2001y.me"
 languageCode = "jp"
 title = "2001Y.me"
-theme = "MyTheme"
+theme = "2001Y.me"
 enableRobotsTXT = true
