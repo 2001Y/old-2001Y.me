@@ -1,5 +1,5 @@
-baseURL = "https://2001y.me/"
-languageCode = "ja"
-title = "2001Y Blog"
-pygmentsUseClasses = true
-pygmentsCodefences = true
+baseURL = "2001y.me"
+languageCode = "jp"
+title = "2001Y.me"
+theme = "MyTheme"
+enableRobotsTXT = true
