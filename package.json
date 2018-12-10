@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/2001Y/2001Y.me/issues"
   },
-  "homepage": "https://github.com/2001Y/2001Y.me#readme"
+  "homepage": "https://github.com/2001Y/2001Y.me#readme",
+  "dependencies": {
+    "gulp": "^4.0.0"
+  }
 }
