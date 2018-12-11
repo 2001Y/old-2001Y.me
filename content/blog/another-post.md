@@ -2,7 +2,7 @@
 title = "Another ヒューゴ Post"
 description = "ここから始まるヒューゴ"
 date = "2018-12-10"
-categories = [ "example", "configuration" ]
+categories = [ "Apple", "Camera" ]
 tags = [
     "example",
     "hugo",

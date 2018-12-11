@@ -3,8 +3,8 @@ title: "Hello ヒューゴ！"
 description: "初めてのヒューゴ"
 date: "2018-12-01"
 categories:
-  - "example"
-  - "hello"
+  - "Web"
+  - "Other"
 tags:
   - "example"
   - "hugo"
