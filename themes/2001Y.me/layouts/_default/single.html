@@ -4,12 +4,48 @@
 
 {{ define "main" }}
     <h1>{{ .Title }}</h1>
-    <article>
-      <time>公開：{{ .Date.Format "2006/01/02" }}</time>
-      {{ if isset .Params "Lastmod" }}
-        <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
+    <nav>
+      {{ with .Params.categories }}
+        カテゴリ
+        <ul>
+          {{ range . }}
+            <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
+          {{ end }}
+        </ul>
       {{ end }}
-      {{ .Content }}
+      {{ with .Params.tags }}
+        タグ
+        <ul>
+          {{ range . }}
+            <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
+            {{ end }}
+        </ul>
+      {{ end }}
+    </nav>
+    <time>公開：{{ .Date.Format "2006/01/02" }}</time>
+    {{ if isset .Params "Lastmod" }}
+      <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
+    {{ end }}
+    {{ .Content }}
+    {{ $related := .Site.RegularPages.Related . | first 10 }}
+    {{ with $related }}
+    <article>
+      <h3>Related Content　<a href="/blog">more</a></h3>
+      <ul>
+      	{{ range . }}
+      	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      	{{ end }}
+      </ul>
+      {{ end }}
+      <h3>Latest Contents　<a href="/blog">more</a></h3>
+      <ul>
+        {{ range first 5 (where .Data.Pages "Type" "blog") }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <time>{{ .Date.Format "2006/01/02" }}</time>
+          </li>
+        {{ end }}
+      </ul>
       <div id="disqus_thread"></div>
       <script>
         (function() {

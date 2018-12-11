@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+  {{ with .Site.LanguageCode }}
+    <html lang="{{ . }}" id="load">
+      {{ else }}
+    <html>
+  {{ end }}
   <head>
     <meta charset="utf-8">
     <title>
@@ -8,12 +12,12 @@
       {{ end }}
     </title>
   </head>
-  <body id="load">
+  <body class="load">
     <header>
       {{ block "header" . }}
       {{ end }}
     </header>
-    <main class="load">
+    <main>
       {{ block "main" . }}
       {{ end }}
     </main>
@@ -84,41 +88,6 @@ if (!element.href.startsWith(site_url)) {
     element.setAttribute('target','_blank');
     return false;
 }
-
-var url = location.protocol + '//' + location.host + location.pathname;
-var extract_hash = element.href.replace(/#.*$/,"");
-if (element.href.startsWith(location.protocol + '//' + location.host)) {
-    if (element.href.indexOf('#') > -1 &&  extract_hash != url ){
-        return true;
-    }
-}
-function scroll(){
-  // ヘッダー追従かどうか
-    var headerFixed = false;
-    // URLに「#」が存在するか
-    if(location.hash){
-        var anchor = document.querySelector( location.hash );
-        if(anchor){
-            var rect = anchor.getBoundingClientRect();
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if(headerFixed){
-                var header = document.getElementById('header');
-                if(header){
-                    top = top - header.clientHeight;
-                }
-            }
-            var top = rect.top + scrollTop;
-            window.scrollTo(0,top);
-        }else{
-          // アンカー先が存在しなければページトップに
-            window.scrollTo(0,0);
-        }
-    }else{
-      // URLに「#」が存在しなければページトップに
-        window.scrollTo(0,0);
-    }
-}
-Barba.Dispatcher.on('transitionCompleted',scroll);
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
