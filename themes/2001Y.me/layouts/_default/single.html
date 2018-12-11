@@ -27,6 +27,16 @@
       <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
     {{ end }}
     {{ .Content }}
+    <h3>Share</h3>
+    <ul>
+      <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink | safeJS }}" target="_blank"><li>Facebookで共有</li></a>
+      <a href="//twitter.com/intent/tweet?text={{ .Title | safeJS }}%20%7C%20{{ .Site.Title }}%20{{ .Permalink | safeJS }}%20%40{{ .Site.Params.twitter }}" target="_blank"><li>Twitterで共有</li></a>
+      <a href="//b.hatena.ne.jp/entry/{{ .Permalink | safeJS }}" target="_blank"><li>はてなブックマークで共有</li></a>
+      <a href="//line.me/R/msg/text/?{{ .Permalink | safeJS }}" target="_blank"><li>LINEで共有</li></a>
+      <a href="//cloud.feedly.com/#subscription/feed/{{ .Permalink | safeJS }}" target="_blank"><li>Feedlyで共有</li></a>
+      <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocketで共有</li></a>
+      <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メールで共有</li></a>
+    </ul>
     {{ $related := .Site.RegularPages.Related . | first 10 }}
     {{ with $related }}
     <article>
