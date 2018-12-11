@@ -8,7 +8,6 @@ tags = [
     "hugo",
     "toml"
 ]
-image = "https://pbs.twimg.com/profile_images/1034841552248393728/SQksaA5o.jpg"
 +++
 
 私たちがカバーすべき素晴らしいHugoの機能の1つ：柔軟な設定とフロントマテリアルフォーマット！このエントリには正面があります
