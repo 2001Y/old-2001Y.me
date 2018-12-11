@@ -88,11 +88,5 @@ if (!element.href.startsWith(site_url)) {
     element.setAttribute('target','_blank');
     return false;
 }
-
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('sw.js');
-    });
-  }
 </script>
 </html>
