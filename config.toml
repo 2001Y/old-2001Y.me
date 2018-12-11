@@ -2,6 +2,8 @@ baseURL = "//2001y.me"
 languageCode = "jp"
 title = "2001Y.me"
 theme = "2001Y.me"
-# enableRobotsTXT = true
 googleAnalytics = "UA-68964193-14"
 disqusShortname= "2001y-me"
+
+# enableRobotsTXT = true
+UglyURLs = true
