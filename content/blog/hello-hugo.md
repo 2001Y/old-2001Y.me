@@ -6,7 +6,7 @@ categories:
   - "Web"
   - "Other"
 tags:
-  - "example"
+  - "tag"
   - "hugo"
   - "blog"
 ---
