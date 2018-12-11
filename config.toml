@@ -4,11 +4,21 @@ title = "2001Y.me"
 theme = "2001Y.me"
 googleAnalytics = "UA-68964193-14"
 disqusShortname= "2001y-me"
-
 # enableRobotsTXT = true
 UglyURLs = true
+HasCJKLanguage = true
+enableGitInfo = true
 
+[author]
+  author = "2001Y"
+  profile = "自己紹介"
+  image = "path/to/profile/image.png"
 
-[Params]
-author = "2001Y"
-description = "Welcome!"
+[params]
+  localeOgp = "ja"
+  description = "トップページ用の説明文"
+  fbAppId = "facebookのAppIDを入れる"
+  ogpimage = "images/ogp.png"
+  ogpimagewidth = "1200"
+  opgimageheight = "620"
+  twitter = "twitterCard用のユーザー名を入れる"

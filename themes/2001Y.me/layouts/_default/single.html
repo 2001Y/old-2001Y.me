@@ -26,7 +26,9 @@
     {{ if isset .Params "Lastmod" }}
       <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
     {{ end }}
+
     {{ .Content }}
+
     <h3>Share</h3>
     <ul>
       <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink | safeJS }}" target="_blank"><li>Facebookで共有</li></a>
@@ -56,5 +58,25 @@
           </li>
         {{ end }}
       </ul>
+      <nav>
+        {{ if (or .PrevInSection .NextInSection) }}
+        <ul>
+            {{ if .PrevInSection }}
+              <li>
+                <a rel="prev" href="{{ .PrevInSection.RelPermalink }}">
+                  « Previous<br />{{ .PrevInSection.Title }}
+                </a>
+              </li>
+            {{ end }}
+            {{ if .NextInSection }}
+              <li>
+                <a  rel="next" href="{{ .NextInSection.RelPermalink }}">
+                  Next »<br />{{ .NextInSection.Title }}
+                </a>
+              </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+      </nav>
     </article>
 {{ end }}
