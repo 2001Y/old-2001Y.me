@@ -15,7 +15,7 @@
       Googleの10倍早い検索エンジンHSSを作成し、課題研究にて成蹊大学賞を獲 得。
     </div>
     <div>
-      <h2>Blog　<a href="/blog/">more</a></h2>
+      <h2>Blog　<a href="/blog">more</a></h2>
       <ul>
         {{ range first 5 (where .Data.Pages "Type" "blog") }}
           <li>
@@ -26,7 +26,7 @@
       </ul>
     </div>
     <div>
-      <h2>Works　<a href="/works/">more</a></h2>
+      <h2>Works　<a href="/works">more</a></h2>
       <ul>
         {{ range first 5 (where .Data.Pages "Type" "works") }}
           <li>
