@@ -7,3 +7,8 @@ disqusShortname= "2001y-me"
 
 # enableRobotsTXT = true
 UglyURLs = true
+
+
+[Params]
+author = "2001Y"
+description = "Welcome!"
