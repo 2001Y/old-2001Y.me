@@ -1,5 +1,5 @@
 ---
-title: blog-2
+title: works-2
 date: 2018-01-02
 ---
-This is blog-2.
+This is works-2.

@@ -1,29 +1,39 @@
+{{ define "header" }}
+  <h1>2001Y</h1>
+  {{ with .Params.subtitle }}
+    <span>{{ . }}</span>
+  {{ end }}
+{{ end}}
 {{ define "main" }}
-    <header class="homepage-header">
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.subtitle }}
-        <span class="subtitle">{{ . }}</span>
-      {{ end }}
-    </header>
-    <div class="homepage-content">
-      <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+    <div>
       {{ .Content }}
     </div>
     <div>
-      カテゴリ
-      <ul id="all-categories">
-        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      小6で初めてのブログを作成。<br>
+      16年間貯めていたお年玉でMacBookAirを購入。<br>
+      学校の文化祭パンフレットをデザイン。<br>
+      Googleの10倍早い検索エンジンHSSを作成し、課題研究にて成蹊大学賞を獲 得。
+    </div>
+    <div>
+      <h2>Blog　<a href="/blog/">more</a></h2>
+      <ul>
+        {{ range first 5 (where .Data.Pages "Type" "blog") }}
           <li>
-            <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
-            {{ $taxonomy.Count }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <time>{{ .Date.Format "2006/01/02" }}</time>
           </li>
         {{ end }}
       </ul>
     </div>
     <div>
-      <!-- Note that .Data.Pages is the equivalent of .Site.Pages on the homepage template. -->
-      {{ range first 5 .Data.Pages }}
-        {{ .Render "summary" }}
-      {{ end }}
+      <h2>Works　<a href="/works/">more</a></h2>
+      <ul>
+        {{ range first 5 (where .Data.Pages "Type" "works") }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <time>{{ .Date.Format "2006/01/02" }}</time>
+          </li>
+        {{ end }}
+      </ul>
     </div>
 {{ end }}
