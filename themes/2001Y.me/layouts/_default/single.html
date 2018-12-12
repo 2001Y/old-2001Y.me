@@ -37,6 +37,7 @@
       <a href="//line.me/R/msg/text/?{{ .Permalink | safeJS }}" target="_blank"><li>LINEで共有</li></a>
       <a href="//cloud.feedly.com/#subscription/feed/{{ .Permalink | safeJS }}" target="_blank"><li>Feedlyで共有</li></a>
       <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocketで共有</li></a>
+
       <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メールで共有</li></a>
     </ul>
     {{ $related := .Site.RegularPages.Related . | first 10 }}
@@ -79,4 +80,15 @@
         {{ end }}
       </nav>
     </article>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script>
+      Barba.Pjax.Dom.wrapperId = 'load';
+      Barba.Pjax.Dom.containerClass = 'load';
+      Barba.Pjax.start();
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
 {{ end }}
