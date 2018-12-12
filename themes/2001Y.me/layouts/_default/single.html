@@ -37,9 +37,9 @@
       <a href="//line.me/R/msg/text/?{{ .Permalink | safeJS }}" target="_blank"><li>LINEで共有</li></a>
       <a href="//cloud.feedly.com/#subscription/feed/{{ .Permalink | safeJS }}" target="_blank"><li>Feedlyで共有</li></a>
       <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocketで共有</li></a>
-
       <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メールで共有</li></a>
     </ul>
+    <img src="//chart.apis.google.com/chart?cht=qr&chs=150x150&chof=jpeg&chl={{ .Permalink | safeJS }}" />
     {{ $related := .Site.RegularPages.Related . | first 10 }}
     {{ with $related }}
     <article>
