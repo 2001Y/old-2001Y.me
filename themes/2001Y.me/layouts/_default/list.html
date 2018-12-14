@@ -1,6 +1,6 @@
 {{ define "header" }}
   <h1>2001Y Blog</h1>
-  <a href="/">portfolio</a>
+  <a href="/">Portfolio</a>
 {{ end}}
 {{ define "main" }}
     {{ .Content }}
@@ -18,4 +18,15 @@
       {{ .Render "summary" }}
     {{ end }}
     {{ template "_internal/pagination.html" . }}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script>
+      Barba.Pjax.Dom.wrapperId = 'load';
+      Barba.Pjax.Dom.containerClass = 'load';
+      Barba.Pjax.start();
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
 {{ end }}
