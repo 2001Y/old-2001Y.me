@@ -1,19 +1,19 @@
 {{ define "header" }}
   <h1>2001Y Blog</h1>
   <a href="/">Portfolio</a>
+  {{ .Content }}
+  カテゴリ
+  <ul>
+    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <li>
+        <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
+        {{ $taxonomy.Count }}
+      </li>
+    {{ end }}
+  </ul>
+  {{ partial "breadcrumbs.html" . }}
 {{ end}}
 {{ define "main" }}
-    {{ .Content }}
-      カテゴリ
-      <ul>
-        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-          <li>
-            <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
-            {{ $taxonomy.Count }}
-          </li>
-        {{ end }}
-      </ul>
-    記事一覧
     {{ range first 10 .Data.Pages }}
       {{ .Render "summary" }}
     {{ end }}

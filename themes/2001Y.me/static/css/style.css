@@ -1,0 +1,22 @@
+body {
+  background-color: #f3f3f3;
+  color: #1b1c1c;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1b1c1c;
+    color: #f3f3f3;
+  }
+}
+.breadcrumbs ol {
+  list-style-type: none;
+}
+.breadcrumbs li {
+  display: inline;
+}
+.breadcrumbs libefore {
+  content: ">";
+}
+.breadcrumbs lifirst-childbefore {
+  content: '';
+}

@@ -2,31 +2,34 @@
   {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
-{{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    <nav>
-      {{ with .Params.categories }}
-        カテゴリ
-        <ul>
-          {{ range . }}
-            <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
-          {{ end }}
-        </ul>
-      {{ end }}
-      {{ with .Params.tags }}
-        タグ
-        <ul>
-          {{ range . }}
-            <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
-            {{ end }}
-        </ul>
-      {{ end }}
-    </nav>
-    <time>公開：{{ .Date.Format "2006/01/02" }}</time>
-    {{ if isset .Params "Lastmod" }}
-      <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
+{{ define "header" }}
+  <h1>{{ .Title }}</h1>
+  {{ partial "breadcrumbs.html" . }}
+  <nav>
+    {{ with .Params.categories }}
+      Category
+      <ul>
+        {{ range . }}
+          <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
+        {{ end }}
+      </ul>
     {{ end }}
+    {{ with .Params.tags }}
+      Tag
+      <ul>
+        {{ range . }}
+          <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
+          {{ end }}
+      </ul>
+    {{ end }}
+  </nav>
+  <time>公開：{{ .Date.Format "2006/01/02" }}</time>
+  {{ if isset .Params "Lastmod" }}
+    <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
+  {{ end }}
+{{ end }}
 
+{{ define "main" }}
     {{ .Content }}
 
     <h3>Share</h3>

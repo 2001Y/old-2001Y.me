@@ -22,3 +22,9 @@ enableGitInfo = true
   ogpimagewidth = "1200"
   opgimageheight = "620"
   twitter = "twitterCard用のユーザー名を入れる"
+
+  [frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = [":git", "lastmod", "date", "publishDate"]
+  publishDate = ["publishDate", "date"]
+  expiryDate = ["expiryDate"]
