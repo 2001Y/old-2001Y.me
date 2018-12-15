@@ -8,6 +8,7 @@ tags = [
     "hugo",
     "toml"
 ]
+img = "https://unsplash.it/500/300/?random"
 +++
 
 更新テスト

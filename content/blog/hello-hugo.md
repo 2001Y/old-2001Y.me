@@ -9,6 +9,7 @@ tags:
   - "tag"
   - "hugo"
   - "blog"
+img: https://unsplash.it/500/300/?random
 ---
 
 こんにちは。あなたのブラウザでこれを読んでいるなら、良い仕事です！ファイル `content / post / hello-hugo.md`は

@@ -6,6 +6,8 @@
   {{ end }}
   <head>
     <meta charset="utf-8">
+    {{ block "head" . }}
+    {{ end }}
     <title>
       {{ block "title" . }}
         {{ .Site.Title }}

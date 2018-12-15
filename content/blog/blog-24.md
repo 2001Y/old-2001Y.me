@@ -1,6 +1,7 @@
 ---
 title: post 24 title
 date: 2018-01-24
+img: https://unsplash.it/500/300/?random
 ---
 This is post 24 *content*.
 

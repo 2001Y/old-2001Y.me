@@ -1,9 +1,20 @@
+{{ define "head" }}
+  {{ with .Params.img }}
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{ end }}
+{{ end }}
+
 {{ define "title" }}
   {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
 {{ define "header" }}
   <h1>{{ .Title }}</h1>
+  <a href="/">Portfolio</a>
+  {{ if isset .Params "img" }}
+    <img src="{{ .Params.img }}" />
+  {{ end }}
   {{ partial "breadcrumbs.html" . }}
   <nav>
     {{ with .Params.categories }}
