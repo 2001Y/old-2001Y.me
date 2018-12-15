@@ -25,10 +25,12 @@
       <h2>Blog　<a href="/blog">more</a></h2>
       <ul>
         {{ range first 5 (where .Data.Pages "Type" "blog") }}
-          <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <time>{{ .Date.Format "2006/01/02" }}</time>
-          </li>
+          <a href="{{ .RelPermalink }}">
+            <li>
+              {{ .Title }}
+              <time>{{ .Date.Format "2006/01/02" }}</time>
+            </li>
+          </a>
         {{ end }}
       </ul>
     </div>
@@ -36,11 +38,13 @@
       <h2>Works　<a href="/works">more</a></h2>
       <ul>
         {{ range first 5 (where .Data.Pages "Type" "works") }}
-          <li>
-            {{ if and (.Params.img) (ne .Params.img "") }}
-              <img src="{{ .Params.img }}" alt="thumbnail"/>
-            {{ end }}
-          </li>
+          <a href="{{ .RelPermalink }}">
+            <li>
+              {{ if and (.Params.img) (ne .Params.img "") }}
+                <img src="{{ .Params.img }}" alt="thumbnail"/>
+              {{ end }}
+            </li>
+          </a>
         {{ end }}
       </ul>
     </div>
