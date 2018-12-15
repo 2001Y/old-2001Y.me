@@ -15,10 +15,10 @@ body {
 .breadcrumbs li {
   display: inline;
 }
-.breadcrumbs libefore {
+.breadcrumbs li:before {
   content: ">";
 }
-.breadcrumbs lifirst-childbefore {
+.breadcrumbs li:first-child:before {
   content: '';
 }
 @font-face {
