@@ -1,12 +1,38 @@
 body
   font-family: 'Oleo Script', cursive;
-  background-color #f3f3f3
   color #1B1C1C
 
 @media (prefers-color-scheme: dark)
   body
     background-color #1B1C1C
     color #f3f3f3
+
+header,footer
+  text-align: center;
+
+h1
+  font-size: 2em
+
+#hello
+  font-size: 10vw
+  color: #fff
+  width: 100vw
+  height 100vh
+  background: linear-gradient(30deg, #a1e5e2, #a1c6e5)
+  position: fixed;
+  top: 0
+  left: 0
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1s 1s forwards
+
+@keyframes fadeOut
+    0%
+      opacity: 1
+    100%
+      opacity: 0
+      display: none;
 
 .breadcrumbs ol
   list-style-type none

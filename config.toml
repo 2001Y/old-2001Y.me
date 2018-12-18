@@ -5,7 +5,7 @@ theme = "2001Y.me"
 googleAnalytics = "UA-68964193-14"
 disqusShortname= "2001y-me"
 # enableRobotsTXT = true
-UglyURLs = true
+# UglyURLs = true
 HasCJKLanguage = true
 enableGitInfo = true
 
