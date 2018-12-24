@@ -1,9 +1,67 @@
+/* === html5doctor.com Reset Stylesheet v1.6.1 Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark === */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,aside,footer,header,menu,nav,section {
+  display: block;
+  border: none;
+}
+input,button,textarea,select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+blockquote,q {
+  quotes: none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+  content: '';
+}
+a,p {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+a {
+  display: inline-block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,select {
+  vertical-align: middle;
+}
+
 ol,ul
   list-style-type none
+
+a
+  text-decoration: none;
 
 body
   font-family: 'Oleo Script', cursive
   color #1B1C1C
+  background: #f2f2f2;
+  width: 100%;
+  overflow-scrolling: touch;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  padding-right: constant(safe-area-inset-right);
+  padding-left: constant(safe-area-inset-right);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: normal;
 
 @media (prefers-color-scheme: dark)
   body
@@ -47,9 +105,10 @@ h1
 
 .breadcrumbs li:before
   content ">"
+  margin: 0 .3em
 
 .breadcrumbs li:first-child:before
-  content ''
+  content ""
 
 #header-category li, #share-box li, #pagination li, #post-nav li
   margin: 0 .5em
