@@ -3,27 +3,17 @@
 <div class="breadcrumbs">
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="/">
-        <span itemprop="name">HOME</span>
+      <a itemprop="item" href="/blog">
+        <span itemprop="name">Blog</span>
       </a>
       <meta itemprop="position" content="{{$i}}" />
     </li>
+
     {{ with .Params.categories }}
       {{ range . }}
         {{ $i = add $i 1 }}
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a itemprop="item" href="/categories/{{ . }}/">
-            <span itemprop="name">{{ . }}</span>
-          </a>
-          <meta itemprop="position" content="{{$i}}" />
-        </li>
-      {{ end }}
-    {{ end }}
-    {{ with .Params.tags }}
-      {{ range . }}
-        {{ $i = add $i 1 }}
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="/tags/{{ . }}/">
             <span itemprop="name">{{ . }}</span>
           </a>
           <meta itemprop="position" content="{{$i}}" />

@@ -1,3 +1,6 @@
+ol,ul
+  list-style-type none
+
 body
   font-family: 'Oleo Script', cursive
   color #1B1C1C
@@ -10,8 +13,16 @@ body
 header,footer
   text-align: center
 
+header, footer
+  padding: 5em 0;
+
 h1
   font-size: 2em
+
+#hello, #header-category, #share-box, #pagination, #post-nav, footer
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 #hello
   font-size: 10vw
@@ -22,9 +33,6 @@ h1
   position: fixed
   top: 0
   left: 0
-  display: flex
-  align-items: center
-  justify-content: center
   animation: fadeOut 1s 1s forwards
 
 @keyframes fadeOut
@@ -34,9 +42,6 @@ h1
       opacity: 0
       visibility: hidden
 
-.breadcrumbs ol
-  list-style-type none
-
 .breadcrumbs li
   display inline
 
@@ -45,6 +50,9 @@ h1
 
 .breadcrumbs li:first-child:before
   content ''
+
+#header-category li, #share-box li, #pagination li, #post-nav li
+  margin: 0 .5em
 
 @font-face
   font-family: 'Oleo Script'
