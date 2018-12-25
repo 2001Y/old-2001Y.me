@@ -1,12 +1,15 @@
+size = font-size
+bg = background
+
 /* === html5doctor.com Reset Stylesheet v1.6.1 Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark === */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
-  // font-size: 100%;
-  // margin: 0;
-  // padding: 0;
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+  size: 100%;
+  margin: 0;
+  padding: 0;
   border: 0;
   outline: 0;
   vertical-align: baseline;
-}
+
 article,aside,footer,header,menu,nav,section {
   display: block;
   border: none;
@@ -23,13 +26,13 @@ blockquote:before,blockquote:after,q:before,q:after {
   content: '';
 }
 a,p {
-  // font-size: 100%;
-  // margin: 0;
-  // padding: 0;
+  size: 100%;
+  margin: 0;
+  padding: 0;
   vertical-align: baseline;
 }
 a {
-  // display: inline-block;
+  display: inline-block;
 }
 table {
   border-collapse: collapse;
@@ -45,10 +48,13 @@ ol,ul
 a
   text-decoration: none;
 
+h1
+  size 3em
+
 body
   font-family: 'Oleo Script', cursive
   color #1B1C1C
-  background: #f2f2f2;
+  bg: #f2f2f2;
   width: 100%;
   overflow-scrolling: touch;
   word-wrap: break-word;
@@ -65,7 +71,7 @@ body
 
 @media (prefers-color-scheme: dark)
   body
-    background-color #1B1C1C
+    bg-color #1B1C1C
     color #f3f3f3
 
 header,footer
@@ -75,7 +81,7 @@ header, footer
   padding: 5em 0;
 
 h1
-  font-size: 2em
+  size: 2em
 
 #hello, #header-category, #share-box, #pagination, #post-nav, footer
   display: flex;
@@ -83,11 +89,11 @@ h1
   align-items: center;
 
 #hello
-  font-size: 10vw
+  size: 10vw
   color: #fff
   width: 100vw
   height 100vh
-  background: linear-gradient(30deg, #a1e5e2, #a1c6e5)
+  bg: linear-gradient(30deg, #a1e5e2, #a1c6e5)
   position: fixed
   top: 0
   left: 0

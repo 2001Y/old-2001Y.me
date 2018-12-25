@@ -1,4 +1,7 @@
 <article>
+    {{ if and (.Params.img) (ne .Params.img "") }}
+      <img src="{{ .Params.img }}" alt="thumbnail"/>
+    {{ end }}
     <a href='{{ .Permalink }}'>{{ .Title }}</a>
     <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
   {{ if and (.Params.image) (ne .Params.image "") }}
