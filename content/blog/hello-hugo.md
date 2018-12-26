@@ -4,7 +4,6 @@ description: "初めてのヒューゴ"
 date: "2018-12-01"
 categories:
   - "Web"
-  - "Other"
 tags:
   - "tag"
   - "hugo"

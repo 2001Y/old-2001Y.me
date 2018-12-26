@@ -1,126 +1,218 @@
-size = font-size
-bg = background
-
-/* === html5doctor.com Reset Stylesheet v1.6.1 Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark === */
+/* === html5doctor.com Reset Stylesheet v1.6.1 Last Updated 2010-09-17 Author Richard Clark - http//richclarkdesign.com Twitter @rich_clark === */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
-  size: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  vertical-align: baseline;
+  font-size 100%
+  margin 0
+  padding 0
+  border 0
+  outline 0
+  vertical-align baseline
+  box-sizing border-box
 
-article,aside,footer,header,menu,nav,section {
-  display: block;
-  border: none;
-}
-input,button,textarea,select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-blockquote,q {
-  quotes: none;
-}
-blockquote:before,blockquote:after,q:before,q:after {
-  content: '';
-}
-a,p {
-  size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
-a {
-  display: inline-block;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-input,select {
-  vertical-align: middle;
-}
+article,aside,footer,header,menu,nav,section
+  display block
+  border none
+
+input,button,textarea,select
+  -webkit-appearance none
+  -moz-appearance none
+  appearance none
+
+blockquote,q
+  quotes none
+
+blockquote:before,blockquote:after,q:before,q:after
+  content ""
+
+a,p
+  font-size 100%
+  margin 0
+  padding 0
+  vertical-align baseline
+
+a
+  display inline-block
+
+table
+  border-collapse collapse
+  border-spacing 0
+
+input,select
+  vertical-align middle
+
 
 ol,ul
   list-style-type none
 
 a
-  text-decoration: none;
+  text-decoration none
 
-h1
-  size 3em
+img
+  max-width: 100%
+
 
 body
-  font-family: 'Oleo Script', cursive
+  font-family 'Oleo Script', cursive
   color #1B1C1C
-  bg: #f2f2f2;
-  width: 100%;
-  overflow-scrolling: touch;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: normal;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: unset;
-  padding-right: constant(safe-area-inset-right);
-  padding-left: constant(safe-area-inset-right);
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-kerning: normal;
+  background #fff
+  width 100%
+  overflow-scrolling touch
+  word-wrap break-word
+  overflow-wrap break-word
+  word-break normal
+  -webkit-text-font-size-adjust 100%
+  -webkit-font-smoothing subpixel-antialiased
+  -moz-osx-font-smoothing unset
+  padding-right constant(safe-area-inset-right)
+  padding-left constant(safe-area-inset-right)
+  -webkit-font-smoothing subpixel-antialiased
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-kerning normal
 
-@media (prefers-color-scheme: dark)
+main
+  width 100%
+  max-width 900px
+  margin 0 auto
+
+main article
+  width:30%
+  margin: 0 .5em
+  padding-top: 90px
+
+#header-category
+  font-size: 1.5em
+
+#header-category a
+  color: #a1d7e5;
+
+#header-category:before, #header-category:after {
+	content: "";
+	flex-grow: 1;
+	height: 1px;
+	background: #a1c6e5;
+	display: block;
+}
+#header-category:before {
+	margin-right: .4em;
+}
+#header-category:after {
+	margin-left: .4em;
+}
+
+#list-post
+  display: flex
+  flex-wrap:wrap
+
+.post-img
+  width: 280px
+  height: 170px
+  clip-path: polygon(50% 100%, 15% 0, 85% 0)
+  position: absolute
+
+.post-category
+  background: #000
+  width: 275px
+  height: 170px
+  clip-path: polygon(50% 0, 15% 100%, 85% 100%)
+  transform-origin: 50% 55%
+  transition: .6s
+  position: relative
+  top: -55px
+  left: 0
+  z-index: -1
+  opacity: .5
+
+.post-img:hover+.post-category
+  transform:rotate(360deg)
+
+.Apple
+  background: #e6a2d8;
+
+.Web
+  background: #a1d7e5;
+
+.Camera
+  background: #d8e6a2;
+
+.Other
+  background: #c3c3c3;
+
+@media (prefers-color-scheme dark)
   body
-    bg-color #1B1C1C
+    background-color #1B1C1C
     color #f3f3f3
 
 header,footer
-  text-align: center
+  text-align center
+  color #fff
 
-header, footer
-  padding: 5em 0;
+header
+  padding 8em 0
+  margin-bottom: 2em
+
+header a
+  color inherit
+
+footer
+  padding 3em 0
+  margin-top: 2em
 
 h1
-  size: 2em
+  font-size 2.5em
+
+h2
+  font-size 2em
+  margin 2em 0 .5em
+
+h3
+  font-size 1.5em
+
+h4
+  font-size 1.2em
+
+h5,h6
+  font-size 1em
+
+#pagination
+  margin-top 2em
 
 #hello, #header-category, #share-box, #pagination, #post-nav, footer
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display flex
+  justify-content center
+  align-items center
 
 #hello
-  size: 10vw
-  color: #fff
-  width: 100vw
+  font-size 10vw
+  color #fff
+  width 100vw
   height 100vh
-  bg: linear-gradient(30deg, #a1e5e2, #a1c6e5)
-  position: fixed
-  top: 0
-  left: 0
-  animation: fadeOut 1s 1s forwards
+  background linear-gradient(30deg, #a1e5e2, #a1c6e5)
+  position fixed
+  top 0
+  left 0
+  animation fadeOut 1s 1s forwards
 
 @keyframes fadeOut
     0%
-      opacity: 1
+      opacity 1
     100%
-      opacity: 0
-      visibility: hidden
+      opacity 0
+      visibility hidden
 
 .breadcrumbs li
   display inline
 
 .breadcrumbs li:before
   content ">"
-  margin: 0 .3em
+  margin 0 .3em
 
-.breadcrumbs li:first-child:before
+.breadcrumbs lifirst-child:before
   content ""
 
 #header-category li, #share-box li, #pagination li, #post-nav li
-  margin: 0 .5em
+  margin 0 .5em
 
 @font-face
-  font-family: 'Oleo Script'
-  font-style: normal
-  font-weight: 400
-  src: local('Oleo Script'), local('OleoScript-Regular'), url(//fonts.gstatic.com/s/oleoscript/v6/rax5HieDvtMOe0iICsUccChdu0_y8zac.woff2) format('woff2')
+  font-family 'Oleo Script'
+  font-style normal
+  font-weight 400
+  src local('Oleo Script'), local('OleoScript-Regular'), url(//fonts.gstatic.com/s/oleoscript/v6/rax5HieDvtMOe0iICsUccChdu0_y8zac.woff2) format('woff2')

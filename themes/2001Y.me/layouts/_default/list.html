@@ -6,35 +6,42 @@
   <h1>2001Y Blog</h1>
   <a href="/">Portfolio</a>
   {{ .Content }}
-  <ul id="header-category">
-    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-      <li>
-        <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
-        <!-- {{ $taxonomy.Count }} -->
-      </li>
-    {{ end }}
-  </ul>
   <style>
-    header {
+    header,footer {
       background: linear-gradient(30deg, #a1e5e2, #a1c6e5);
     }
   </style>
 {{ end}}
 
 {{ define "main" }}
-    {{ range first 10 .Data.Pages }}
+<nav>
+<ul id="header-category">
+  <li>
+    <a href="/blog">Home</a>
+  </li>
+  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <li>
+      <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
+      <!-- {{ $taxonomy.Count }} -->
+    </li>
+  {{ end }}
+</ul>
+</nav>
+  <section id="list-post">
+    {{ range first 11 .Data.Pages }}
       {{ .Render "summary" }}
     {{ end }}
-    {{ partial "paginator.html" . }}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
-    <script>
-      Barba.Pjax.Dom.wrapperId = 'load';
-      Barba.Pjax.Dom.containerClass = 'load';
-      Barba.Pjax.start();
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('sw.js');
-        });
-      }
-    </script>
+  </section>
+  {{ partial "paginator.html" . }}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+  <script>
+    Barba.Pjax.Dom.wrapperId = 'load';
+    Barba.Pjax.Dom.containerClass = 'load';
+    Barba.Pjax.start();
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
 {{ end }}

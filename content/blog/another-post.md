@@ -2,13 +2,13 @@
 title = "Another ヒューゴ Post"
 description = "ここから始まるヒューゴ"
 date = "2018-12-10"
-categories = [ "Apple", "Camera" ]
+categories = [ "Apple"]
 tags = [
     "example",
     "hugo",
     "toml"
 ]
-img = "https://unsplash.it/500/300/?random"
+img = "https://unsplash.it/500/500/?random"
 +++
 
 更新テスト

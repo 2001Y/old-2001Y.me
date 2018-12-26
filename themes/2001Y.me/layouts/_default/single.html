@@ -12,14 +12,6 @@
 {{ define "header" }}
   <h1>{{ .Title }}</h1>
   <a href="/">Portfolio</a>
-  <ul id="header-category">
-  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-    <li>
-      <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
-      <!-- {{ $taxonomy.Count }} -->
-    </li>
-  {{ end }}
-</ul>
   {{ if isset .Params "img" }}
     <style>
       header{
@@ -34,6 +26,16 @@
 {{ end }}
 
 {{ define "main" }}
+<nav>
+<ul id="header-category">
+  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <li>
+      <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
+      <!-- {{ $taxonomy.Count }} -->
+    </li>
+  {{ end }}
+</ul>
+</nav>
 {{ partial "breadcrumbs.html" . }}
 <nav>
   {{ with .Params.categories }}
