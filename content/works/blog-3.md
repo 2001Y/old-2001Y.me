@@ -1,6 +1,6 @@
 ---
-title: works-3
+title: たむらクリニック「サプリメントに関する」チラシ
 date: 2018-01-03
-img: https://unsplash.it/200/200/?random
+img: /works/5.jpg
 ---
-This is works-3.
+川崎市にある内科/外科のたむらクリニック「サプリメントに関する」チラシ

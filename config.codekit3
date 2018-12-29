@@ -653,6 +653,96 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/content/blog/lit1.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "/content/blog/lit1.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/content/blog/lit2.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "/content/blog/lit2.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/content/blog/lit3.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "/content/blog/lit3.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/content/blog/lit4.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "/content/blog/lit4.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/content/blog/lit5.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "/content/blog/lit5.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"/content/contact.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -696,6 +786,13 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/content/works/blog-2.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/content/works/blog-2.html",
+		"oF": 0
+		},
 	"/content/works/blog-2.md": {
 		"cB": 0,
 		"cS": 0,
@@ -713,6 +810,13 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/content/works/blog-3.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/content/works/blog-3.html",
+		"oF": 0
 		},
 	"/content/works/blog-3.md": {
 		"cB": 0,
@@ -873,6 +977,13 @@
 		"oAP": "/themes/2001Y.me/layouts/partials/main.html",
 		"oF": 0
 		},
+	"/themes/2001Y.me/layouts/partials/paginator.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/layouts/partials/paginator.html",
+		"oF": 0
+		},
 	"/themes/2001Y.me/layouts/robots.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -897,12 +1008,41 @@
 		"oAP": "/themes/2001Y.me/layouts/site.webmanifest",
 		"oF": 0
 		},
+	"/themes/2001Y.me/layouts/timeline.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/layouts/timeline.html",
+		"oF": 0
+		},
 	"/themes/2001Y.me/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/themes/2001Y.me/LICENSE",
 		"oF": 0
+		},
+	"/themes/2001Y.me/static/bg.jpg": {
+		"ft": 16384,
+		"iS": 666033,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/themes/2001Y.me/static/icon.png": {
+		"ft": 32768,
+		"iS": 90483,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/themes/2001Y.me/static/package-lock.json": {
 		"ft": 524288,
@@ -934,6 +1074,71 @@
 		"oF": 0,
 		"oS": 1,
 		"rrU": 0
+		},
+	"/themes/2001Y.me/static/svg.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/themes/2001Y.me/static/svg.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088191,
+		"prP": 0
+		},
+	"/themes/2001Y.me/static/works/1.jpg": {
+		"ft": 16384,
+		"iS": 640442,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/works/1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/themes/2001Y.me/static/works/2.jpg": {
+		"ft": 16384,
+		"iS": 556486,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/works/2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/themes/2001Y.me/static/works/3.jpg": {
+		"ft": 16384,
+		"iS": 572127,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/works/3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/themes/2001Y.me/static/works/4.jpg": {
+		"ft": 16384,
+		"iS": 1301175,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/works/4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/themes/2001Y.me/static/works/5.jpg": {
+		"ft": 16384,
+		"iS": 1115432,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/works/5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/themes/2001Y.me/theme.toml": {
 		"cB": 0,

@@ -3,8 +3,19 @@
 {{ end }}
 
 {{ define "header" }}
-  <h1>2001Y Blog</h1>
-  <a href="/">Portfolio</a>
+  <section id="title">
+    <h1>2001Y</h1>
+    <svg viewBox="0 0 10 8.7" fill="#fff" width="9em" id="logo">
+        <path d="m10 0h-2l-4 6.9 1 1.8"/>
+        <path d="m7 0h-7l3.5 6.1"/>
+    </svg>
+    <div id="parapara-nav">
+      <a href="/">Portfolio</a>
+      <a href="/blog" class="attention">Blog</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </section>
+
   {{ .Content }}
   <style>
     header,footer {
@@ -15,17 +26,29 @@
 
 {{ define "main" }}
 <nav>
-<ul id="header-category">
-  <li>
-    <a href="/blog">Home</a>
-  </li>
-  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+  <ul id="header-category">
     <li>
-      <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
-      <!-- {{ $taxonomy.Count }} -->
+      <a href="/blog">Home</a>
     </li>
-  {{ end }}
-</ul>
+    <li>
+      <a href="/categories/web">Web</a>
+    </li>
+    <li>
+      <a href="/categories/apple">Apple</a>
+    </li>
+    <li>
+      <a href="/categories/camera">Camera</a>
+    </li>
+    <li>
+      <a href="/categories/other">Other</a>
+    </li>
+    <!-- {{ range $name, $taxonomy := .Site.Taxonomies.categories }} -->
+      <!-- <li> -->
+        <!-- <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a> -->
+        <!-- {{ $taxonomy.Count }} -->
+      <!-- </li> -->
+    <!-- {{ end }} -->
+  </ul>
 </nav>
   <section id="list-post">
     {{ range first 11 .Data.Pages }}
@@ -35,13 +58,54 @@
   {{ partial "paginator.html" . }}
   <script src="//cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
   <script>
+    Barba.Dispatcher.on( 'newPageReady', function( currentStatus, oldStatus, container, newPageRawHTML ) {
+      if ( Barba.HistoryManager.history.length === 1 ) {
+          return;
+      }
+      var head = document.head,
+          newPageRawHead = newPageRawHTML.match( /<head[^>]*>([\s\S.]*)<\/head>/i )[ 0 ],
+          newPageHead = document.createElement( 'head' );
+      newPageHead.innerHTML = newPageRawHead;
+      var headTags = [
+          "meta[name='keywords']",
+          "meta[name='description']",
+          "meta[property^='og']",
+          "meta[name^='twitter']",
+          "meta[itemprop]",
+          "link[itemprop]",
+          "link[rel='prev']",
+          "link[rel='next']",
+          "link[rel='canonical']",
+          "link[rel='alternate']"
+      ].join( ',' );
+      var oldHeadTags = head.querySelectorAll( headTags );
+      for (var i = 0, len = oldHeadTags.length; i < len; i++) {
+          head.removeChild( oldHeadTags[ i ] );
+      }
+      var newHeadTags = newPageHead.querySelectorAll( headTags );
+      for (var i = 0, len = newHeadTags.length; i < len; i++) {
+          head.appendChild( newHeadTags[ i ] );
+      }
+  });
+
+    Barba.Pjax.getTransition = function() {
+      return HideShowTransition;
+    };
+
     Barba.Pjax.Dom.wrapperId = 'load';
     Barba.Pjax.Dom.containerClass = 'load';
     Barba.Pjax.start();
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('sw.js');
-      });
+
+    Barba.Dispatcher.on('initStateChange', function() {
+    if (typeof gtag === 'function' && Barba.HistoryManager.history.length >= 1) {
+      gtag('config', '{{ .Site.GoogleAnalytics }}', {'page_path': location.pathname});
     }
+  });
+
+  var site_url = location.protocol + '//' + location.host;
+  if (!element.href.startsWith(site_url)) {
+      element.setAttribute('target','_blank');
+      return false;
+  }
   </script>
 {{ end }}

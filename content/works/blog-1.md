@@ -1,6 +1,6 @@
 ---
-title: works-1
-date: 2018-01-01
-img: https://unsplash.it/200/200/?random
+title: 「たのしいコンサート 2018」パンフレット
+date: 2018-10-23
+img: /works/1.jpg
 ---
-This is works-1.
+小さなピアノ教室のコンサート「たのしいコンサート」のパンフレットをデザイン。

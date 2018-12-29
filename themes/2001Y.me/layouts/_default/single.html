@@ -23,18 +23,49 @@
   {{ if isset .Params "Lastmod" }}
     <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
   {{ end }}
+  <style>
+    body{
+    	background: linear-gradient(to right top, #a1d7e5 50%, #e6e6e6 50%);
+    	background-size: 100% calc(100% - 100vh + 5px);
+    	background-repeat: no-repeat;
+    }
+    body:before{
+    	content:'';
+    	position: fixed;
+    	top: 5px;
+    	bottom: 0;
+    	width: 100%;
+    	z-index: -1;
+    	background: #fff;
+    }
+  </style>
 {{ end }}
 
 {{ define "main" }}
 <nav>
-<ul id="header-category">
-  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+  <ul id="header-category">
     <li>
-      <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
-      <!-- {{ $taxonomy.Count }} -->
+      <a href="/blog">Home</a>
     </li>
-  {{ end }}
-</ul>
+    <li>
+      <a href="/categories/web">Web</a>
+    </li>
+    <li>
+      <a href="/categories/apple">Apple</a>
+    </li>
+    <li>
+      <a href="/categories/camera">Camera</a>
+    </li>
+    <li>
+      <a href="/categories/other">Other</a>
+    </li>
+    <!-- {{ range $name, $taxonomy := .Site.Taxonomies.categories }} -->
+      <!-- <li> -->
+        <!-- <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a> -->
+        <!-- {{ $taxonomy.Count }} -->
+      <!-- </li> -->
+    <!-- {{ end }} -->
+  </ul>
 </nav>
 {{ partial "breadcrumbs.html" . }}
 <nav>

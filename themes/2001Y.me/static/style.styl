@@ -1,5 +1,5 @@
 /* === html5doctor.com Reset Stylesheet v1.6.1 Last Updated 2010-09-17 Author Richard Clark - http//richclarkdesign.com Twitter @rich_clark === */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+html,body,main,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
   font-size 100%
   margin 0
   padding 0
@@ -16,6 +16,9 @@ input,button,textarea,select
   -webkit-appearance none
   -moz-appearance none
   appearance none
+  border: 0
+  outline: 0;
+  border-color: orange;
 
 blockquote,q
   quotes none
@@ -54,7 +57,7 @@ body
   font-family 'Oleo Script', cursive
   color #1B1C1C
   background #fff
-  width 100%
+  width 100%;
   overflow-scrolling touch
   word-wrap break-word
   overflow-wrap break-word
@@ -77,6 +80,108 @@ main article
   width:30%
   margin: 0 .5em
   padding-top: 90px
+
+#work
+  display: inline;
+  margin: auto;
+
+#work img
+  width: 19vw
+  margin: 0 .5em
+
+#blog-list li
+  display: block;
+  padding: .5em;
+  background: rgba(250,250,250,.5)
+
+#blog-list li:hover
+  background: rgba(250,250,250,.7)
+
+#blog-list time
+  display: block;
+
+#blog-list a
+  color: #000;
+
+#logoimg
+  position: absolute;
+  right: 30%;
+  top: 35%;
+
+#my-icon
+  top:80%
+  right: 57.7%
+  position: absolute;
+  z-index: 0;
+
+#big-logo
+  width: 900px;
+  animation: logo 2s forwards;
+  position: absolute;
+  fill: #fff;
+  top: 40%;
+  right: 42%;
+  z-index: -1;
+
+@keyframes logo {
+  0% {
+    margin-left: -35vmin;
+    stroke-width: 0;
+  }
+  50% {
+    margin-left: -35vmin;
+  }
+  70% {
+    margin-left: -35vmin;
+    stroke-width: .1px;
+  }
+  100% {
+    margin-left: -15vmin;
+    stroke-width: .1px;
+  }
+}
+
+#name
+  font-size: 4.5em
+  position: absolute;
+  left: 27%
+  top 40%
+
+#header-nav
+  display: flex;
+  position: fixed;
+  top: 1.5em;
+  right: 1.5em;
+  font-family: 'Thasadith', sans-serif;
+
+#header-nav li
+  margin: 0 .5em
+
+#title
+  margin-bottom: 2em;
+
+#logo
+  margin: 0 1em
+
+#parapara-nav
+  width: 7em;
+  text-align: left;
+  line-height: 1em;
+
+#parapara-nav a:not(.attention)
+  font-size: 2em;
+  display: block;
+  opacity: .7
+
+#parapara-nav a:first-of-type
+  transform:rotateX(-45deg);
+
+#parapara-nav a:last-of-type
+  transform:rotateX(45deg);
+
+.attention
+  font-size: 3em;
+  line-height: 1.5em;
 
 #header-category
   font-size: 1.5em
@@ -175,7 +280,7 @@ h5,h6
 #pagination
   margin-top 2em
 
-#hello, #header-category, #share-box, #pagination, #post-nav, footer
+#hello, #title,#header-category, #pagination, #post-nav, footer
   display flex
   justify-content center
   align-items center
@@ -190,6 +295,7 @@ h5,h6
   top 0
   left 0
   animation fadeOut 1s 1s forwards
+  z-index: 99;
 
 @keyframes fadeOut
     0%
@@ -201,14 +307,11 @@ h5,h6
 .breadcrumbs li
   display inline
 
-.breadcrumbs li:before
+.breadcrumbs li:not(:first-of-type):before
   content ">"
   margin 0 .3em
 
-.breadcrumbs lifirst-child:before
-  content ""
-
-#header-category li, #share-box li, #pagination li, #post-nav li
+#header-category li, #pagination li, #post-nav li
   margin 0 .5em
 
 @font-face
