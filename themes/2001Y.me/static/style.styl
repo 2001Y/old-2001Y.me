@@ -1,16 +1,20 @@
-/* === html5doctor.com Reset Stylesheet v1.6.1 Last Updated 2010-09-17 Author Richard Clark - http//richclarkdesign.com Twitter @rich_clark === */
-html,body,main,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
-  font-size 100%
+html,body,h1,h2,h3,h4,h5,h6,a,p,span,em,small,strong,sub,sup,mark,del,ins,strike,abbr,dfn,blockquote,q,cite,code,pre,ol,ul,li,dl,dt,dd,div,section,article,main,aside,nav,header,hgroup,footer,img,figure,figcaption,address,time,canvas,iframe,details,summary,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+  font: inherit inherit/inherit inherit;
   margin 0
   padding 0
   border 0
   outline 0
   vertical-align baseline
   box-sizing border-box
+  background-repeat no-repeat
 
-article,aside,footer,header,menu,nav,section
+:before,:after
+  text-decoration inherit
+  vertical-align inherit
+  box-sizing inherit
+
+article,aside,footer,header,nav,section,main
   display block
-  border none
 
 input,button,textarea,select
   -webkit-appearance none
@@ -20,38 +24,36 @@ input,button,textarea,select
   outline: 0;
   border-color: orange;
 
+input,select
+  vertical-align middle
+
 blockquote,q
   quotes none
 
 blockquote:before,blockquote:after,q:before,q:after
   content ""
 
-a,p
-  font-size 100%
-  margin 0
-  padding 0
-  vertical-align baseline
-
 a
   display inline-block
+  text-decoration none
+  background-color transparent
+  -webkit-text-decoration-skip objects
+
+a:active,a:hover
+  outline 0
+
+code,kbd,pre,samp
+  font-family monospace, monospace
 
 table
   border-collapse collapse
   border-spacing 0
 
-input,select
-  vertical-align middle
-
-
 ol,ul
   list-style-type none
 
-a
-  text-decoration none
-
-img
+img,video
   max-width: 100%
-
 
 body
   font-family 'Oleo Script', cursive
@@ -313,9 +315,3 @@ h5,h6
 
 #header-category li, #pagination li, #post-nav li
   margin 0 .5em
-
-@font-face
-  font-family 'Oleo Script'
-  font-style normal
-  font-weight 400
-  src local('Oleo Script'), local('OleoScript-Regular'), url(//fonts.gstatic.com/s/oleoscript/v6/rax5HieDvtMOe0iICsUccChdu0_y8zac.woff2) format('woff2')

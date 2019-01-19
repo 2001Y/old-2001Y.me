@@ -1,0 +1,3 @@
+/*
+ Cache-Control: max-age=10000, immutable
+ Link: </style.css>; rel=preload; as=style
