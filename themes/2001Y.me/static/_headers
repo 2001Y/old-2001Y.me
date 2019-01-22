@@ -1,14 +1,14 @@
-/*
- Cache-Control: max-age=10000, immutable
- Link: </style.css>; rel=preload; as=style
- Link: </barba.min.js>; rel=preload; as=script
- Link: </fonts/oleo-script-700.eot>; rel=preload; as=font
- Link: </fonts/oleo-script-700.woff2>; rel=preload; as=font
- Link: </fonts/oleo-script-700.woff>; rel=preload; as=font
- Link: </fonts/oleo-script-700.ttf>; rel=preload; as=font
- Link: </fonts/oleo-script-700.svg>; rel=preload; as=font
- Link: </fonts/oleo-script-regular.eot>; rel=preload; as=font
- Link: </fonts/oleo-script-regular.woff2>; rel=preload; as=font
- Link: </fonts/oleo-script-regular.woff>; rel=preload; as=font
- Link: </fonts/oleo-script-regular.ttf>; rel=preload; as=font
- Link: </fonts/oleo-script-regular.svg>; rel=preload; as=font
+/
+ Cache-Control: max-age=10000, immutable;
+ Link: </style.css>; rel=preload; as=style;
+ Link: </barba.min.js>; rel=preload; as=script;
+ Link: </fonts/oleo-script-700.eot>; rel=preload; as=font; type=application/vnd.ms-fontobject;
+ Link: </fonts/oleo-script-700.woff2>; rel=preload; as=font; type=font/woff2;
+ Link: </fonts/oleo-script-700.woff>; rel=preload; as=font; type=font/woff;
+ Link: </fonts/oleo-script-700.ttf>; rel=preload; as=font; type=font/ttf;
+ Link: </fonts/oleo-script-700.svg>; rel=preload; as=font; type=image/svg+xml;
+ Link: </fonts/oleo-script-regular.eot>; rel=preload; as=font; type=application/vnd.ms-fontobject;
+ Link: </fonts/oleo-script-regular.woff2>; rel=preload; as=font; type=font/woff2;
+ Link: </fonts/oleo-script-regular.woff>; rel=preload; as=font; type=font/woff;
+ Link: </fonts/oleo-script-regular.ttf>; rel=preload; as=font; type=font/ttf;
+ Link: </fonts/oleo-script-regular.svg>; rel=preload; as=font; type=image/svg+xml;
