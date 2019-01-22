@@ -191,19 +191,18 @@ main article
 #header-category a
   color: #a1d7e5;
 
-#header-category:before, #header-category:after {
+#header-category:before, #header-category:after
 	content: "";
 	flex-grow: 1;
 	height: 1px;
 	background: #a1c6e5;
 	display: block;
-}
-#header-category:before {
+
+#header-category:before
 	margin-right: .4em;
-}
-#header-category:after {
+  
+#header-category:after
 	margin-left: .4em;
-}
 
 #list-post
   display: flex
@@ -228,20 +227,20 @@ main article
   z-index: -1
   opacity: .5
 
-.post-img:hover+.post-category
-  transform:rotate(360deg)
+#list-post article:hover .post-category
+  transform rotate(360deg)
 
 .Apple
-  background: #e6a2d8;
+  background #e6a2d8
 
 .Web
-  background: #a1d7e5;
+  background #a1d7e5
 
 .Camera
-  background: #d8e6a2;
+  background #d8e6a2
 
 .Other
-  background: #c3c3c3;
+  background #c3c3c3
 
 @media (prefers-color-scheme dark)
   body
@@ -316,29 +315,28 @@ h5,h6
 #header-category li, #pagination li, #post-nav li
   margin 0 .5em
   
-@font-face {
-  font-family: 'Oleo Script';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/oleo-script-regular.eot'); /* IE9 Compat Modes */
-  src: local('Oleo Script'), local('OleoScript-Regular'),
+@font-face
+  font-family 'Oleo Script'
+  font-style normal
+  font-weight 400
+  src url('/fonts/oleo-script-regular.eot') /* IE9 Compat Modes */
+  src local('Oleo Script'), local('OleoScript-Regular'),
           url('/fonts/oleo-script-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
           url('/fonts/oleo-script-regular.woff2') format('woff2'), /* Super Modern Browsers */
           url('/fonts/oleo-script-regular.woff') format('woff'), /* Modern Browsers */
           url('/fonts/oleo-script-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-          url('/fonts/oleo-script-regular.svg#OleoScript') format('svg'); /* Legacy iOS */
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Oleo Script';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/oleo-script-700.eot'); /* IE9 Compat Modes */
-  src: local('Oleo Script Bold'), local('OleoScript-Bold'),
+          url('/fonts/oleo-script-regular.svg#OleoScript') format('svg') /* Legacy iOS */
+  unicode-range U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+
+@font-face
+  font-family 'Oleo Script'
+  font-style normal
+  font-weight 700
+  src url('/fonts/oleo-script-700.eot') /* IE9 Compat Modes */
+  src local('Oleo Script Bold'), local('OleoScript-Bold'),
           url('/fonts/oleo-script-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
           url('/fonts/oleo-script-700.woff2') format('woff2'), /* Super Modern Browsers */
           url('/fonts/oleo-script-700.woff') format('woff'), /* Modern Browsers */
           url('/fonts/oleo-script-700.ttf') format('truetype'), /* Safari, Android, iOS */
-          url('/fonts/oleo-script-700.svg#OleoScript') format('svg'); /* Legacy iOS */
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+          url('/fonts/oleo-script-700.svg#OleoScript') format('svg') /* Legacy iOS */
+  unicode-range U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
