@@ -6,7 +6,7 @@ googleAnalytics = "UA-68964193-14"
 disqusShortname= "2001y-me"
 # enableRobotsTXT = true
 # UglyURLs = true
-HasCJKLanguage = true
+hasCJKLanguage = true
 enableGitInfo = true
 
 [author]
@@ -23,8 +23,11 @@ enableGitInfo = true
   opgimageheight = "620"
   twitter = "twitterCard用のユーザー名を入れる"
 
-  [frontmatter]
+[frontmatter]
   date = ["date", "publishDate", "lastmod"]
   lastmod = [":git", "lastmod", "date", "publishDate"]
   publishDate = ["publishDate", "date"]
   expiryDate = ["expiryDate"]
+
+[outputs]
+  page = [ "HTML", "AMP" ]

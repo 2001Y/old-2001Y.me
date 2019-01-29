@@ -86,68 +86,56 @@
     </ul>
   {{ end }}
 </nav>
-    {{ .Content }}
-
-    <h3>Share</h3>
-    <ul id="share-box">
-      <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink | safeJS }}" target="_blank"><li>Facebook</li></a>
-      <a href="//twitter.com/intent/tweet?text={{ .Title | safeJS }}%20%7C%20{{ .Site.Title }}%20{{ .Permalink | safeJS }}%20%40{{ .Site.Params.twitter }}" target="_blank"><li>Twitterで共有</li></a>
-      <a href="//b.hatena.ne.jp/entry/{{ .Permalink | safeJS }}" target="_blank"><li>はてなブックマーク</li></a>
-      <a href="//line.me/R/msg/text/?{{ .Permalink | safeJS }}" target="_blank"><li>LINE</li></a>
-      <a href="//cloud.feedly.com/#subscription/feed/{{ .Permalink | safeJS }}" target="_blank"><li>Feedly</li></a>
-      <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocker</li></a>
-      <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メール</li></a>
+  {{ .Content }}
+  <h3>Share</h3>
+  <ul id="share-box">
+    <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink | safeJS }}" target="_blank"><li>Facebook</li></a>
+    <a href="//twitter.com/intent/tweet?text={{ .Title | safeJS }}%20%7C%20{{ .Site.Title }}%20{{ .Permalink | safeJS }}%20%40{{ .Site.Params.twitter }}" target="_blank"><li>Twitterで共有</li></a>
+    <a href="//b.hatena.ne.jp/entry/{{ .Permalink | safeJS }}" target="_blank"><li>はてなブックマーク</li></a>
+    <a href="//line.me/R/msg/text/?{{ .Permalink | safeJS }}" target="_blank"><li>LINE</li></a>
+    <a href="//cloud.feedly.com/#subscription/feed/{{ .Permalink | safeJS }}" target="_blank"><li>Feedly</li></a>
+    <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocker</li></a>
+    <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メール</li></a>
+  </ul>
+  <img src="//chart.apis.google.com/chart?cht=qr&chs=150x150&chof=gif&chl={{ .Permalink | safeJS }}" />
+  {{ $related := .Site.RegularPages.Related . | first 10 }}
+  {{ with $related }}
+  <article>
+    <h3>Related Content　<a href="/blog">more</a></h3>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
     </ul>
-    <img src="//chart.apis.google.com/chart?cht=qr&chs=150x150&chof=gif&chl={{ .Permalink | safeJS }}" />
-    {{ $related := .Site.RegularPages.Related . | first 10 }}
-    {{ with $related }}
-    <article>
-      <h3>Related Content　<a href="/blog">more</a></h3>
+    {{ end }}
+    <h3>Latest Contents　<a href="/blog">more</a></h3>
+    <ul>
+      {{ range first 5 (where .Data.Pages "Type" "blog") }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <time>{{ .Date.Format "2006/01/02" }}</time>
+      </li>
+      {{ end }}
+    </ul>
+    <nav id="post-nav">
+      {{ if (or .PrevInSection .NextInSection) }}
       <ul>
-        {{ range . }}
-      	   <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      	{{ end }}
+        {{ if .PrevInSection }}
+        <li>
+          <a rel="prev" href="{{ .PrevInSection.RelPermalink }}">
+            « Previous：{{ .PrevInSection.Title }}
+          </a>
+        </li>
+        {{ end }}
+        {{ if .NextInSection }}
+        <li>
+          <a  rel="next" href="{{ .NextInSection.RelPermalink }}">
+            Next »：{{ .NextInSection.Title }}
+          </a>
+        </li>
+        {{ end }}
       </ul>
       {{ end }}
-      <h3>Latest Contents　<a href="/blog">more</a></h3>
-      <ul>
-        {{ range first 5 (where .Data.Pages "Type" "blog") }}
-          <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <time>{{ .Date.Format "2006/01/02" }}</time>
-          </li>
-        {{ end }}
-      </ul>
-      <nav id="post-nav">
-        {{ if (or .PrevInSection .NextInSection) }}
-        <ul>
-            {{ if .PrevInSection }}
-              <li>
-                <a rel="prev" href="{{ .PrevInSection.RelPermalink }}">
-                  « Previous：{{ .PrevInSection.Title }}
-                </a>
-              </li>
-            {{ end }}
-            {{ if .NextInSection }}
-              <li>
-                <a  rel="next" href="{{ .NextInSection.RelPermalink }}">
-                  Next »：{{ .NextInSection.Title }}
-                </a>
-              </li>
-            {{ end }}
-        </ul>
-        {{ end }}
-      </nav>
-    </article>
-    <script src="/barba.min.js"></script>
-    <script>
-      Barba.Pjax.Dom.wrapperId = 'load';
-      Barba.Pjax.Dom.containerClass = 'load';
-      Barba.Pjax.start();
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('sw.js');
-        });
-      }
-    </script>
+    </nav>
+  </article>
 {{ end }}

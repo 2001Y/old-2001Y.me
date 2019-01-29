@@ -30,7 +30,9 @@
         {{ .Site.Title }}
       {{ end }}
     </title>
-    <link rel="stylesheet" href="/style.css">
+    <style amp-custom>
+      {{ partial "style.css" . | safeCSS }}
+    </style>
   </head>
   <body id="load">
     <section class="load">
@@ -49,5 +51,16 @@
       </footer>
     </section>
   </body>
+  <script src="/barba.min.js"></script>
+  <script>
+    Barba.Pjax.Dom.wrapperId = 'load';
+    Barba.Pjax.Dom.containerClass = 'load';
+    Barba.Pjax.init();
+    Barba.Prefetch.init();
+    Barba.Dispatcher.on('newPageReady', function() {
+      location.href = "#top";
+      ga('send', 'pageview', window.location.pathname.replace(/^\/?/, '/') + window.location.search);
+    });
+  </script>
   <!--<script async src="//www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>-->
 </html>
