@@ -28,6 +28,3 @@ enableGitInfo = true
   lastmod = [":git", "lastmod", "date", "publishDate"]
   publishDate = ["publishDate", "date"]
   expiryDate = ["expiryDate"]
-
-[outputs]
-  page = [ "HTML", "AMP" ]
