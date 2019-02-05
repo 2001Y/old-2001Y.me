@@ -1,6 +1,5 @@
 /
  Cache-Control: max-age=10000, immutable;
- Link: </style.css>; rel=preload; as=style;
  Link: </barba.min.js>; rel=preload; as=script;
  Link: </fonts/oleo-script-700.eot>; rel=preload; as=font; type=application/vnd.ms-fontobject;
  Link: </fonts/oleo-script-700.woff2>; rel=preload; as=font; type=font/woff2;
