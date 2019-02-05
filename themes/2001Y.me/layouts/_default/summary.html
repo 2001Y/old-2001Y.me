@@ -1,16 +1,18 @@
-<a href='{{ .Permalink }}'>
-  <article>
+<article>
+  <a href='{{ .Permalink }}'>
     {{ if and (.Params.img) (ne .Params.img "") }}
       <img src="{{ .Params.img }}" alt="thumbnail" class="post-img"/>
     {{ end }}
     <div class="post-category {{ range .Params.categories }}{{ . }}{{ end }}"></div>
     <span>{{ .Title }}</span>
     <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-    {{ if .Params.categories }}
-      {{ range .Params.categories }}
-        <a href="/categories/{{ . | urlize }}/">{{ . }}</a>
-      {{ end }}
+  </a>
+  {{ if .Params.categories }}
+    {{ range .Params.categories }}
+      <a href="/categories/{{ . | urlize }}/">{{ . }}</a>
     {{ end }}
+  {{ end }}
+  <a href='{{ .Permalink }}'>
     <p>{{ .Summary }}</p>
-  </article>
-</a>
+  </a>
+</article>
