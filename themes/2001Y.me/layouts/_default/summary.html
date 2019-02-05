@@ -1,5 +1,5 @@
-<a href='{{ .Permalink }}'>
-  <article>
+<article>
+  <a href='{{ .Permalink }}'>
     {{ if and (.Params.img) (ne .Params.img "") }}
       <img src="{{ .Params.img }}" alt="thumbnail" class="post-img"/>
     {{ end }}
@@ -12,5 +12,5 @@
       {{ end }}
     {{ end }}
     <p>{{ .Summary }}</p>
-  </article>
-</a>
+  </a>
+</article>
