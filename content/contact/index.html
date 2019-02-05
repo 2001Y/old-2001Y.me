@@ -1,0 +1,90 @@
+{{ block "head" . }}
+    <style>
+      h2 {
+        margin: 1em 0 0 0;
+      }
+      button {
+        font-family: inherit;
+        color: #fff;
+        font-size: 2em;
+        border-radius: 2em;
+        background: #a1d7e5;
+        padding: .2em 3em;
+        margin: 0 auto;
+        display: block;
+      }
+      form {
+        box-sizing: border-box;
+        margin: 0 20%;
+      }
+      label {
+        color: #a1d7e5;
+      }
+      input,textarea {
+        font-size: 1em;
+        padding: .5em 1em;
+        border: solid .2em #d0cccc;
+        border-radius: 20px;
+        width: 100%;
+      }
+      input:focus,textarea:focus {
+        border: solid .2em #a1d7e5;
+        transition: 1s;
+        box-shadow: 0 0 -6px #a1d7e5;
+      }
+      input:placeholder ,textarea:placeholder {
+        color: #d0cccc;
+      }
+      input:focus:placeholder,textarea:focus:placeholder {
+        color: transparent;
+      }
+      textarea {
+        margin-bottom: 2em;
+      }
+    </style>
+{{ end }}
+
+{{ define "header" }}
+<section id="title">
+  <h1>2001Y</h1>
+  <svg viewBox="0 0 10 8.7" fill="#fff" width="9em" id="logo">
+    <path d="m10 0h-2l-4 6.9 1 1.8"/>
+    <path d="m7 0h-7l3.5 6.1"/>
+  </svg>
+  <div id="parapara-nav">
+    <a href="/">Portfolio</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact" class="attention">Contact</a>
+  </div>
+</section>
+{{ end}}
+
+{{ block "main" . }}
+<nav>
+  <ul id="header-category">
+    <li>
+      <a href="/blog">Home</a>
+    </li>
+    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <li>
+      <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
+<form name="contact" method="POST" data-netlify="true">
+  <label>
+    <h2>Name</h2>
+    <input type="text" name="name" placeholder="Your Name"/>
+  </label>
+  <label>
+    <h2>Email</h2>
+    <input type="email" name="email" placeholder="Your Email"/>
+  </label>
+  <label>
+    <h2>Message</h2>
+    <textarea name="message" placeholder="Message to me"></textarea>
+  </label>
+  <button type="submit">Send</button>
+</form>
+{{ end }}
