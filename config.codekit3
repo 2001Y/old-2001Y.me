@@ -16,6 +16,12 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/.idea": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/.idea",
+		"oF": 0
+		},
 	"/archetypes/default.md": {
 		"cB": 0,
 		"cS": 0,
@@ -653,101 +659,11 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/content/blog/lit1.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/content/blog/lit1.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/content/blog/lit2.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/content/blog/lit2.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/content/blog/lit3.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/content/blog/lit3.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/content/blog/lit4.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/content/blog/lit4.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/content/blog/lit5.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/content/blog/lit5.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/content/contact.html": {
+	"/content/contact/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/content/contact.html",
+		"oAP": "/content/contact/index.html",
 		"oF": 0
 		},
 	"/content/works/_index.md": {
@@ -886,6 +802,13 @@
 		"oAP": "/themes/2001Y.me/layouts/404.html",
 		"oF": 0
 		},
+	"/themes/2001Y.me/layouts/_default/baseof.amp.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/layouts/_default/baseof.amp.html",
+		"oF": 0
+		},
 	"/themes/2001Y.me/layouts/_default/baseof.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -984,6 +907,52 @@
 		"oAP": "/themes/2001Y.me/layouts/partials/paginator.html",
 		"oF": 0
 		},
+	"/themes/2001Y.me/layouts/partials/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/layouts/partials/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/themes/2001Y.me/layouts/partials/style.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/layouts/partials/style.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/themes/2001Y.me/layouts/partials/style/all.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/layouts/partials/style/all-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/themes/2001Y.me/layouts/partials/style/all.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/layouts/partials/style/all.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
 	"/themes/2001Y.me/layouts/robots.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -1022,6 +991,30 @@
 		"oAP": "/themes/2001Y.me/LICENSE",
 		"oF": 0
 		},
+	"/themes/2001Y.me/static/_headers": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/themes/2001Y.me/static/_headers",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/_redirects": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/themes/2001Y.me/static/_redirects",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/barba.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/barba.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/themes/2001Y.me/static/bg.jpg": {
 		"ft": 16384,
 		"iS": 666033,
@@ -1032,6 +1025,82 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-700.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-700.eot",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-700.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-700.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088191,
+		"prP": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-700.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-700.ttf",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-700.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-700.woff",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-700.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-700.woff2",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-regular.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-regular.eot",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-regular.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-regular.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088191,
+		"prP": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-regular.ttf",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-regular.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-regular.woff",
+		"oF": 0
+		},
+	"/themes/2001Y.me/static/fonts/oleo-script-regular.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/fonts/oleo-script-regular.woff2",
+		"oF": 0
 		},
 	"/themes/2001Y.me/static/icon.png": {
 		"ft": 32768,
@@ -1052,29 +1121,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/themes/2001Y.me/static/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/themes/2001Y.me/static/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/themes/2001Y.me/static/style.styl": {
-		"aP": 1,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/themes/2001Y.me/static/style.css",
-		"oF": 0,
-		"oS": 1,
-		"rrU": 0
-		},
 	"/themes/2001Y.me/static/svg.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1084,6 +1130,16 @@
 		"opt": 0,
 		"plM": 3758088191,
 		"prP": 0
+		},
+	"/themes/2001Y.me/static/waterfall.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/themes/2001Y.me/static/waterfall.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/themes/2001Y.me/static/works/1.jpg": {
 		"ft": 16384,

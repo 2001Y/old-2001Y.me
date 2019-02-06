@@ -2,6 +2,11 @@
   {{ .Title }}
 {{ end }}
 
+{{ define "style" }}
+  {{ readFile "/themes/2001Y.me/static/style/blog.css" | safeCSS }}
+  {{ readFile "/themes/2001Y.me/static/style/list.css" | safeCSS }}
+{{ end }}
+
 {{ define "header" }}
   <section id="title">
     <h1>2001Y</h1>
@@ -15,9 +20,7 @@
       <a href="/contact">Contact</a>
     </div>
   </section>
-
   {{ .Content }}
-
 {{ end}}
 
 {{ define "main" }}

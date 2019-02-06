@@ -18,7 +18,8 @@
       {{ end }}
     </title>
     <style>
-      {{ partial "style.css" . | safeCSS }}
+      {{ block "style" . }}
+      {{ end }}
     </style>
   </head>
   <body id="load">

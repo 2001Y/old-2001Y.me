@@ -9,6 +9,11 @@
   {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
+{{ define "style" }}
+  {{ readFile "/themes/2001Y.me/static/style/blog.css" | safeCSS }}
+  {{ readFile "/themes/2001Y.me/static/style/single.css" | safeCSS }}
+{{ end }}
+
 {{ define "header" }}
   <h1>{{ .Title }}</h1>
   <a href="/">Portfolio</a>
@@ -23,22 +28,6 @@
   {{ if isset .Params "Lastmod" }}
     <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
   {{ end }}
-  <style>
-    body{
-    	background: linear-gradient(to right top, #a1d7e5 50%, #e6e6e6 50%);
-    	background-size: 100% calc(100% - 100vh + 5px);
-    	background-repeat: no-repeat;
-    }
-    body:before{
-    	content:'';
-    	position: fixed;
-    	top: 5px;
-    	bottom: 0;
-    	width: 100%;
-    	z-index: -1;
-    	background: #fff;
-    }
-  </style>
 {{ end }}
 
 {{ define "main" }}
