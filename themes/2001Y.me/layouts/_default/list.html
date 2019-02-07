@@ -41,12 +41,6 @@
     <li>
       <a href="/categories/other">Other</a>
     </li>
-    <!-- {{ range $name, $taxonomy := .Site.Taxonomies.categories }} -->
-      <!-- <li> -->
-        <!-- <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a> -->
-        <!-- {{ $taxonomy.Count }} -->
-      <!-- </li> -->
-    <!-- {{ end }} -->
   </ul>
 </nav>
   <section id="list-post">
@@ -54,5 +48,7 @@
       {{ .Render "summary" }}
     {{ end }}
   </section>
-  {{ partial "paginator.html" . }}
+
+{{ partial "paginator.html" . }}
+
 {{ end }}
