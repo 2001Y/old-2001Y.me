@@ -1,0 +1,349 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+:before,
+:after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  border-color: #ffa500;
+}
+input,
+select {
+  vertical-align: middle;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol,
+ul {
+  list-style-type: none;
+}
+img,
+video {
+  max-width: 100%;
+}
+body {
+  font-family: 'Oleo Script', cursive;
+  color: #1b1c1c;
+  background: #fff;
+  width: 100%;
+  overflow-scrolling: touch;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  -webkit-text-font-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  padding-right: constant(safe-area-inset-right);
+  padding-left: constant(safe-area-inset-right);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: normal;
+}
+main {
+  width: 100%;
+  max-width: 900px;
+  padding: 5em 10vw;
+  margin: 0 auto;
+}
+header,
+footer {
+  text-align: center;
+  color: #fff;
+}
+#hello {
+  font-size: 10vw;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(30deg, #a1e5e2, #a1c6e5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: fadeOut 1s 1s forwards;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header-nav {
+  display: flex;
+  position: fixed;
+  top: 1.5em;
+  right: 1.5em;
+  font-family: 'Thasadith', sans-serif;
+}
+#header-nav li {
+  margin: 0 0.5em;
+}
+#logoimg {
+  position: absolute;
+  right: 30%;
+  top: 35%;
+}
+#my-icon {
+  top: 80%;
+  right: 57.7%;
+  position: absolute;
+  z-index: 0;
+}
+#big-logo {
+  width: 900px;
+  animation: logo 2s forwards;
+  position: absolute;
+  fill: #fff;
+  top: 40%;
+  right: 42%;
+  z-index: -1;
+}
+#name {
+  font-size: 4.5em;
+  position: absolute;
+  left: 27%;
+  top: 40%;
+}
+#work {
+  display: inline;
+  margin: auto;
+}
+#work img {
+  width: 19vw;
+  margin: 0 0.5em;
+}
+@font-face {
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/oleo-script-regular.eot") /* IE9 Compat Modes */;
+  src: local('Oleo Script'), local('OleoScript-Regular'), url("/fonts/oleo-script-regular.eot?#iefix") format('embedded-opentype'), url("/fonts/oleo-script-regular.woff2") format('woff2'), url("/fonts/oleo-script-regular.woff") format('woff'), url("/fonts/oleo-script-regular.ttf") format('truetype'), url("/fonts/oleo-script-regular.svg#OleoScript") format('svg') /* Legacy iOS */;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/oleo-script-700.eot") /* IE9 Compat Modes */;
+  src: local('Oleo Script Bold'), local('OleoScript-Bold'), url("/fonts/oleo-script-700.eot?#iefix") format('embedded-opentype'), url("/fonts/oleo-script-700.woff2") format('woff2'), url("/fonts/oleo-script-700.woff") format('woff'), url("/fonts/oleo-script-700.ttf") format('truetype'), url("/fonts/oleo-script-700.svg#OleoScript") format('svg') /* Legacy iOS */;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-moz-keyframes logo {
+  0% {
+    margin-left: -35vmin;
+    stroke-width: 0;
+  }
+  50% {
+    margin-left: -35vmin;
+  }
+  70% {
+    margin-left: -35vmin;
+    stroke-width: 0.1px;
+  }
+  100% {
+    margin-left: -15vmin;
+    stroke-width: 0.1px;
+  }
+}
+@-webkit-keyframes logo {
+  0% {
+    margin-left: -35vmin;
+    stroke-width: 0;
+  }
+  50% {
+    margin-left: -35vmin;
+  }
+  70% {
+    margin-left: -35vmin;
+    stroke-width: 0.1px;
+  }
+  100% {
+    margin-left: -15vmin;
+    stroke-width: 0.1px;
+  }
+}
+@-o-keyframes logo {
+  0% {
+    margin-left: -35vmin;
+    stroke-width: 0;
+  }
+  50% {
+    margin-left: -35vmin;
+  }
+  70% {
+    margin-left: -35vmin;
+    stroke-width: 0.1px;
+  }
+  100% {
+    margin-left: -15vmin;
+    stroke-width: 0.1px;
+  }
+}
+@keyframes logo {
+  0% {
+    margin-left: -35vmin;
+    stroke-width: 0;
+  }
+  50% {
+    margin-left: -35vmin;
+  }
+  70% {
+    margin-left: -35vmin;
+    stroke-width: 0.1px;
+  }
+  100% {
+    margin-left: -15vmin;
+    stroke-width: 0.1px;
+  }
+}
