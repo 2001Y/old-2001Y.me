@@ -8,7 +8,6 @@ disqusShortname= "2001y-me"
 # UglyURLs = true
 hasCJKLanguage = true
 enableGitInfo = true
-canonifyurls = true
 
 [author]
   author = "2001Y"
