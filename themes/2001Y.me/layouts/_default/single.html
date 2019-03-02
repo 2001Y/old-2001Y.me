@@ -1,4 +1,5 @@
 {{ define "head" }}
+  <meta name="description" content="ページの概要が入ります。" >
   {{ with .Params.img }}
     <meta property="og:image" content="{{ . | absURL }}" />
     <meta name="twitter:image" content="{{ . | absURL }}" />
@@ -15,7 +16,13 @@
 {{ end }}
 
 {{ define "header" }}
-  <h1>{{ .Title }}</h1>
+  {{ if .PrevInSection }}
+    <a rel="prev" href="{{ .PrevInSection.RelPermalink }}" id="prev-post"></a>
+  {{ end }}
+  {{ if .NextInSection }}
+    <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
+  {{ end }}
+  <h1 {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
   <a href="/">Portfolio</a>
   {{ if isset .Params "img" }}
     <style>
@@ -76,6 +83,7 @@
   {{ end }}
 </nav>
   {{ .Content }}
+<aside>
   <h3>Share</h3>
   <ul id="share-box">
     <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink | safeJS }}" target="_blank"><li>Facebook</li></a>
@@ -89,42 +97,21 @@
   <img src="//chart.apis.google.com/chart?cht=qr&chs=150x150&chof=gif&chl={{ .Permalink | safeJS }}" />
   {{ $related := .Site.RegularPages.Related . | first 10 }}
   {{ with $related }}
-  <article>
-    <h3>Related Content　<a href="/blog">more</a></h3>
-    <ul>
-      {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
+  <h3>Related Content　<a href="/blog">more</a></h3>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
-    <h3>Latest Contents　<a href="/blog">more</a></h3>
-    <ul>
-      {{ range first 5 (where .Data.Pages "Type" "blog") }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <time>{{ .Date.Format "2006/01/02" }}</time>
-      </li>
-      {{ end }}
-    </ul>
-    <nav id="post-nav">
-      {{ if (or .PrevInSection .NextInSection) }}
-      <ul>
-        {{ if .PrevInSection }}
-        <li>
-          <a rel="prev" href="{{ .PrevInSection.RelPermalink }}">
-            « Previous：{{ .PrevInSection.Title }}
-          </a>
-        </li>
-        {{ end }}
-        {{ if .NextInSection }}
-        <li>
-          <a  rel="next" href="{{ .NextInSection.RelPermalink }}">
-            Next »：{{ .NextInSection.Title }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-      {{ end }}
-    </nav>
-  </article>
+  </ul>
+  {{ end }}
+  <h3>Latest Contents　<a href="/blog">more</a></h3>
+  <ul>
+    {{ range first 5 (where .Data.Pages "Type" "blog") }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <time>{{ .Date.Format "2006/01/02" }}</time>
+    </li>
+    {{ end }}
+  </ul>
+</aside>
 {{ end }}

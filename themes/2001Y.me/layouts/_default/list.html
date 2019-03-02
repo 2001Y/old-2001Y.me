@@ -1,3 +1,11 @@
+{{ define "head" }}
+  <meta name="description" content="ページの概要が入ります。" >
+  {{ with .Params.img }}
+    <meta property="og:image" content="" />
+    <meta name="twitter:image" content="" />
+  {{ end }}
+{{ end }}
+
 {{ define "title" }}
   {{ .Title }}
 {{ end }}
@@ -48,17 +56,21 @@
       <article>
         <a href='{{ .Permalink }}'>
           {{ if and (.Params.img) (ne .Params.img "") }}
-          <img src="{{ .Params.img }}" alt="thumbnail" class="post-img"/>
+            <img src="{{ .Params.img }}" alt="thumbnail" class="post-img"/>
           {{ end }}
-          <div class="post-category {{ range .Params.categories }}{{ . }}{{ end }}"></div>
-          <span>{{ .Title }}</span>
-          <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-          {{ if .Params.categories }}
-          {{ range .Params.categories }}
-          {{ . }}
-          {{ end }}
-          {{ end }}
-          <p>{{ .Summary }}</p>
+          <div class="post-color {{ range .Params.categories }}{{ . }}{{ end }}"></div>
+          <div class="post-meta">
+            <span class="post-title">
+              {{ .Title }}
+            </span>
+            <time class="post-time">
+              {{ .Date.Format "Mon, Jan 2, 2006" }}
+            </time>
+            <span class="post-category">
+              {{ if .Params.categories }}{{ range .Params.categories }}{{ . }}{{ end }}{{ end }}
+            </span>
+          </div>
+          <!--<p>{{ .Summary }}</p>-->
         </a>
       </article>
     {{ end }}

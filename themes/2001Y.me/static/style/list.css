@@ -1,1 +1,60 @@
-main article{width:calc(100% / 3);padding:90px 0.5em 0 0.5em}#blog-list li{display:block;padding:0.5em;background:rgba(250,250,250,0.5)}#blog-list li:hover{background:rgba(250,250,250,0.7)}#blog-list time{display:block}#blog-list a{color:#000}.attention{font-size:3em;line-height:1.5em}#list-post{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.post-img{width:280px;height:170px;-webkit-clip-path:polygon(50% 100%, 15% 0, 85% 0);clip-path:polygon(50% 100%, 15% 0, 85% 0);position:absolute}.post-img:hover+.post-category{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}.post-category{background:#c3c3c3;width:275px;height:170px;-webkit-clip-path:polygon(50% 0, 15% 100%, 85% 100%);clip-path:polygon(50% 0, 15% 100%, 85% 100%);-webkit-transform-origin:50% 65%;-ms-transform-origin:50% 65%;transform-origin:50% 65%;-webkit-transition:0.6s;-o-transition:0.6s;transition:0.6s;position:relative;top:-55px;left:0;z-index:-1;opacity:0.5}.Apple{background:#e6a2d8}.Web{background:#a1d7e5}.Camera{background:#d8e6a2}#pagination{margin-top:2em}
+main article {
+  width: calc(100% / 3);
+  padding: 90px 0.5em 0 0.5em;
+}
+#blog-list li {
+  display: block;
+  padding: 0.5em;
+  background: rgba(250,250,250,0.5);
+}
+#blog-list li:hover {
+  background: rgba(250,250,250,0.7);
+}
+#blog-list time {
+  display: block;
+}
+#blog-list a {
+  color: #000;
+}
+.attention {
+  font-size: 3em;
+  line-height: 1.5em;
+}
+#list-post {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-img {
+  width: 280px;
+  height: 170px;
+  clip-path: polygon(50% 100%, 15% 0, 85% 0);
+  position: absolute;
+}
+.post-img:hover+.post-color {
+  transform: rotate(360deg);
+}
+.post-color {
+  background: #c3c3c3;
+  width: 280px;
+  height: 170px;
+  clip-path: polygon(50% 0, 15% 100%, 85% 100%);
+  transform-origin: 50% 65%;
+  transition: 0.6s;
+  position: relative;
+  top: -55px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+.Apple {
+  background: #e6a2d8;
+}
+.Web {
+  background: #a1d7e5;
+}
+.Camera {
+  background: #d8e6a2;
+}
+#pagination {
+  margin-top: 2em;
+}
