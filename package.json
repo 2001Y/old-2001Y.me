@@ -1,0 +1,30 @@
+{
+  "name": "2001y.me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2001Y/2001Y.me.git"
+  },
+  "author": "2001Y",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2001Y/2001Y.me/issues"
+  },
+  "homepage": "https://github.com/2001Y/2001Y.me#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-changed": "^3.2.0",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^5.0.3",
+    "imagemin-guetzli": "^2.0.0"
+  }
+}
