@@ -18,14 +18,15 @@
   "homepage": "https://github.com/2001Y/2001Y.me#readme",
   "devDependencies": {
     "gulp": "^4.0.0",
-    "gulp-changed": "^3.2.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
     "gulp-responsive": "^2.13.0",
+    "gulp-stylus": "^2.7.0",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0"
   },
-  "dependencies": {
-    "gulp-imagemin": "^5.0.3",
-    "imagemin-guetzli": "^2.0.0"
-  }
+  "dependencies": {}
 }

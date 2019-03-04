@@ -5,6 +5,10 @@ const png = require('imagemin-pngquant');
 const gif = require('imagemin-gifsicle');
 const responsive = require('gulp-responsive');
 
+const stylus = require('gulp-stylus');
+const clean = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+
 gulp.task('default', () =>
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
         .pipe(imagemin([
@@ -34,4 +38,14 @@ gulp.task('default', () =>
             },{}]
         }))
         .pipe(gulp.dest('img/'))
+);
+
+gulp.task('autoprefixer', () =>
+    gulp.src('themes/2001Y.me/static/style/*.styl')
+        .pipe(stylus())
+        .pipe(autoprefixer({
+            stats: ['> 3% in JP']
+        }))
+        .pipe(clean())
+        .pipe(gulp.dest('themes/2001Y.me/static/style'))
 );
