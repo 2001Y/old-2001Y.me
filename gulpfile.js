@@ -6,10 +6,14 @@ const gif = require('imagemin-gifsicle');
 const responsive = require('gulp-responsive');
 
 const stylus = require('gulp-stylus');
-const clean = require('gulp-clean-css');
+const cssmin = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 
+const htmlmin = require('gulp-htmlmin');
+
 gulp.task('default', () =>
+    gulp.src('public/*.html')
+        .pipe(htmlmin())
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
         .pipe(imagemin([
             jpeg({ quality: 80 }),
@@ -46,6 +50,6 @@ gulp.task('autoprefixer', () =>
         .pipe(autoprefixer({
             stats: ['> 3% in JP']
         }))
-        .pipe(clean())
+        .pipe(cssmin())
         .pipe(gulp.dest('themes/2001Y.me/static/style'))
 );
