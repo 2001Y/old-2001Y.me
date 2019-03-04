@@ -9,6 +9,8 @@ disqusShortname= "2001y-me"
 hasCJKLanguage = true
 enableGitInfo = true
 Paginate = 9
+pygmentsUseClasses = true
+pygmentsCodefences = true
 
 [author]
   author = "2001Y"
