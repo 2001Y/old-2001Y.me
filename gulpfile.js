@@ -11,7 +11,21 @@ const autoprefixer = require('gulp-autoprefixer');
 
 const htmlmin = require('gulp-htmlmin');
 
-gulp.task('default', ['imgmin','htmlmin']);
+gulp.task('htmlmin', () =>
+    gulp.src('public/*.html')
+        .pipe(htmlmin())
+        .pipe(gulp.dest('public'))
+);
+
+gulp.task('autoprefixer', () =>
+    gulp.src('themes/2001Y.me/static/style/*.styl')
+        .pipe(stylus())
+        .pipe(autoprefixer({
+            stats: ['> 3% in JP']
+        }))
+        .pipe(cssmin())
+        .pipe(gulp.dest('themes/2001Y.me/static/style'))
+);
 
 gulp.task('imgmin', () =>
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
@@ -42,20 +56,4 @@ gulp.task('imgmin', () =>
             },{}]
         }))
         .pipe(gulp.dest('img/'))
-);
-
-gulp.task('htmlmin', () =>
-    gulp.src('public/*.html')
-        .pipe(htmlmin())
-        .pipe(gulp.dest('public'))
-);
-
-gulp.task('autoprefixer', () =>
-    gulp.src('themes/2001Y.me/static/style/*.styl')
-        .pipe(stylus())
-        .pipe(autoprefixer({
-            stats: ['> 3% in JP']
-        }))
-        .pipe(cssmin())
-        .pipe(gulp.dest('themes/2001Y.me/static/style'))
 );
