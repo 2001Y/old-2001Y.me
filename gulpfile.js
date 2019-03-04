@@ -1,6 +1,4 @@
 const gulp = require("gulp");
-const changed  = require('gulp-changed');
-const cache = require('gulp-cached');
 
 const htmlmin = require('gulp-htmlmin');
 
@@ -16,14 +14,12 @@ const responsive = require('gulp-responsive');
 
 gulp.task('htmlmin', () =>
     gulp.src('public/*.html')
-        .pipe(cache('htmlmining'))
         .pipe(htmlmin())
         .pipe(gulp.dest('public'))
 );
 
 gulp.task('autoprefixer', () =>
     gulp.src('themes/2001Y.me/static/style/*.styl')
-        .pipe(cache('autoprefixering'))
         .pipe(stylus())
         .pipe(autoprefixer({
             stats: ['> 3% in JP']
@@ -34,7 +30,6 @@ gulp.task('autoprefixer', () =>
 
 gulp.task('imgmin', () =>
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
-        .pipe(changed('img'))
         .pipe(imagemin([
             jpeg({ quality: 80 }),
             png({ quality: '65-80' }),
