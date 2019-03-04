@@ -13,7 +13,7 @@ const htmlmin = require('gulp-htmlmin');
 
 gulp.task('default', () =>
     gulp.src('public/*.html')
-        .pipe(htmlmin())
+        .pipe(htmlmin({ collapseWhitespace: true }))
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
         .pipe(imagemin([
             jpeg({ quality: 80 }),
