@@ -1,4 +1,5 @@
 /
+ Accept-Encoding: gzip, deflate, br
  Cache-Control: max-age=10000, immutable;
  Link: </barba.min.js>; rel=preload; as=script;
  Link: </fonts/oleo-script-700.eot>; rel=preload; as=font; type=application/vnd.ms-fontobject;

@@ -11,6 +11,7 @@ enableGitInfo = true
 Paginate = 9
 pygmentsUseClasses = true
 pygmentsCodefences = true
+pygmentsStyle = "monokai"
 
 [author]
   author = "2001Y"
