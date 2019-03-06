@@ -24,6 +24,7 @@ gulp.task('autoprefixer', () =>
         .pipe(autoprefixer({
             stats: ['> 3% in JP']
         }))
+        .pipe(cssmin())
         .pipe(gulp.dest('themes/2001Y.me/static/style'))
 );
 
