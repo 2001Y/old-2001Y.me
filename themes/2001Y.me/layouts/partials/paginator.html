@@ -21,7 +21,7 @@
 
         {{ if $pag.Pagers  }}
           {{ range $pag.Pagers }}
-            <li{{ if eq . $pag }} class="active"{{ end }}>
+            <li{{ if eq . $pag }} id="active"{{ end }}>
                 <a href="{{ .URL }}" class="pagination" >
                   {{ .PageNumber }}
                 </a>

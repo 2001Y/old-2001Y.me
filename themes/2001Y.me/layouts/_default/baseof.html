@@ -30,6 +30,25 @@
         {{ block "header" . }}
         {{ end }}
       </header>
+      <nav>
+        <ul id="header-category">
+          <li>
+            <a href="/blog">Home</a>
+          </li>
+          <li>
+            <a href="/categories/web">Web</a>
+          </li>
+          <li>
+            <a href="/categories/apple">Apple</a>
+          </li>
+          <li>
+            <a href="/categories/camera">Camera</a>
+          </li>
+          <li>
+            <a href="/categories/other">Other</a>
+          </li>
+        </ul>
+      </nav>
       <main>
         {{ block "main" . }}
         {{ end }}
@@ -43,6 +62,9 @@
   </body>
   <script src="/barba.min.js"></script>
   <script>
+    {{ if not .Site.IsServer }}
+
+    {{ end }}
     Barba.Pjax.Dom.wrapperId = 'load';
     Barba.Pjax.Dom.containerClass = 'load';
     Barba.Pjax.init();

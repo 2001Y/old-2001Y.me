@@ -32,31 +32,13 @@
 {{ end}}
 
 {{ define "main" }}
-<nav>
-  <ul id="header-category">
-    <li>
-      <a href="/blog">Home</a>
-    </li>
-    <li>
-      <a href="/categories/web">Web</a>
-    </li>
-    <li>
-      <a href="/categories/apple">Apple</a>
-    </li>
-    <li>
-      <a href="/categories/camera">Camera</a>
-    </li>
-    <li>
-      <a href="/categories/other">Other</a>
-    </li>
-  </ul>
-</nav>
-  <section id="list-post">
+  <section id="blog-list">
     {{ range .Paginator.Pages }}
       <article>
         <a href='{{ .Permalink }}'>
           {{ if and (.Params.img) (ne .Params.img "") }}
-            <img src="{{ .Params.img }}" alt="thumbnail" class="post-img"/>
+            <img src="//unsplash.it/600/500/?random" alt="{{ .Title }}" class="post-img"/>
+            <!--{{ .Params.img }}-->
           {{ end }}
           <div class="post-color {{ range .Params.categories }}{{ . }}{{ end }}"></div>
           <div class="post-meta">

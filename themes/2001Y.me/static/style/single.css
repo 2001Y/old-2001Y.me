@@ -1,1 +1,70 @@
-body{background:linear-gradient(to right top,#a1d7e5 50%,#e6e6e6 50%);background-size:100% calc(100% - 100vh + 5px);background-repeat:no-repeat}body:before{content:'';position:fixed;top:1.2vh;bottom:0;width:100%;z-index:-1;background:#fff}.breadcrumbs li{display:inline}.breadcrumbs li:not(:first-of-type):before{content:">";margin:0 .3em}header{position:relative}#next-post,#prev-post{padding:0 3em;position:absolute;top:0;height:100%;display:flex;align-items:center}#prev-post{margin:0 auto 0 0;left:0}#next-post{margin:0 0 0 auto;right:0}#next-post:after,#prev-post:after{content:'';width:1.5em;height:1.5em;border-top:2px solid #fff;border-right:2px solid #fff;display:block}#prev-post:after{-webkit-transform:rotate(-135deg);transform:rotate(-135deg)}#next-post:after{-webkit-transform:rotate(45deg);transform:rotate(45deg)}h1{height:1.5em;overflow:hidden}h1:before{white-space:pre}#prev-post:hover+#next-post+h1:before,#prev-post:hover+h1:before{content:attr(data-prev-post) "\A"}#next-post:hover+h1:before{content:attr(data-next-post) "\A"}
+body {
+  background: linear-gradient(to right top, #a1d7e5 50%, #e6e6e6 50%);
+  background-size: 100% calc(100% - 100vh + 5px);
+  background-repeat: no-repeat;
+}
+body:before {
+  content: '';
+  position: fixed;
+  top: 1.2vh;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  background: #fff;
+}
+.breadcrumbs li {
+  display: inline;
+}
+.breadcrumbs li:not(:first-of-type):before {
+  content: ">";
+  margin: 0 0.3em;
+}
+header {
+  position: relative;
+}
+#prev-post,
+#next-post {
+  padding: 0 3em;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#prev-post {
+  margin: 0 auto 0 0;
+  left: 0;
+}
+#next-post {
+  margin: 0 0 0 auto;
+  right: 0;
+}
+#prev-post:after,
+#next-post:after {
+  content: '';
+  width: 1.5em;
+  height: 1.5em;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  display: block;
+}
+#prev-post:after {
+  transform: rotate(-135deg);
+}
+#next-post:after {
+  transform: rotate(45deg);
+}
+h1 {
+  height: 1.5em;
+  overflow: hidden;
+}
+h1:before {
+  white-space: pre;
+}
+#prev-post:hover + #next-post + h1:before,
+#prev-post:hover + h1:before {
+  content: attr(data-prev-post) "\A";
+}
+#next-post:hover + h1:before {
+  content: attr(data-next-post) "\A";
+}

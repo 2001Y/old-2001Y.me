@@ -1,4 +1,8 @@
 {{ define "head" }}
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//2001y.me">
+  <link rel="dns-prefetch" href="//i.ytimg.com">
+  <link rel="dns-prefetch" href="//youtube.com">
   <meta name="description" content="ページの概要が入ります。" >
   {{ with .Params.img }}
     <meta property="og:image" content="{{ . | absURL }}" />
@@ -38,31 +42,6 @@
 {{ end }}
 
 {{ define "main" }}
-<nav>
-  <ul id="header-category">
-    <li>
-      <a href="/blog">Home</a>
-    </li>
-    <li>
-      <a href="/categories/web">Web</a>
-    </li>
-    <li>
-      <a href="/categories/apple">Apple</a>
-    </li>
-    <li>
-      <a href="/categories/camera">Camera</a>
-    </li>
-    <li>
-      <a href="/categories/other">Other</a>
-    </li>
-    <!-- {{ range $name, $taxonomy := .Site.Taxonomies.categories }} -->
-      <!-- <li> -->
-        <!-- <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a> -->
-        <!-- {{ $taxonomy.Count }} -->
-      <!-- </li> -->
-    <!-- {{ end }} -->
-  </ul>
-</nav>
 {{ partial "breadcrumbs.html" . }}
 <nav>
   {{ with .Params.categories }}
@@ -107,11 +86,22 @@
   <h3>Latest Contents　<a href="/blog">more</a></h3>
   <ul>
     {{ range first 5 (where .Data.Pages "Type" "blog") }}
-    <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <time>{{ .Date.Format "2006/01/02" }}</time>
-    </li>
+    <a href="{{ .RelPermalink }}">
+      <li>
+        {{ .Title }}
+        <time>{{ .Date.Format "2006/01/02" }}</time>
+      </li>
+    </a>
     {{ end }}
   </ul>
 </aside>
+<script>
+  let f = document.querySelectorAll(".youtube");
+  for (let i = 0; i < f.length; ++i) {
+    f[i].onclick = function () {
+      let iframe = this.getAttribute("data-iframe");
+      this.innerHTML = iframe;
+    }
+  }
+</script>
 {{ end }}
