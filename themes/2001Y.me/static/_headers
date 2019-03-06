@@ -4,11 +4,6 @@
  Cache-Control: max-age=10000, immutable;
  Content-type: text/html; charset=utf-8
 
- Options +FollowSymLinks
- RewriteEngine on
- RewriteCond %{HTTP_HOST} ^www\.2001y\.me$
- RewriteRule ^(.*)$ https://2001y.me/$1 [R=301,L]
-
  RewriteEngine on
  RewriteRule ^(.*)/+$ $1 [R=301,L]
 
