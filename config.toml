@@ -9,9 +9,11 @@ disqusShortname= "2001y-me"
 hasCJKLanguage = true
 enableGitInfo = true
 Paginate = 10
+rssuri = "feed.xml"
 pygmentsUseClasses = true
 pygmentsCodefences = true
 pygmentsStyle = "monokai"
+
 
 [author]
   author = "2001Y"
