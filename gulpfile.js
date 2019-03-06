@@ -12,12 +12,9 @@ const png = require('imagemin-pngquant');
 const gif = require('imagemin-gifsicle');
 const responsive = require('gulp-responsive');
 
-const brotli = require('gulp-brotli');
-
 gulp.task('htmlmin', () =>
     gulp.src('public/*.html')
         .pipe(htmlmin())
-        // .pipe(brotli.compress())
         .pipe(gulp.dest('public'))
 );
 
