@@ -4,13 +4,6 @@
  Cache-Control: max-age=10000, immutable;
  Content-type: text/html; charset=utf-8
 
- RewriteEngine on
-
- RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
- RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
- RewriteCond %{HTTPS} !on
- RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
  Link: </barba.min.js>; rel=preload; as=script;
  Link: </fonts/oleo-script-700.eot>; rel=preload; as=font; type=application/vnd.ms-fontobject;
  Link: </fonts/oleo-script-700.woff2>; rel=preload; as=font; type=font/woff2;

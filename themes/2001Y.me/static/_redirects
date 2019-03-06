@@ -1,3 +1,6 @@
 http://2001y.me/*  https://2001y.me/:splat  301!
+http://www.2001y.me/*  https://2001y.me/:splat  301!
+https://www.2001y.me/*  https://2001y.me/:splat  301!
+
 http://2001y-blog.netlify.com/*  https://2001y.me/:splat  301!
 https://2001y-blog.netlify.com/*  https://2001y.me/:splat  301!
