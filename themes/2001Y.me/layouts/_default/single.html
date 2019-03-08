@@ -28,11 +28,11 @@
     <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
   {{ end }}
   <h1 {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
-  <a href="/">Portfolio</a>
   {{ if isset .Params "img" }}
     <style>
       header{
         background: url({{ .Params.img }}) no-repeat center/cover;
+        background-attachment: fixed;
       }
     </style>
   {{ end }}
@@ -40,28 +40,26 @@
   {{ if isset .Params "Lastmod" }}
     <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
   {{ end }}
+  <nav>
+    {{ with .Params.categories }}
+      <ul>
+        {{ range . }}
+          <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
+        {{ end }}
+      </ul>
+    {{ end }}
+    {{ with .Params.tags }}
+      <ul>
+        {{ range . }}
+          <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </nav>
 {{ end }}
 
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
-<nav>
-  {{ with .Params.categories }}
-    Category
-    <ul>
-      {{ range . }}
-        <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
-      {{ end }}
-    </ul>
-  {{ end }}
-  {{ with .Params.tags }}
-    Tag
-    <ul>
-      {{ range . }}
-        <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
-        {{ end }}
-    </ul>
-  {{ end }}
-</nav>
   {{ .Content }}
 <aside>
   <h3>Share</h3>

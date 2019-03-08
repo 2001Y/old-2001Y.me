@@ -1,16 +1,22 @@
 // Post
+
+body
+  counter-reset: number 0;
 .breadcrumbs li
   display inline
 
 .breadcrumbs li:not(:first-of-type):before
   content ">"
-  margin 0 .3em
+  margin 0 .3rem
 
 header
   position: relative;
 
+iframe
+  margin auto
+
 #prev-post,#next-post
-  padding 0 3em
+  padding 0 3rem
   position absolute
   top 0
   height 100%
@@ -27,8 +33,8 @@ header
 
 #prev-post:after,#next-post:after
   content:'';
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.5rem;
+  height: 1.5rem;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   display block
@@ -46,15 +52,39 @@ h1
 h1:before
   white-space: pre;
 
+h2
+  font-size 3.3rem
+  margin 3rem 0 2rem
+  text-align center
+
+h2:before
+  color rgba(51,51,51,.5)
+  counter-increment number 1
+  content counter(number) ".\A"
+
+h3
+  font-size 1.5rem
+
+h4
+  font-size 1.2rem
+
+h5,h6
+  font-size 1rem
+
 p
-  line-height 1.875
+  font-family 'M PLUS Rounded 1c', cursive
+  font-size 1.4rem
+  margin-top 1rem
+  line-height: 1.875;
+
 
 #prev-post:hover + #next-post + h1:before,#prev-post:hover + h1:before
   content: attr(data-prev-post)"\A";
 #next-post:hover + h1:before
   content: attr(data-next-post)"\A";
 #qr
-  width 5em
+  width 10rem
+  margin auto
   image-rendering: pixelated;
   image-rendering: -webkit-crisp-edges;
   image-rendering: -moz-crisp-edges;
@@ -62,10 +92,57 @@ p
 
 picture
   display block
-source,main img
+source,picture img,.youtube
   margin auto
   display block
   cursor pointer
+
+.youtube
+  font-size 2.4vmin
+  max-width 75%
+  max-height 40vmin
+  height 40vw
+  position relative
+  z-index 0
+  background-size: cover;
+  margin auto
+
+.youtube:before
+  content: attr(data-title);
+  text-align center
+  color #fff
+  position absolute
+  bottom 13vmin
+  left 0
+  width 100%
+  display block
+  z-index -1
+
+.youtube:after
+  content  url(/youtube.svg)
+  width 9vmin
+  padding 0 2vmin
+  position absolute
+  top calc(50% - 5vmin)
+  left calc(50% - 4.5vmin)
+  z-index -1
+
+.youtube:hover:after
+  content  url(/youtube-red.svg)
+
+.youtube iframe
+  z-index 1
+
+.blog-link
+  font-size 3rem
+  margin auto
+  width 75%
+  background #ebebeb
+  border solid
+  border-radius 2rem
+
+.blog-link img
+  width 10rem
 
 #lightbox
   width: 100vw;
@@ -94,10 +171,9 @@ source,main img
 
 .chroma
   font-family: monospace, monospace;
-  font-size .9em
   color: #333;
   width 100%
-  padding 1em
+  padding 1rem
   background-color: #f8f8f8;
   overflow: scroll;
 code
@@ -127,8 +203,8 @@ code
   width: 100%;
   background-color: rgba(161, 215, 229, .44)
 .ln, .lnt
-  margin-right: .4em;
-  padding: 0 .4em
+  margin-right: .4rem;
+  padding: 0 .4rem
 .kt
   color: #458
 .na

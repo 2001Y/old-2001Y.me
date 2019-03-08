@@ -1,7 +1,9 @@
 {{ $itemURL := .Get "url" }}
 {{ $gistJ := getJSON "https://powerful-sierra-79664.herokuapp.com/?url=" $itemURL }}
 
-<div>
-    <img id="qr" src="{{ $gistJ.image }}">
-    {{ $gistJ.title }}
+<div class="blog-link">
+    <a href="{{ $itemURL }}">
+        <img src="{{ $gistJ.image }}">
+        {{ $gistJ.title }}
+    </a>
 </div>
