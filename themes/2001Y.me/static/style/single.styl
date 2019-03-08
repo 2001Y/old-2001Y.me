@@ -51,10 +51,8 @@ p
 
 #prev-post:hover + #next-post + h1:before,#prev-post:hover + h1:before
   content: attr(data-prev-post)"\A";
-
 #next-post:hover + h1:before
   content: attr(data-next-post)"\A";
-
 #qr
   width 5em
   image-rendering: pixelated;
@@ -62,9 +60,12 @@ p
   image-rendering: -moz-crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
 
-picture,source,main img
+picture
+  display block
+source,main img
   margin auto
   display block
+  cursor pointer
 
 #lightbox
   width: 100vw;
@@ -82,18 +83,16 @@ picture,source,main img
   -webkit-backdrop-filter: blur(3px);
   z-index: 99999;
   transition .5s;
-
 .close
   opacity: 0;
   visibility: hidden;
-
 .open
   opacity: 1;
   visibility: visible;
 
 //Highlight
 
-.chroma {
+.chroma
   font-family: monospace, monospace;
   font-size .9em
   color: #333;
@@ -101,26 +100,21 @@ picture,source,main img
   padding 1em
   background-color: #f8f8f8;
   overflow: scroll;
-}
 code
   word-wrap normal
-.kc, .kd, .kn, .kp, .kr, .kt, .nc, .o, .ow {
+.kc, .kd, .kn, .kp, .kr, .kt, .nc, .o, .ow
   font-weight: 700
-}
-.cs, .ge {
+.cs, .ge
   font-style: italic
-}
-.err {
+.err
   color: #a61717;
   background-color: #e3d2d2
-}
-.lntd {
+.lntd
   vertical-align: top;
   padding: 0;
   margin: 0;
   border: 0
-}
-.lntable {
+.lntable
   border-spacing: 0;
   padding: 0;
   margin: 0;
@@ -128,99 +122,69 @@ code
   width: auto;
   overflow: auto;
   display: block
-}
-.hl {
+.hl
   display: block;
   width: 100%;
   background-color: rgba(161, 215, 229, .44)
-}
-.ln, .lnt {
+.ln, .lnt
   margin-right: .4em;
   padding: 0 .4em
-}
-.kt {
+.kt
   color: #458
-}
-.na {
+.na
   color: teal
-}
-.nb {
+.nb
   color: #999
-}
-.nc {
+.nc
   color: #458
-}
-.no {
+.no
   color: teal
-}
-.ni {
+.ni
   color: purple
-}
-.ne, .nf {
+.ne, .nf
   color: #900;
   font-weight: 700
-}
-.nn {
+.nn
   color: #555
-}
-.nt {
+.nt
   color: navy
-}
-.nv {
+.nv
   color: teal
-}
-.dl, .s, .s2, .sa, .sb, .sc, .sd, .se, .sh, .si, .sx {
+.dl, .s, .s2, .sa, .sb, .sc, .sd, .se, .sh, .si, .sx
   color: #b84
-}
-.sr {
+.sr
   color: olive
-}
-.s1, .ss {
+.s1, .ss
   color: #b84
-}
-.il, .m, .mb, .mf, .mh, .mi, .mo {
+.il, .m, .mb, .mf, .mh, .mi, .mo
   color: #099
-}
-.c, .c1, .ch, .cm {
+.c, .c1, .ch, .cm
   color: #998;
   font-style: italic
-}
-.cp, .cpf, .cs {
+.cp, .cpf, .cs
   color: #999;
   font-weight: 700
-}
-.gd {
+.gd
   color: #000;
   background-color: #fdd
-}
-.gr {
+.gr
   color: #a00
-}
-.gh {
+.gh
   color: #999
-}
-.gi {
+.gi
   color: #000;
   background-color: #dfd
-}
-.go {
+.go
   color: #888
-}
-.gp {
+.gp
   color: #555
-}
-.gs {
+.gs
   font-weight: 700
-}
-.gu {
+.gu
   color: #aaa
-}
-.gt {
+.gt
   color: #a00
-}
-.gl {
+.gl
   text-decoration: underline
-}
-.w {
+.w
   color: #bbb
-}
