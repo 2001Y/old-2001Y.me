@@ -15,3 +15,14 @@
  Link: </fonts/oleo-script-regular.woff>; rel=preload; as=font; type=font/woff;
  Link: </fonts/oleo-script-regular.ttf>; rel=preload; as=font; type=font/ttf;
  Link: </fonts/oleo-script-regular.svg>; rel=preload; as=font; type=image/svg+xml;
+
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-800.eott>; rel=preload; as=font; type=application/vnd.ms-fontobject;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-800.woff2>; rel=preload; as=font; type=font/woff2;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-800.woff>; rel=preload; as=font; type=font/woff;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-800.ttf>; rel=preload; as=font; type=font/ttf;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-800.svg>; rel=preload; as=font; type=image/svg+xml;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-regular.eott>; rel=preload; as=font; type=application/vnd.ms-fontobject;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-regular.woff2>; rel=preload; as=font; type=font/woff2;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-regular.woff>; rel=preload; as=font; type=font/woff;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-regular.ttf>; rel=preload; as=font; type=font/ttf;
+ Link: </fonts/m-plus-rounded-1c-v7-japanese-regular.svg>; rel=preload; as=font; type=image/svg+xml;
