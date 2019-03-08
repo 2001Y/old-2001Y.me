@@ -12,13 +12,13 @@ const png = require('imagemin-pngquant');
 const gif = require('imagemin-gifsicle');
 const responsive = require('gulp-responsive');
 
-gulp.task('htmlmin', () =>
+gulp.task('html', () =>
     gulp.src('public/*.html')
         .pipe(htmlmin())
         .pipe(gulp.dest('public'))
 );
 
-gulp.task('autoprefixer', () =>
+gulp.task('css', () =>
     gulp.src('themes/2001Y.me/static/style/*.styl')
         .pipe(stylus())
         .pipe(autoprefixer({
@@ -28,12 +28,12 @@ gulp.task('autoprefixer', () =>
         .pipe(gulp.dest('themes/2001Y.me/static/style'))
 );
 
-gulp.task('imgmin', () =>
+gulp.task('img', () =>
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
         .pipe(imagemin([
             jpeg({ quality: 80 }),
             png({ quality: '65-80' }),
-            gif(),
+            gif()
         ]))
         .pipe(responsive({
             '*.{png,jpeg,jpg,JPG,gif}': [{
@@ -56,5 +56,5 @@ gulp.task('imgmin', () =>
                 format: 'webp'
             },{}]
         }))
-        .pipe(gulp.dest('img'))
+        .pipe(gulp.dest('static/img'))
 );

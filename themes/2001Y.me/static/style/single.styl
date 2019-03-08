@@ -1,19 +1,4 @@
 // Post
-body{
-  background: linear-gradient(to right top, #a1d7e5 50%, #e6e6e6 50%);
-  background-size: 100% calc(100% - 100vh + 5px);
-  background-repeat: no-repeat;
-}
-
-body:before
-  content:'';
-  position: fixed;
-  top 1.2vh
-  bottom 0
-  width 100%
-  z-index -1
-  background #fff
-
 .breadcrumbs li
   display inline
 
@@ -61,8 +46,177 @@ h1
 h1:before
   white-space: pre;
 
+p
+  line-height 1.875
+
 #prev-post:hover + #next-post + h1:before,#prev-post:hover + h1:before
   content: attr(data-prev-post)"\A";
 
 #next-post:hover + h1:before
   content: attr(data-next-post)"\A";
+
+#qr
+  width 5em
+  image-rendering: pixelated;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+
+#lightbox
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(//rawgit.com/2001Y/YTech/master/load.svg) no-repeat center, rgba(250, 250, 250, .3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 99999;
+  transition .5s;
+
+.close
+  opacity: 0;
+  visibility: hidden;
+
+.open
+  opacity: 1;
+  visibility: visible;
+
+//Highlight
+
+.chroma {
+  font-family: monospace, monospace;
+  font-size .9em
+  color: #333;
+  width 100%
+  padding 1em
+  background-color: #f8f8f8;
+  overflow: scroll;
+}
+code
+  word-wrap normal
+.kc, .kd, .kn, .kp, .kr, .kt, .nc, .o, .ow {
+  font-weight: 700
+}
+.cs, .ge {
+  font-style: italic
+}
+.err {
+  color: #a61717;
+  background-color: #e3d2d2
+}
+.lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+.lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+  overflow: auto;
+  display: block
+}
+.hl {
+  display: block;
+  width: 100%;
+  background-color: rgba(161, 215, 229, .44)
+}
+.ln, .lnt {
+  margin-right: .4em;
+  padding: 0 .4em
+}
+.kt {
+  color: #458
+}
+.na {
+  color: teal
+}
+.nb {
+  color: #999
+}
+.nc {
+  color: #458
+}
+.no {
+  color: teal
+}
+.ni {
+  color: purple
+}
+.ne, .nf {
+  color: #900;
+  font-weight: 700
+}
+.nn {
+  color: #555
+}
+.nt {
+  color: navy
+}
+.nv {
+  color: teal
+}
+.dl, .s, .s2, .sa, .sb, .sc, .sd, .se, .sh, .si, .sx {
+  color: #b84
+}
+.sr {
+  color: olive
+}
+.s1, .ss {
+  color: #b84
+}
+.il, .m, .mb, .mf, .mh, .mi, .mo {
+  color: #099
+}
+.c, .c1, .ch, .cm {
+  color: #998;
+  font-style: italic
+}
+.cp, .cpf, .cs {
+  color: #999;
+  font-weight: 700
+}
+.gd {
+  color: #000;
+  background-color: #fdd
+}
+.gr {
+  color: #a00
+}
+.gh {
+  color: #999
+}
+.gi {
+  color: #000;
+  background-color: #dfd
+}
+.go {
+  color: #888
+}
+.gp {
+  color: #555
+}
+.gs {
+  font-weight: 700
+}
+.gu {
+  color: #aaa
+}
+.gt {
+  color: #a00
+}
+.gl {
+  text-decoration: underline
+}
+.w {
+  color: #bbb
+}

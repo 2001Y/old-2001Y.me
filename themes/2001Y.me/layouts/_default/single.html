@@ -1,6 +1,9 @@
 {{ define "head" }}
   <link rel="dns-prefetch" href="//i.ytimg.com">
   <link rel="dns-prefetch" href="//youtube.com">
+  <link rel="dns-prefetch" href="//unsplash.it">
+  <link rel="dns-prefetch" href="//picsum.photos">
+  <link rel="dns-prefetch" href="//chart.apis.google.com">
   <meta name="description" content="ページの概要が入ります。" >
   {{ with .Params.img }}
     <meta property="og:image" content="{{ . | absURL }}" />
@@ -71,7 +74,7 @@
     <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocker</li></a>
     <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メール</li></a>
   </ul>
-  <img src="//chart.apis.google.com/chart?cht=qr&chs=150x150&chof=gif&chl={{ .Permalink | safeJS }}" />
+
   {{ $related := .Site.RegularPages.Related . | first 10 }}
   {{ with $related }}
   <h3>Related Content　<a href="/blog">more</a></h3>
@@ -93,13 +96,39 @@
     {{ end }}
   </ul>
 </aside>
+<picture id="lightbox" class="close">
+  <source type="image/webp" id="lightbox-webp">
+  <img alt="lightbox" id="lightbox-jpeg">
+</picture>
 <script>
-  let f = document.querySelectorAll(".youtube");
-  for (let i = 0; i < f.length; ++i) {
-    f[i].onclick = function () {
+  let youtube = document.querySelectorAll(".youtube");
+  for (let i = 0; i < youtube.length; ++i) {
+    youtube[i].onclick = function () {
       let iframe = this.getAttribute("data-iframe");
       this.innerHTML = iframe;
     }
+  }
+
+  let img = document.querySelectorAll("picture");
+  let jpeg = document.getElementById("lightbox-jpeg");
+  let webp = document.getElementById("lightbox-webp");
+  let lightbox = document.getElementById("lightbox");
+
+  for (let i = 0; i < img.length; ++i) {
+    img[i].onclick = function () {
+      let original = this.getAttribute("deta-original");
+      let alt = this.getAttribute("deta-alt");
+      jpeg.src = original + ".jpeg";
+      webp.setAttribute("srcset", original + ".webp");
+      jpeg.alt = alt;
+      lightbox.classList.add('open');
+      lightbox.classList.remove('close');
+    }
+  }
+
+  lightbox.onclick = function () {
+    lightbox.classList.add('close');
+    lightbox.classList.remove('open');
   }
 </script>
 {{ end }}

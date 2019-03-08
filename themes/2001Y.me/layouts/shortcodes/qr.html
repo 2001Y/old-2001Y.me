@@ -1,0 +1,4 @@
+{{ $itemURL := .Get "url" }}
+{{ $gistJ := getJSON "https://api-ssl.bitly.com/v3/shorten?access_token=22d84b5a5e0a3015b57159fc4b72d66e268881b3&longUrl=" $itemURL }}
+
+<img id="qr" src="//chart.apis.google.com/chart?cht=qr&chs=21x21&chof=gif&chld=l|0&chl=21y.in/{{ $gistJ.data.hash }}">

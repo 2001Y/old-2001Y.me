@@ -13,6 +13,7 @@ rssuri = "feed.xml"
 pygmentsUseClasses = true
 pygmentsCodefences = true
 pygmentsStyle = "monokai"
+relativeURLs = true
 
 
 [author]
