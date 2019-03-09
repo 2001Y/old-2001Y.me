@@ -9,8 +9,28 @@ body
   content ">"
   margin 0 .3rem
 
+#thumbnail
+  position absolute
+  top 0
+  left 0
+  width 100vw
+  z-index -2
+
+#thumbnail source,#thumbnail img
+  width 100vw
+  height 33rem
+  background-size: cover;
+
 header
+  text-shadow rgba(0,0,0,.5) .5rem
   position: relative;
+  background linear-gradient(30deg, rgba(161, 229, 226, .7), rgba(161, 198, 229, .7))
+
+footer
+  background linear-gradient(30deg, #a1e5e2, #a1c6e5)
+
+main
+  background #fff
 
 iframe
   margin auto
@@ -82,6 +102,15 @@ p
   content: attr(data-prev-post)"\A";
 #next-post:hover + h1:before
   content: attr(data-next-post)"\A";
+
+#post-meta
+  display flex
+  justify-content center
+  align-items center
+
+#post-meta li
+  margin-left 1rem
+
 #qr
   width 10rem
   margin auto
@@ -92,7 +121,8 @@ p
 
 picture
   display block
-source,picture img,.youtube
+
+main source,main picture img,.youtube
   margin auto
   display block
   cursor pointer
@@ -121,7 +151,6 @@ source,picture img,.youtube
 .youtube:after
   content  url(/youtube.svg)
   width 9vmin
-  padding 0 2vmin
   position absolute
   top calc(50% - 5vmin)
   left calc(50% - 4.5vmin)
@@ -160,6 +189,7 @@ source,picture img,.youtube
   -webkit-backdrop-filter: blur(3px);
   z-index: 99999;
   transition .5s;
+
 .close
   opacity: 0;
   visibility: hidden;

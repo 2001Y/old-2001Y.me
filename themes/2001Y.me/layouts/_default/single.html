@@ -27,35 +27,30 @@
   {{ if .NextInSection }}
     <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
   {{ end }}
-  <h1 {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
-  {{ if isset .Params "img" }}
-    <style>
-      header{
-        background: url({{ .Params.img }}) no-repeat center/cover;
-        background-attachment: fixed;
-      }
-    </style>
-  {{ end }}
-  <time>公開：{{ .Date.Format "2006/01/02" }}</time>
-  {{ if isset .Params "Lastmod" }}
-    <time>更新：{{ .Lastmod.Format "2006/01/02" }}</time>
-  {{ end }}
-  <nav>
-    {{ with .Params.categories }}
+  <h1 id="{{ range .Params.categories }}{{ . }}{{ end }}" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
+  <div id="post-meta">
+    <time>{{ .Date.Format "2006/01/02" }}</time>
+      {{ with .Params.categories }}
       <ul>
         {{ range . }}
-          <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
+        <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
         {{ end }}
       </ul>
-    {{ end }}
-    {{ with .Params.tags }}
+      {{ end }}
+      {{ with .Params.tags }}
       <ul>
         {{ range . }}
-          <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
+        <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
         {{ end }}
       </ul>
-    {{ end }}
-  </nav>
+      {{ end }}
+  </div>
+{{ if isset .Params "img" }}
+<picture id="thumbnail">
+  <source type="image/webp" style="background:url('/img/{{ .Params.img }}-700.webp') no-repeat border-box left top/contain fixed content-box;"/>
+  <img style="background:url('/img/{{ .Params.img }}-700.jpeg') no-repeat top/contain fixed;"/>
+</picture>
+{{ end }}
 {{ end }}
 
 {{ define "main" }}
@@ -107,7 +102,7 @@
     }
   }
 
-  let img = document.querySelectorAll("picture");
+  let img = document.querySelectorAll("main picture");
   let jpeg = document.getElementById("lightbox-jpeg");
   let webp = document.getElementById("lightbox-webp");
   let lightbox = document.getElementById("lightbox");
