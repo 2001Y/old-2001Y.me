@@ -11,14 +11,13 @@
 {{ end }}
 
 {{ define "style" }}
-  {{ readFile "/themes/2001Y.me/static/style/blog.css" | safeCSS }}
   {{ readFile "/themes/2001Y.me/static/style/list.css" | safeCSS }}
 {{ end }}
 
 {{ define "header" }}
   <section id="title">
     <h1>2001Y</h1>
-    <svg viewBox="0 0 10 8.7" fill="#fff" width="9em" id="logo">
+    <svg viewBox="0 0 10 8.7" fill="#fff" width="12rem" id="logo">
         <path d="m10 0h-2l-4 6.9 1 1.8"/>
         <path d="m7 0h-7l3.5 6.1"/>
     </svg>

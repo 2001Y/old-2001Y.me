@@ -12,11 +12,10 @@
 {{ end }}
 
 {{ define "title" }}
-  {{ .Title }} | {{ .Site.Title }}
+  {{ .Title }} | {{ .Site.Title }}k
 {{ end }}
 
 {{ define "style" }}
-  {{ readFile "/themes/2001Y.me/static/style/blog.css" | safeCSS }}
   {{ readFile "/themes/2001Y.me/static/style/single.css" | safeCSS }}
 {{ end }}
 
@@ -46,10 +45,15 @@
       {{ end }}
   </div>
 {{ if isset .Params "img" }}
-<picture id="thumbnail">
-  <source type="image/webp" style="background:url('/img/{{ .Params.img }}-700.webp') no-repeat border-box left top/contain fixed content-box;"/>
-  <img style="background:url('/img/{{ .Params.img }}-700.jpeg') no-repeat top/contain fixed;"/>
-</picture>
+<!--<picture id="thumbnail">-->
+  <!--<source type="image/webp" style="background:url('/img/{{ .Params.img }}.webp'),url('/img/{{ .Params.img }}.jpeg') no-repeat center/cover fixed;"/>-->
+  <!--<img style="background:url('/img/{{ .Params.img }}.jpeg') no-repeat center/cover fixed"/>-->
+<!--</picture>-->
+<style>
+  header {
+    background:linear-gradient(30deg, rgba(161, 229, 226, .7), rgba(161, 198, 229, .7)),url('/img/{{ .Params.img }}.jpeg') no-repeat center/cover fixed;
+  }
+</style>
 {{ end }}
 {{ end }}
 
@@ -111,8 +115,8 @@
     img[i].onclick = function () {
       let original = this.getAttribute("deta-original");
       let alt = this.getAttribute("deta-alt");
-      jpeg.src = original + ".jpeg";
       webp.setAttribute("srcset", original + ".webp");
+      jpeg.src = original + ".jpeg";
       jpeg.alt = alt;
       lightbox.classList.add('open');
       lightbox.classList.remove('close');

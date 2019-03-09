@@ -26,12 +26,15 @@
       {{ end }}
     </title>
     <style>
-      {{ block "style" . }}
-      {{ end }}
+      {{ readFile "/themes/2001Y.me/static/style/blog.css" | safeCSS }}
     </style>
   </head>
   <body id="load">
     <section class="load">
+      <style>
+        {{ block "style" . }}
+        {{ end }}
+      </style>
       <header>
         {{ block "header" . }}
         {{ end }}
@@ -76,7 +79,6 @@
     Barba.Pjax.init();
     Barba.Prefetch.init();
     Barba.Dispatcher.on('newPageReady', function() {
-      location.href = "#top";
       ga('send', 'pageview', window.location.pathname.replace(/^\/?/, '/') + window.location.search);
     });
   </script>
