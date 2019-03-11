@@ -3,7 +3,7 @@
  Accept-Encoding: gzip, deflate, br
  Cache-Control: max-age=10000, immutable;
  Content-type: text/html; charset=utf-8
- Content-Security-Policy: frame-ancestors 'self'
+ Content-Security-Policy: default-src https:
  X-Frame-Options: DENY
  X-XSS-Protection: 1; mode=block
  X-Content-Type-Options: nosniff
