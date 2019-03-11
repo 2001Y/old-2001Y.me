@@ -44,6 +44,9 @@ gulp.task('img', () =>
                 width: 700,
                 rename: { suffix: '-700' }
             },{
+                width: 100,
+                rename: { suffix: '-100' }
+            },{
                 format: 'webp',
                 width: 500,
                 height: 500,

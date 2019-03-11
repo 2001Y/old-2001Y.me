@@ -71,6 +71,14 @@ main img,main video
   max-width 75%
   max-height 75%
 
+img {
+  transition: filter 0.3s;
+}
+
+img.lazyestload {
+  width: 100%;
+  filter: blur(8px);
+}
 
 body
   font-family 'Oleo Script','M PLUS Rounded 1c', cursive

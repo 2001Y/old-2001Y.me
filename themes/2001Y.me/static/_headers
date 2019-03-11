@@ -3,8 +3,14 @@
  Accept-Encoding: gzip, deflate, br
  Cache-Control: max-age=10000, immutable;
  Content-type: text/html; charset=utf-8
+ Content-Security-Policy: frame-ancestors 'self'
+ X-Frame-Options: DENY
+ X-XSS-Protection: 1; mode=block
+ X-Content-Type-Options: nosniff
 
  Link: </barba.min.js>; rel=preload; as=script;
+ Link: </lazyestload.js>; rel=preload; as=script;
+
  Link: </fonts/oleo-script-700.eot>; rel=preload; as=font; type=application/vnd.ms-fontobject;
  Link: </fonts/oleo-script-700.woff2>; rel=preload; as=font; type=font/woff2;
  Link: </fonts/oleo-script-700.woff>; rel=preload; as=font; type=font/woff;

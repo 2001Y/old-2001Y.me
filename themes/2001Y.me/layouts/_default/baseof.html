@@ -68,6 +68,7 @@
         2019 © 2001Y
       </footer>
     </section>
+    <script src="/lazyestload.js"></script>
   </body>
   <script src="/barba.min.js"></script>
   <script>
@@ -79,7 +80,7 @@
     Barba.Pjax.init();
     Barba.Prefetch.init();
     Barba.Dispatcher.on('newPageReady', function() {
-      ga('send', 'pageview', window.location.pathname.replace(/^\/?/, '/') + window.location.search);
+      // ga('send', 'pageview', window.location.pathname.replace(/^\/?/, '/') + window.location.search);
     });
   </script>
   <!--<script async src="//www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>-->
