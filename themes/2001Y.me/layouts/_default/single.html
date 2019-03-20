@@ -26,9 +26,9 @@
   {{ if .NextInSection }}
     <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
   {{ end }}
-  <h1 id="{{ range .Params.categories }}{{ . }}{{ end }}" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
+  <h1 itemprop="name" id="{{ range .Params.categories }}{{ . }}{{ end }}" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
   <div id="post-meta">
-    <time>{{ .Date.Format "2006/01/02" }}</time>
+    <time itemprop="datePublished">{{ .Date.Format "2006/01/02" }}</time>
       {{ with .Params.categories }}
       <ul>
         {{ range . }}
