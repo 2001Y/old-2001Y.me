@@ -5,6 +5,7 @@
   <link rel="dns-prefetch" href="//picsum.photos">
   <link rel="dns-prefetch" href="//chart.apis.google.com">
   <meta name="description" content="ページの概要が入ります。" >
+  <meta itemprop="image" content="/img/{{ .Params.img }}-700.jpeg">
   {{ with .Params.img }}
     <meta property="og:image" content="{{ . | absURL }}" />
     <meta name="twitter:image" content="{{ . | absURL }}" />
@@ -28,7 +29,7 @@
   {{ end }}
   <h1 itemprop="name" id="{{ range .Params.categories }}{{ . }}{{ end }}" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
   <div id="post-meta">
-    <time itemprop="datePublished">{{ .Date.Format "2006/01/02" }}</time>
+    <time itemprop="datePublished" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006/01/02" }}</time>
       {{ with .Params.categories }}
       <ul>
         {{ range . }}
@@ -59,7 +60,16 @@
 
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
+
+<section itemprop="articleBody">
   {{ .Content }}
+</section>
+
+<!--<section id="my-comment">-->
+  <!--<img src="" id="myicon">-->
+  <!--<span>2001Y</span>-->
+<!--</section>-->
+
 <aside>
   <h3>Share</h3>
   <ul id="share-box">
