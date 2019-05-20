@@ -8,7 +8,7 @@ tags = [
     "hugo",
     "toml"
 ]
-img = "IMGP4000"
+img = "GR000943"
 +++
 
 Sample Code
