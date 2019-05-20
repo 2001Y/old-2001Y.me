@@ -3,17 +3,17 @@
 body
   counter-reset: number 0;
 
-.breadcrumbs
+#breadcrumbs
   color #a9a9a9
 
-.breadcrumbs,#main-section
+#breadcrumbs,#main-section
   max-width 850px
   margin auto
 
-.breadcrumbs li
+#breadcrumbs li
   display inline
 
-.breadcrumbs li:not(:first-of-type):before
+#breadcrumbs li:not(:first-of-type):before
   content ">"
   margin 0 .3rem
 
@@ -34,7 +34,6 @@ header:after,header:before
 
 header:before
   filter blur(3px)
-  margin -3px 0
 
 main
   background #fff
@@ -74,14 +73,30 @@ iframe
 
 #prev-post:hover + #next-post + h1:before,#prev-post:hover + h1:before
   content: attr(data-prev-post)"\A";
+
 #next-post:hover + h1:before
   content: attr(data-next-post)"\A";
 
-#prev-post:hover + #next-post + h1 + #post-meta,#prev-post:hover + h1 + #post-meta
-  opacity 0
+//#prev-post:hover + #next-post + #title + #description, #prev-post:hover + #title + #description ,#next-post:hover + #title + #description
+//  opacity 0
 
-#next-post:hover + h1 + #post-meta
-  opacity 0
+#next-post:hover + #title,#prev-post:hover + #title,#prev-post:hover + #next-post + #title
+  animation fadeInOut 1s ease 0s 1 forwards
+
+#next-post:hover + #title + #description,#prev-post:hover + #title + #description,#prev-post:hover + #next-post + #title + #description,#next-post:hover + #title + #description + #post-meta,#prev-post:hover + #title + #description + #post-meta,#prev-post:hover + #next-post + #title + #description + #post-meta
+  animation fadeOut .3s ease 0s 1 forwards
+
+@keyframes fadeInOut
+  from
+    opacity: 0;
+  to
+    opacity 1
+
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity 0
 
 h1
   height 1.5em
@@ -115,12 +130,21 @@ p
   margin-top 1rem
   line-height: 1.875;
 
+#description,#post-meta,#main-section,#breadcrumbs
+  opacity 0
+
+#description
+  animation: fadeIn 1.5s ease .2s 1 forwards;
+
 #post-meta
   display flex
   justify-content center
   align-items center
-  animation: fadeIn 1.5s ease 0s 1 normal;
   transition .3s
+  animation fadeIn 1.5s ease .4s 1 forwards
+
+#main-section,#breadcrumbs
+  animation: fadeIn 1.5s ease .6s 1 forwards;
 
 #post-meta li
   margin-left 1rem
