@@ -100,17 +100,18 @@ body
   -moz-osx-font-smoothing unset
 
 main
-  width 100%
-  max-width 850px
+  width 100vw
   margin 0 auto
   padding .5rem
+
+#main-section
   animation: fadeIn 1.5s ease 0s 1 normal;
 
 @keyframes fadeIn
   from
     opacity: 0;
   to
-    opacity: 1;
+    opacity 1
 
 header,footer
   font-size 2rem
@@ -119,12 +120,15 @@ header,footer
   background linear-gradient(30deg, #a1e5e2, #a1c6e5)
 
 header
-  padding 8rem 0
-  margin-bottom: 2rem
+  margin-bottom 2rem
+  height 24rem
 
 footer
   padding 5rem 0
   margin-top: 2rem
+
+#title,#post-meta
+  animation: fadeIn 1.5s ease 0s 1 normal;
 
 #parapara-nav a:not(.attention)
   font-size 2rem
@@ -137,7 +141,7 @@ footer
 #parapara-nav a:last-of-type
   transform rotateX(45deg)
 
-#title,#header-category ul, #pagination, #post-nav, footer
+#title,#header-category ul, #pagination, #post-nav, footer, header
   display flex
   justify-content center
   align-items center
@@ -167,10 +171,11 @@ footer
   margin-left: 1rem;
 
 @media (prefers-color-scheme dark)
-  body
+  body,main
     background-color #1B1C1C
     color #f3f3f3
-
+  #main-section a
+    color #f3f3f3
 
 @font-face
   font-family 'M PLUS Rounded 1c'

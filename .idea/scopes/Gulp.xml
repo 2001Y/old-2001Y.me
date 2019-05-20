@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Gulp" pattern="file:gulpfile.js" />
+</component>

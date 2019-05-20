@@ -31,13 +31,15 @@
 {{ end}}
 
 {{ define "main" }}
-  <section id="blog-list">
+  <section id="main-section">
     {{ range .Paginator.Pages }}
       <article>
         <a href='{{ .Permalink }}'>
           {{ if and (.Params.img) (ne .Params.img "") }}
-            <img src="//unsplash.it/600/500/?random" alt="{{ .Title }}" class="post-img"/>
-            <!--{{ .Params.img }}-->
+          <picture>
+            <source type="image/webp" srcset="/img/{{ .Params.img }}-500-tmb.webp" class="post-img"/>
+            <img src="/img/{{ .Params.img }}-500-tmb.jpeg" alt="{{ .Title }}" class="post-img" />
+          </picture>
           {{ end }}
           <div class="post-color {{ range .Params.categories }}{{ . }}{{ end }}"></div>
           <div class="post-data">
@@ -45,7 +47,7 @@
               {{ .Title }}
             </span>
             <time class="post-time">
-              {{ .Date.Format "Mon, Jan 2, 2006" }}
+              {{ .Date.Format "2006/01/02" }}
             </time>
             <span class="post-category">
               {{ if .Params.categories }}{{ range .Params.categories }}{{ . }}{{ end }}{{ end }}

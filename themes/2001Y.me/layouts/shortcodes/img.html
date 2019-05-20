@@ -1,4 +1,4 @@
 <picture deta-original="/img/{{ index .Params 0 }}" deta-alt="{{ index .Params 1 }}">
-    <source type="image/webp" srcset="/img/{{ index .Params 0 }}-100.webp" data-srcset="/img/{{ index .Params 0 }}-700.webp" />
-    <img class="lazyestload" src="/img/{{ index .Params 0 }}-100.jpeg" data-src="/img/{{ index .Params 0 }}-700.jpeg" alt="{{ index .Params 1 }}" />
+    <source type="image/webp" srcset="/img/{{ index .Params 0 }}-100.webp" data-srcset="/img/{{ index .Params 0 }}.webp" />
+    <img class="lazyestload" src="/img/{{ index .Params 0 }}-100.jpeg" data-src="/img/{{ index .Params 0 }}.jpeg" alt="{{ index .Params 1 }}" />
 </picture>

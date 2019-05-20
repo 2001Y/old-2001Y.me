@@ -4,12 +4,13 @@
   <link rel="dns-prefetch" href="//unsplash.it">
   <link rel="dns-prefetch" href="//picsum.photos">
   <link rel="dns-prefetch" href="//chart.apis.google.com">
-  <meta name="description" content="ページの概要が入ります。" >
+  <meta name="description" content="{{ .Description }}" >
   <meta itemprop="image" content="/img/{{ .Params.img }}-700.jpeg">
   {{ with .Params.img }}
     <meta property="og:image" content="{{ . | absURL }}" />
     <meta name="twitter:image" content="{{ . | absURL }}" />
   {{ end }}
+  <base target="_blank">
 {{ end }}
 
 {{ define "title" }}
@@ -27,7 +28,8 @@
   {{ if .NextInSection }}
     <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
   {{ end }}
-  <h1 itemprop="name" id="{{ range .Params.categories }}{{ . }}{{ end }}" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
+  <h1 itemprop="name" id="title" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
+  <span>{{ .Description }}</span>
   <div id="post-meta">
     <time itemprop="datePublished" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006/01/02" }}</time>
       {{ with .Params.categories }}
@@ -46,13 +48,15 @@
       {{ end }}
   </div>
 {{ if isset .Params "img" }}
-<!--<picture id="thumbnail">-->
-  <!--<source type="image/webp" style="background:url('/img/{{ .Params.img }}.webp'),url('/img/{{ .Params.img }}.jpeg') no-repeat center/cover fixed;"/>-->
-  <!--<img style="background:url('/img/{{ .Params.img }}.jpeg') no-repeat center/cover fixed"/>-->
-<!--</picture>-->
 <style>
-  header {
-    background:linear-gradient(30deg, rgba(161, 229, 226, .7), rgba(161, 198, 229, .7)),url('/img/{{ .Params.img }}-700.jpeg') no-repeat center/cover fixed;
+  header:after {
+    background: linear-gradient(30deg, rgb(161, 229, 226), rgb(161, 198, 229));
+    z-index: -2;
+  }
+  header:before {
+    background: linear-gradient(30deg, rgba(161, 229, 226, .7), rgba(161, 198, 229, .7)),url('/img/{{ .Params.img }}-700.jpeg') no-repeat center/cover;
+    z-index: -1;
+    animation: fadeIn 1.5s ease 0s 1 normal;
   }
 </style>
 {{ end }}
@@ -61,48 +65,48 @@
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
 
-<section itemprop="articleBody">
-  {{ .Content }}
-</section>
-
-<!--<section id="my-comment">-->
-  <!--<img src="" id="myicon">-->
-  <!--<span>2001Y</span>-->
-<!--</section>-->
-
-<aside>
-  <h3>Share</h3>
-  <ul id="share-box">
-    <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink | safeJS }}" target="_blank"><li>Facebook</li></a>
-    <a href="//twitter.com/intent/tweet?text={{ .Title | safeJS }}%20%7C%20{{ .Site.Title }}%20{{ .Permalink | safeJS }}%20%40{{ .Site.Params.twitter }}" target="_blank"><li>Twitterで共有</li></a>
-    <a href="//b.hatena.ne.jp/entry/{{ .Permalink | safeJS }}" target="_blank"><li>はてなブックマーク</li></a>
-    <a href="//line.me/R/msg/text/?{{ .Permalink | safeJS }}" target="_blank"><li>LINE</li></a>
-    <a href="//cloud.feedly.com/#subscription/feed/{{ .Permalink | safeJS }}" target="_blank"><li>Feedly</li></a>
-    <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocker</li></a>
-    <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メール</li></a>
-  </ul>
-
-  {{ $related := .Site.RegularPages.Related . | first 10 }}
-  {{ with $related }}
-  <h3>Related Content　<a href="/blog">more</a></h3>
-  <ul>
-    {{ range . }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
+<section id="main-section" itemprop="articleBody">
+  {{ if isset .Params "img" }}
+  <picture deta-original="/img/{{ .Params.img }}" deta-alt="{{ .Params.img }}" id="thumbnail">
+    <source type="image/webp" srcset="/img/{{ .Params.img }}-100.webp" data-srcset="/img/{{ .Params.img }}.webp" />
+    <img class="lazyestload" src="/img/{{ .Params.img }}-100.jpeg" data-src="/img/{{ .Params.img }}.jpeg" alt="{{ .Params.img }}" />
+  </picture>
   {{ end }}
-  <h3>Latest Contents　<a href="/blog">more</a></h3>
-  <ul>
-    {{ range first 5 (where .Data.Pages "Type" "blog") }}
-    <a href="{{ .RelPermalink }}">
-      <li>
-        {{ .Title }}
-        <time>{{ .Date.Format "2006/01/02" }}</time>
-      </li>
-    </a>
+  {{ .Content }}
+  <aside>
+    <h3>Share</h3>
+    <ul id="share-box">
+      <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink | safeJS }}" target="_blank"><li>Facebook</li></a>
+      <a href="//twitter.com/intent/tweet?text={{ .Title | safeJS }}%20%7C%20{{ .Site.Title }}%20{{ .Permalink | safeJS }}%20%40{{ .Site.Params.twitter }}" target="_blank"><li>Twitterで共有</li></a>
+      <a href="//b.hatena.ne.jp/entry/{{ .Permalink | safeJS }}" target="_blank"><li>はてなブックマーク</li></a>
+      <a href="//line.me/R/msg/text/?{{ .Permalink | safeJS }}" target="_blank"><li>LINE</li></a>
+      <a href="//cloud.feedly.com/#subscription/feed/{{ .Permalink | safeJS }}" target="_blank"><li>Feedly</li></a>
+      <a href="//getpocket.com/edit?url={{ .Permalink | safeJS }}" target="_blank"><li>Pocker</li></a>
+      <a href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | safeURL }}" target="_blank"><li>メール</li></a>
+    </ul>
+
+    {{ $related := .Site.RegularPages.Related . | first 10 }}
+    {{ with $related }}
+    <h3>Related Content　<a href="/blog">more</a></h3>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
     {{ end }}
-  </ul>
-</aside>
+    <h3>Latest Contents　<a href="/blog">more</a></h3>
+    <ul>
+      {{ range first 5 (where .Data.Pages "Type" "blog") }}
+      <a href="{{ .RelPermalink }}">
+        <li>
+          {{ .Title }}
+          <time>{{ .Date.Format "2006/01/02" }}</time>
+        </li>
+      </a>
+      {{ end }}
+    </ul>
+  </aside>
+</section>
 <picture id="lightbox" class="close">
   <source type="image/webp" id="lightbox-webp">
   <img alt="lightbox" id="lightbox-jpeg">

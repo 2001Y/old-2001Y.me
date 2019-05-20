@@ -2,6 +2,14 @@
 
 body
   counter-reset: number 0;
+
+.breadcrumbs
+  color #a9a9a9
+
+.breadcrumbs,#main-section
+  max-width 850px
+  margin auto
+
 .breadcrumbs li
   display inline
 
@@ -10,7 +18,23 @@ body
   margin 0 .3rem
 
 header
+  background: none;
   position: relative;
+  flex-direction: column;
+  flex-wrap: wrap
+
+header:after,header:before
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 24rem;
+
+header:before
+  filter blur(3px)
+  margin -3px 0
 
 main
   background #fff
@@ -48,6 +72,17 @@ iframe
 #next-post:after
   transform: rotate(45deg);
 
+#prev-post:hover + #next-post + h1:before,#prev-post:hover + h1:before
+  content: attr(data-prev-post)"\A";
+#next-post:hover + h1:before
+  content: attr(data-next-post)"\A";
+
+#prev-post:hover + #next-post + h1 + #post-meta,#prev-post:hover + h1 + #post-meta
+  opacity 0
+
+#next-post:hover + h1 + #post-meta
+  opacity 0
+
 h1
   height 1.5em
   overflow hidden
@@ -80,16 +115,12 @@ p
   margin-top 1rem
   line-height: 1.875;
 
-
-#prev-post:hover + #next-post + h1:before,#prev-post:hover + h1:before
-  content: attr(data-prev-post)"\A";
-#next-post:hover + h1:before
-  content: attr(data-next-post)"\A";
-
 #post-meta
   display flex
   justify-content center
   align-items center
+  animation: fadeIn 1.5s ease 0s 1 normal;
+  transition .3s
 
 #post-meta li
   margin-left 1rem
@@ -159,9 +190,6 @@ main source,main picture img,.youtube
 #lightbox
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -172,6 +200,34 @@ main source,main picture img,.youtube
   -webkit-backdrop-filter: blur(3px);
   z-index: 99999;
   transition .5s;
+  cursor pointer
+
+#lightbox img,#lightbox source
+  margin 0
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition .5s;
+
+@media screen and (max-width: 870px)
+  #lightbox img,#lightbox source
+    min-width 100vw
+
+#lightbox:after,#lightbox:before
+  content ""
+  width 4rem
+  border-top solid #000 .2em
+  position: fixed;
+  top 3rem
+  right 1rem;
+  opacity .3
+
+#lightbox:after
+  transform rotate(45deg)
+
+#lightbox:before
+  transform rotate(-45deg)
 
 .close
   opacity: 0;

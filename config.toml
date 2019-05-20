@@ -35,3 +35,6 @@ relativeURLs = true
   lastmod = [":git", "lastmod", "date", "publishDate"]
   publishDate = ["publishDate", "date"]
   expiryDate = ["expiryDate"]
+
+[blackfriday]
+  hrefTargetBlank = true
