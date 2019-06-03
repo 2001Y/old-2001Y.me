@@ -1,11 +1,12 @@
 +++
 title = "はじまり"
-description = "Hugoでテーマからブログを作る"
-date = "2019-05-18"
+description = "Hugoで0からブログを作る"
+date = "2019-06-03"
 categories = ["Other"]
 tags = [ "Hugo","Blog" ]
 img = "hello-tmb"
 draft = true
+
 +++
 
 はじめまして！2001Y（[@Y2001090T](//twitter.com/Y20010920T)）です。
