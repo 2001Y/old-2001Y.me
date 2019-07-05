@@ -38,7 +38,7 @@
           {{ if and (.Params.img) (ne .Params.img "") }}
           <picture>
             <source type="image/webp" srcset="/img/{{ .Params.img }}-500-tmb.webp" class="post-img"/>
-            <img src="/img/{{ .Params.img }}-500-tmb.jpeg" alt="{{ .Title }}" class="post-img" />
+            <img src="/img/{{ .Params.img }}.jpeg?nf_resize=fit&h=500&w=600" alt="{{ .Title }}" class="post-img" />
           </picture>
           {{ end }}
           <div class="post-color {{ range .Params.categories }}{{ . }}{{ end }}"></div>

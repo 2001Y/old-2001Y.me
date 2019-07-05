@@ -5,6 +5,7 @@ date = "2019-06-03"
 categories = ["Other"]
 tags = [ "Hugo","Netlify","Blog" ]
 img = "hello-tmb"
+draft = true
 
 +++
 
@@ -36,7 +37,6 @@ ServiceWorkerによるPjaxを自作してみたかったのですが、今のと
 NetlifyもCDNが使われているはずなのですが、日本ではCloudflareの方が早かったです...
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/Cloudflare?ref_src=twsrc%5Etfw">@Cloudflare</a> vs <a href="https://twitter.com/Netlify?ref_src=twsrc%5Etfw">@Netlify</a> at Japan<br><br>日本ではサーバーは <a href="https://twitter.com/hashtag/Netlify?src=hash&amp;ref_src=twsrc%5Etfw">#Netlify</a> を使っていても、CDNは <a href="https://twitter.com/hashtag/Cloudflare?src=hash&amp;ref_src=twsrc%5Etfw">#Cloudflare</a> を使った方が高速（多分） <a href="https://t.co/hD2vPDPr1O">pic.twitter.com/hD2vPDPr1O</a></p>&mdash; 2001Y (@Y20010920T) <a href="https://twitter.com/Y20010920T/status/1071364550283354112?ref_src=twsrc%5Etfw">December 8, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 ## 最後に
 
 AMPの対応もできてないしスマホ表示なども全然完成していないので、少しづつ調整していければと思います。あと、barba.jsのv2が出てるみたいで...びっくり...

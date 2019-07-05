@@ -55,16 +55,6 @@ gulp.task('img', () =>
                 rename: { suffix: '-500-tmb' }
             },{
                 format: 'webp'
-            },{
-                width: 700,
-                rename: { suffix: '-700' }
-            },{
-                width: 100,
-                rename: { suffix: '-100' }
-            },{
-                width: 600,
-                height: 500,
-                rename: { suffix: '-500-tmb' }
             },{}]
         }))
         .pipe(gulp.dest('static/img'))
