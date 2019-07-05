@@ -58,6 +58,17 @@
     z-index: -1;
     animation: fadeIn 1.5s ease 0s 1 normal;
   }
+  {{ if in .Params.categories "Other" }}
+    h2 {
+      color: #a1c6e5;
+    }
+    h2:before {
+      border-color: #a1e5e2 transparent transparent transparent;
+    }
+    h2:after {
+      border-color: #a1c6e5 transparent transparent transparent;
+    }
+  {{end}}
 </style>
 {{ end }}
 {{ end }}

@@ -105,18 +105,40 @@ h1
 h1:before
   white-space: pre;
 
-h2
-  font-size 3.3rem
+h2 {
+  font-size 3rem
   margin 3rem 0 2rem
-  text-align center
+  position: relative;
+  padding-left: 4rem;
+  font-weight: 700;
+}
+h2::before,h2::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 2rem 1.2rem 0 1.2rem
+  position:absolute;
+}
+h2::before {
+  border-color: #007bff transparent transparent transparent;
+  top: 1.5rem;
+  left: 0rem;
+}
+h2::after {
+  border-color: #000 transparent transparent transparent;
+  top: 1rem;
+  left: 1rem;
+}
 
-h2:before
+h3
+  font-size 2rem
+  margin-top 2rem
+
+h3:before
   color rgba(51,51,51,.5)
   counter-increment number 1
   content counter(number) ".\A"
-
-h3
-  font-size 1.5rem
 
 h4
   font-size 1.2rem
@@ -227,6 +249,8 @@ main source,main picture img,.youtube
   cursor pointer
 
 #lightbox img,#lightbox source
+  max-width: 1000px;
+  max-height 100vh
   margin 0
   position: fixed;
   top: 50%;
@@ -259,6 +283,9 @@ main source,main picture img,.youtube
 .open
   opacity: 1;
   visibility: visible;
+
+.twitter-tweet
+  margin auto
 
 //Highlight
 

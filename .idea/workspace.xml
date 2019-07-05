@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl" mnemonic="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="89956195-f41c-4cbd-8416-31888ccc9b0a" name="Default Changelist" comment="" />
+    <list default="true" id="89956195-f41c-4cbd-8416-31888ccc9b0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/hello.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/hello.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/2001Y.me/layouts/_default/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/2001Y.me/layouts/_default/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/2001Y.me/static/style/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/2001Y.me/static/style/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/2001Y.me/static/style/blog.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/2001Y.me/static/style/blog.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/2001Y.me/static/style/single.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/2001Y.me/static/style/single.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,46 +26,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/blog/hello.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="98">
-                <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="12" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/_default/baseof.html">
+        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/blog.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+            <state relative-caret-position="2702">
+              <caret line="193" column="62" selection-start-line="193" selection-start-column="62" selection-end-line="193" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/blog/another-post2.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="280">
-                <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/blog/hello2.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="56">
-                <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="20" />
-              </first_editor>
-              <second_editor />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -62,44 +46,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/_default/single.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="868">
+              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/partials/breadcrumbs.html">
+        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/_default/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/blog.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="173" column="19" lean-forward="true" selection-start-line="173" selection-start-column="19" selection-end-line="173" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/list.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="728">
+              <caret line="52" column="96" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -115,10 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>33rem</find>
-      <find>5rem</find>
-      <find>0-100.webp</find>
-      <find>lightbox</find>
       <find>main picture img</find>
       <find>me</find>
       <find>head</find>
@@ -135,7 +88,6 @@
       <find>color #f3f3f3</find>
       <find>3d</find>
       <find>#main-section a</find>
-      <find>img</find>
       <find>prev-post:</find>
       <find>#ti</find>
       <find>#parapara-nav</find>
@@ -144,9 +96,16 @@
       <find>@</find>
       <find>#tit</find>
       <find>#post-meta</find>
+      <find>h3</find>
+      <find>#</find>
+      <find>img</find>
+      <find>#lightbox:after</find>
+      <find>h2</find>
+      <find>800</find>
     </findStrings>
     <replaceStrings>
       <replace>main-section</replace>
+      <replace>700</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -157,9 +116,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/content/blog/another-post2.md" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -173,15 +129,15 @@
         <option value="$PROJECT_DIR$/themes/2001Y.me/layouts/shortcodes/img.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/themes/2001Y.me/layouts/_default/list.html" />
-        <option value="$PROJECT_DIR$/themes/2001Y.me/layouts/_default/single.html" />
         <option value="$PROJECT_DIR$/themes/2001Y.me/static/style/list.styl" />
         <option value="$PROJECT_DIR$/themes/2001Y.me/layouts/partials/breadcrumbs.html" />
-        <option value="$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl" />
         <option value="$PROJECT_DIR$/content/blog/hello.md" />
         <option value="$PROJECT_DIR$/content/blog/hello2.md" />
         <option value="$PROJECT_DIR$/themes/2001Y.me/layouts/_default/baseof.html" />
         <option value="$PROJECT_DIR$/content/blog/another-post2.md" />
+        <option value="$PROJECT_DIR$/themes/2001Y.me/layouts/_default/single.html" />
         <option value="$PROJECT_DIR$/themes/2001Y.me/static/style/blog.styl" />
+        <option value="$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl" />
       </list>
     </option>
   </component>
@@ -204,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,40 +170,7 @@
             <path>
               <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
               <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
-              <item name="archetypes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="contact" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
@@ -260,6 +182,21 @@
               <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="2001Y.me" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="_default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2001Y.me" type="b2602c69:ProjectViewProjectNode" />
@@ -280,6 +217,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +317,11 @@
       <workItem from="1558174062523" duration="35000" />
       <workItem from="1558174173264" duration="24839000" />
       <workItem from="1559092912901" duration="1947000" />
-      <workItem from="1559554787099" duration="459000" />
+      <workItem from="1559554787099" duration="5539000" />
+      <workItem from="1559995408760" duration="359000" />
+      <workItem from="1561897711801" duration="581000" />
+      <workItem from="1562130029584" duration="2221000" />
+      <workItem from="1562330957082" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="BugFix">
       <created>1552152692124</created>
@@ -546,7 +488,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44361000" />
+    <option name="totallyTimeSpent" value="52605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="18" y="27" width="1192" height="802" extended-state="0" />
@@ -677,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/_default/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/shortcodes/qr.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -759,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/list.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -773,17 +701,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/_default/single.html">
+    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/blog.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="2702">
+          <caret line="193" column="62" selection-start-line="193" selection-start-column="62" selection-end-line="193" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/blog.styl">
+    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/_default/single.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="173" column="19" lean-forward="true" selection-start-line="173" selection-start-column="19" selection-end-line="173" selection-end-column="19" />
+        <state relative-caret-position="868">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/layouts/_default/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="52" column="96" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/2001Y.me/static/style/single.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>

@@ -9,20 +9,18 @@ html,body,h1,h2,h3,h4,h5,h6,a,p,span,em,small,strong,sub,sup,mark,del,ins,strike
   box-sizing border-box
   background-repeat no-repeat
 
-:root {
-  line-sizing: normal;
-}
+:root
+  line-sizing normal
 
-/* CJK言語（中国語、日本語、韓国語）での句読点の間隔を変更。 */
-:root {
+/* CJK言語（中国語、日本語、韓国語）での句読点の間隔を変更 */
+:root
   text-spacing: trim-start allow-end trim-adjacent ideograph-alpha ideograph-numeric;
-}
 
-html {
+html
   font-size: 62.5%
-}
+
 body
-  font-size: 1.4rem;
+  font-size: 1.4rem
 
 h1
   font-size 4rem
@@ -68,12 +66,11 @@ ol,ul
   list-style-type none
 
 main img,main video
-  max-width 75%
-  max-height 75%
+  max-width 80%
+  max-height 75vh
 
-img {
+img
   transition: filter 0.3s;
-}
 
 img.lazyestload {
   width: 100%;
@@ -93,7 +90,7 @@ body
   overflow-wrap break-word
   word-break normal
   font-kerning: normal;
-  font-feature-settings: "palt";
+  font-feature-settings: "palt" 1;
   font-variant-ligatures: no-common-ligatures;
   -webkit-text-font-size-adjust 100%
   -webkit-font-smoothing subpixel-antialiased
@@ -186,6 +183,19 @@ footer
   url('/fonts/m-plus-rounded-1c-v7-japanese-regular.woff') format('woff'), /* Modern Browsers */
   url('/fonts/m-plus-rounded-1c-v7-japanese-regular.ttf') format('truetype'), /* Safari, Android, iOS */
   url('/fonts/m-plus-rounded-1c-v7-japanese-regular.svg#MPLUSRounded1c') format('svg') /* Legacy iOS */
+
+@font-face
+  font-family 'M PLUS Rounded 1c'
+  font-display swap
+  font-style normal
+  font-weight 700
+  src url('/fonts/m-plus-rounded-1c-v7-japanese-700.eot') /* IE9 Compat Modes */
+  src local('M PLUS Rounded 1c ExtraBold'), local('MPLUSRounded1c-ExtraBold'),
+  url('/fonts/m-plus-rounded-1c-v7-japanese-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/m-plus-rounded-1c-v7-japanese-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/m-plus-rounded-1c-v7-japanese-700.woff') format('woff'), /* Modern Browsers */
+  url('/fonts/m-plus-rounded-1c-v7-japanese-700.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/m-plus-rounded-1c-v7-japanese-700.svg#MPLUSRounded1c') format('svg') /* Legacy iOS */
 
 @font-face
   font-family 'M PLUS Rounded 1c'

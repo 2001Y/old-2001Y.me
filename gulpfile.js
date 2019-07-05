@@ -1,16 +1,18 @@
-const gulp = require("gulp");
+const gulp         = require("gulp");
+const cache        = require('gulp-cached');
+const changed      = require('gulp-changed');
 
-const htmlmin = require('gulp-htmlmin');
+const htmlmin      = require('gulp-htmlmin');
 
-const stylus = require('gulp-stylus');
-const cssmin = require('gulp-clean-css');
+const stylus       = require('gulp-stylus');
+const cssmin       = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 
-const imagemin = require('gulp-imagemin');
-const jpeg = require('imagemin-mozjpeg');
-const png = require('imagemin-pngquant');
-const gif = require('imagemin-gifsicle');
-const responsive = require('gulp-responsive');
+const imagemin     = require('gulp-imagemin');
+const jpeg         = require('imagemin-mozjpeg');
+const png          = require('imagemin-pngquant');
+const gif          = require('imagemin-gifsicle');
+const responsive   = require('gulp-responsive');
 
 gulp.task('html', () =>
     gulp.src('public/*.html')
@@ -20,6 +22,7 @@ gulp.task('html', () =>
 
 gulp.task('css', () =>
     gulp.src('themes/2001Y.me/static/style/*.styl')
+        .pipe(cache( 'css' ))
         .pipe(stylus())
         .pipe(autoprefixer({
             stats: ['> 3% in JP']
@@ -30,6 +33,7 @@ gulp.task('css', () =>
 
 gulp.task('img', () =>
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
+        .pipe(changed( 'static/img' ))
         .pipe(imagemin([
             jpeg({ quality: 80 }),
             png({ quality: '65-80' }),
