@@ -36,7 +36,7 @@ gulp.task('img', () =>
         .pipe(changed( 'static/img' ))
         .pipe(imagemin([
             jpeg({ quality: 80 }),
-            png({ quality: '65-80' }),
+            png(),
             gif()
         ]))
         .pipe(responsive({
