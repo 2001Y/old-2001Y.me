@@ -1,15 +1,10 @@
-+++
-title = "テスト"
-description = "ここから始まるヒューゴ"
-date = "2018-12-10"
-categories = [ "Other"]
-tags = [
-    "example",
-    "hugo",
-    "toml"
-]
-img = "aa"
-+++
+---
+title: テストだよ〜！
+date: 2018-12-09T15:00:00.000Z
+categories:
+  - Other
+img: /img/capture-1.png
+---
 
 Sample Code
 -
