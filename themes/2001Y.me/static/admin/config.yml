@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: 2001Y/2001Y.me
+  branch: master
+
+  publish_mode: editorial_workflow
+
+  media_folder: "/images"
+  media_library: "/static/img"
+  public_folder: "/public"
+
+  collections:
+  - label: "Blog" # 管理画面のサイドバーで使う
+    name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
+    folder: "content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    create: true # 新しいページを作ることを許可する
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
+    fields: # ページ作成画面で使う。Front Matterの値を書く
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "カテゴリ", name: "categories", widget: "list", required: false}
+      - {label: "タグ", name: "tags", widget: "list", required: false}
+      - {label: "サムネイル画像", name: "img", widget: "image"}
+      - {label: "本文", name: "body", widget: "markdown"}
