@@ -33,6 +33,7 @@ gulp.task('css', () =>
 
 gulp.task('img', () =>
     gulp.src('images/*.{png,jpeg,jpg,JPG,gif}')
+        .pipe(changed( 'static/img' ))
         .pipe(imagemin([
             jpeg({ quality: 80 }),
             png(),
