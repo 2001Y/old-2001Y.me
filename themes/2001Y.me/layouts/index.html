@@ -73,7 +73,7 @@
           <a href="{{ .RelPermalink }}">
             <li>
               {{ if and (.Params.img) (ne .Params.img "") }}
-                <img src="{{ .Params.img }}" alt="thumbnail"/>
+                <img src="/img/{{ .Params.img }}.jpeg" alt="thumbnail"/>
               {{ end }}
             </li>
           </a>
