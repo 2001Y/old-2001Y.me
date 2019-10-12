@@ -40,12 +40,20 @@ gulp.task('img', () =>
             gif()
         ]))
         .pipe(responsive({
-            '*.{png,jpeg,jpg,JPG,gif}': [{
+            '*.{png,jpeg,jpg,JPG,gif}': [{},{
+                format: 'webp'
+            },{
                 format: 'webp',
                 width: 700,
                 rename: { suffix: '-700' }
             },{
+                width: 700,
+                rename: { suffix: '-700' }
+            },{
                 format: 'webp',
+                width: 100,
+                rename: { suffix: '-100' }
+            },{
                 width: 100,
                 rename: { suffix: '-100' }
             },{
@@ -54,8 +62,10 @@ gulp.task('img', () =>
                 height: 500,
                 rename: { suffix: '-500-tmb' }
             },{
-                format: 'webp'
-            },{}]
+                width: 600,
+                height: 500,
+                rename: { suffix: '-500-tmb' }
+            }]
         }))
         .pipe(gulp.dest('static/img'))
 );
