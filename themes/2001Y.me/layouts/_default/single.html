@@ -47,7 +47,25 @@
       </ul>
       {{ end }}
   </div>
-{{ if isset .Params "img" }}
+
+{{ $light := "#c3c3c3" }}
+{{ $dim := "#bbbbbb" }}
+
+{{ range .Site.Pages}}
+{{ if (in .Params.categories "Web") }}
+  {{ $dim := "#a1c6e5" }}
+  {{ $light := "#a1d7e5" }}
+{{end}}
+{{ if (in .Params.categories "Apple") }}
+  {{ $dim := "#e6a2d8" }}
+  {{ $light := "#e3a2e6" }}
+{{end}}
+{{ if (in .Params.categories "Camera") }}
+  {{ $dim := "#d8e6a2" }}
+  {{ $light := "#e6e3a2" }}
+{{end}}
+{{end}}
+
 <style>
   header:after {
     background: linear-gradient(30deg, rgb(161, 229, 226), rgb(161, 198, 229));
@@ -58,19 +76,33 @@
     z-index: -1;
     animation: fadeIn 1.5s ease 0s 1 normal;
   }
-  {{ if in .Params.categories "Other" }}
-    h2 {
-      color: #a1c6e5;
-    }
-    h2:before {
-      border-color: #a1e5e2 transparent transparent transparent;
-    }
-    h2:after {
-      border-color: #a1c6e5 transparent transparent transparent;
-    }
-  {{end}}
+  h2 {
+    color: {{ $dim }};
+    font-size: 3rem;
+    margin: 3rem 0 2rem;
+    position: relative;
+    padding-left: 4rem;
+    font-weight: 700;
+  }
+  h2::before,h2::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2rem 1.2rem 0 1.2rem;
+    position:absolute;
+  }
+  h2::before {
+    border-color: {{ $light }} transparent transparent transparent;
+    top: 1.5rem;
+    left: 0rem;
+  }
+  h2::after {
+    border-color: {{ $dim }} transparent transparent transparent;
+    top: 1rem;
+    left: 1rem;
+  }
 </style>
-{{ end }}
 {{ end }}
 
 {{ define "main" }}
@@ -131,15 +163,15 @@
     }
   }
 
-  let img = document.querySelectorAll("main picture");
-  let jpeg = document.getElementById("lightbox-jpeg");
-  let webp = document.getElementById("lightbox-webp");
-  let lightbox = document.getElementById("lightbox");
+  let img = document.querySelectorAll("main picture"),
+      jpeg = document.getElementById("lightbox-jpeg"),
+      webp = document.getElementById("lightbox-webp"),
+      lightbox = document.getElementById("lightbox");
 
   for (let i = 0; i < img.length; ++i) {
     img[i].onclick = function () {
-      let original = this.getAttribute("deta-original");
-      let alt = this.getAttribute("deta-alt");
+      let original = this.getAttribute("deta-original"),
+          alt = this.getAttribute("deta-alt");
       webp.setAttribute("srcset", original + ".webp");
       jpeg.src = original + ".jpeg";
       jpeg.alt = alt;
@@ -147,8 +179,9 @@
       lightbox.classList.remove('close');
     }
   }
-
-  lightbox.onclick = function () {
+  lightbox.addEventListener('scroll', OpenClose);
+  lightbox.onclick = OpenClose;
+  function OpenClose() {
     lightbox.classList.add('close');
     lightbox.classList.remove('open');
   }
