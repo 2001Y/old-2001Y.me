@@ -8,6 +8,7 @@
  X-XSS-Protection: 1; mode=block
  X-Content-Type-Options: nosniff
 
+ Link: </ga-lite.min.js>; rel=preload; as=script;
  Link: </barba.min.js>; rel=preload; as=script;
  Link: </lazyestload.js>; rel=preload; as=script;
 
