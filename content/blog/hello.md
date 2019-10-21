@@ -5,7 +5,6 @@ date = "2019-10-22"
 categories = ["Other"]
 tags = [ "Blog","HTML","CSS","JavaScript","Hugo","Netlify"]
 img = "hello-tmb"
-
 +++
 
 ## Hello, World!

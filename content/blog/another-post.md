@@ -10,7 +10,6 @@ tags = [
 ]
 img = "IMGP4000"
 draft = true
-
 +++
 
 Sample Code
