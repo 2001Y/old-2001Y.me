@@ -47,7 +47,6 @@
 {{ $light := "#c3c3c3" }}
 {{ $dim := "#bbbbbb" }}
 
-{{ range .Site.Pages}}
 {{ if (in .Params.categories "Web") }}
   {{ $dim := "#a1c6e5" }}
   {{ $light := "#a1d7e5" }}
@@ -59,7 +58,6 @@
 {{ if (in .Params.categories "Camera") }}
   {{ $dim := "#d8e6a2" }}
   {{ $light := "#e6e3a2" }}
-{{end}}
 {{end}}
 
 <style>
@@ -104,7 +102,7 @@
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
 
-<section id="main-section" itemprop="articleBody">
+<section id="main-section {{ range .Params.categories }}{{ . }}{{ end }}" itemprop="articleBody">
   {{ if isset .Params "img" }}
   <picture deta-original="/img/{{ .Params.img }}" deta-alt="{{ .Params.img }}" id="thumbnail">
     <source type="image/webp" srcset="/img/{{ .Params.img }}-100.webp" data-srcset="/img/{{ .Params.img }}.webp" />
