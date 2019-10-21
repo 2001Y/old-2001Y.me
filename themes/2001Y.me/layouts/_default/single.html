@@ -1,10 +1,17 @@
 {{ define "head" }}
   <meta name="description" content="{{ .Description }}" >
-  {{ with .Params.img }}
-    <meta itemprop="image" content="/img/{{ . }}-700.jpeg">
-    <meta property="og:image" content="/img/{{ . }}-700.jpeg" />
-    <meta name="twitter:image" content="/img/{{ . }}-700.jpeg" />
-  {{ end }}
+  <meta itemprop="image" content="https://2001y.me/img/{{ .Params.img }}-700.jpeg">
+
+  <meta property="fb:app_id" content="app">
+  <meta property="og:site_name" content="2001Y.me">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:image" content="https://2001y.me/img/{{ .Params.img }}-700.jpeg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Y20010920T">
+  <meta name="twitter:image" content="https://2001y.me/img/{{ .Params.img }}-700.jpeg">
+
   <base target="_blank">
 {{ end }}
 
