@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-  {{ with .Site.LanguageCode }}
-    <html lang="{{ . }}" itemscope itemtype="http://schema.org/Blog">
-      {{ else }}
-    <html itemscope itemtype="http://schema.org/Blog">
-  {{ end }}
+  <html itemscope itemtype="http://schema.org/Blog">
   <head>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta name="robots" content="index,follow,archive">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//2001y.me">
-    <!--<link rel="canonical" href="ページURL" />-->
-    <!--<link rel="amphtml" href="AMPのページURL" />-->
     <meta itemprop="author" content="2001Y">
-    <meta name="theme-color" content="#a1d7e5">
     <link rel="icon" href="/svg.svg" type="image/vnd.microsoft.icon">
     <link rel="shortcut icon" href="/svg.svg" type="image/vnd.microsoft.icon">
     {{ range .AlternativeOutputFormats -}}

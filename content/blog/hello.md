@@ -1,16 +1,15 @@
-+++
-title = "はじまり"
-description = "Hugoで1からブログを作る。"
-date = "2019-10-22"
-categories = ["Other"]
-tags = [ "Blog","HTML","CSS","JavaScript","Hugo","Netlify"]
-img = "hello-tmb"
-draft = false
-+++
+---
+title: はじまり
+description: Hugoで1からブログを作る。
+date: 2019-10-22T01:56:57+09:00
+img: hello-tmb
+categories: ["Other"]
+tags: ["Blog","HTML","CSS","JavaScript","Hugo","Netlify"]
+---
 
 ## Hello, World!
 
-初めまして？、[2001Y](https://twitter.com/y20010920t) です。
+初めまして（？）[2001Y](https://twitter.com/y20010920t) です。
 
 新たにブログを作り直しました！
 どうにも納得のいくブログを作れず、1から作り直すことにしました。以前のブログについては全てまとめる予定です。
@@ -45,9 +44,7 @@ GoogleChromeが対応したWebPを採用しました！
 
 Netlifyは無料で使えるにも関わらず、SSLも使え、非常に高速化に取り組んでいます。同時読み込みが可能なHTTPS2や、ServerPushにも対応し、WebFontなどの大きなファイルも扱いやすくなりました。
 
-NetlifyはCDNも内蔵していますが、日本ではCloudflareの方が早かったので今の所、Cloudflareを使用しています。
-
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/Cloudflare?ref_src=twsrc%5Etfw">@Cloudflare</a> vs <a href="https://twitter.com/Netlify?ref_src=twsrc%5Etfw">@Netlify</a> at Japan<br><br>日本ではサーバーは <a href="https://twitter.com/hashtag/Netlify?src=hash&amp;ref_src=twsrc%5Etfw">#Netlify</a> を使っていても、CDNは <a href="https://twitter.com/hashtag/Cloudflare?src=hash&amp;ref_src=twsrc%5Etfw">#Cloudflare</a> を使った方が高速（多分） <a href="https://t.co/hD2vPDPr1O">pic.twitter.com/hD2vPDPr1O</a></p>&mdash; 2001Y (@Y20010920T) <a href="https://twitter.com/Y20010920T/status/1071364550283354112?ref_src=twsrc%5Etfw">December 8, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+NetlifyはCDNも内蔵していますが、日本では[Cloudflareの方が早かった](https://twitter.com/Y20010920T/status/1071364550283354112)ので今の所、Cloudflareを使用しています。
 
 その他、Hugoを選んだ理由など、それぞれの導入方法も含め、メモのために記事にしていきたいと思います。
 

@@ -1,10 +1,9 @@
 {{ define "head" }}
-  <link rel="dns-prefetch" href="//chart.apis.google.com">
   <meta name="description" content="{{ .Description }}" >
-  <meta itemprop="image" content="/img/{{ .Params.img }}.jpeg">
   {{ with .Params.img }}
-    <meta property="og:image" content="{{ . | absURL }}" />
-    <meta name="twitter:image" content="{{ . | absURL }}" />
+    <meta itemprop="image" content="/img/{{ . }}-700.jpeg">
+    <meta property="og:image" content="/img/{{ . }}-700.jpeg" />
+    <meta name="twitter:image" content="/img/{{ . }}-700.jpeg" />
   {{ end }}
   <base target="_blank">
 {{ end }}
@@ -66,7 +65,7 @@
     z-index: -2;
   }
   header:before {
-    background: linear-gradient(30deg, rgba(161, 229, 226, .7), rgba(161, 198, 229, .7)),url('/img/{{ .Params.img }}.jpeg?nf_resize=fit&h=9999&w=700') no-repeat center/cover;
+    background: linear-gradient(30deg, rgba(161, 229, 226, .7), rgba(161, 198, 229, .7)),url('/img/{{ .Params.img }}-700.jpeg') no-repeat center/cover;
     z-index: -1;
     animation: fadeIn 1.5s ease 0s 1 normal;
   }
@@ -102,11 +101,11 @@
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
 
-<section id="main-section {{ range .Params.categories }}{{ . }}{{ end }}" itemprop="articleBody">
+<section id="main-section" itemprop="articleBody">
   {{ if isset .Params "img" }}
   <picture deta-original="/img/{{ .Params.img }}" deta-alt="{{ .Params.img }}" id="thumbnail">
-    <source type="image/webp" srcset="/img/{{ .Params.img }}-100.webp" data-srcset="/img/{{ .Params.img }}.webp" />
-    <img class="lazyestload" src="/img/{{ .Params.img }}.jpeg?nf_resize=fit&h=9999&w=100" data-src="/img/{{ .Params.img }}.jpeg" alt="{{ .Params.img }}" />
+    <source type="image/webp" srcset="/img/{{ .Params.img }}-100.webp" data-srcset="/img/{{ .Params.img }}-700.webp" />
+    <img class="lazyestload" src="/img/{{ .Params.img }}-100.jpeg" data-src="/img/{{ .Params.img }}-700.jpeg" alt="{{ .Params.img }}" />
   </picture>
   {{ end }}
   {{ .Content }}
