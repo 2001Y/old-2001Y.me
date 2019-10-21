@@ -1,11 +1,12 @@
----
-title:はじまり
-description:Hugoで1からブログを作る。
-date:2019-10-22
-categories:["Other"]
-tags:["Blog","HTML","CSS","JavaScript","Hugo","Netlify"]
-img:hello-tmb
----
++++
+title = "はじまり"
+description = "Hugoで1からブログを作る。"
+date = "2019-10-22"
+categories = ["Other"]
+tags = [ "Blog","HTML","CSS","JavaScript","Hugo","Netlify"]
+img = "hello-tmb"
+draft = false
++++
 
 ## Hello, World!
 
