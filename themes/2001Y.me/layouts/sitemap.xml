@@ -14,9 +14,9 @@
       {{ end }}
       {{ if .IsTranslated }}
         {{ range .Translations }}
-          <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+          <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="https://{{ .Permalink }}" />
         {{ end }}
-        <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+        <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="https://{{ .Permalink }}" />
       {{ end }}
     </url>
   {{ end }}
