@@ -4,7 +4,7 @@ description: Hugoで1からブログを作る。
 date: 2019-10-22T01:56:57+09:00
 img: hello-tmb
 categories: ["Other"]
-tags: ["Blog","HTML","CSS","JavaScript","Hugo","Netlify"]
+tags: ["HTML","CSS","JavaScript","Hugo","Netlify"]
 ---
 
 ## Hello, World!

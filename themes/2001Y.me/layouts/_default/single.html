@@ -26,80 +26,47 @@
 {{ end }}
 
 {{ define "header" }}
-  {{ if .PrevInSection }}
-    <a rel="prev" href="{{ .PrevInSection.RelPermalink }}" id="prev-post"></a>
-  {{ end }}
-  {{ if .NextInSection }}
-    <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
-  {{ end }}
-  <h1 itemprop="name" id="title" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
-  <span id="description">{{ .Description }}</span>
-  <div id="post-meta">
-    <time itemprop="datePublished" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006/01/02" }}</time>
-      {{ with .Params.categories }}
-      <ul>
-        {{ range . }}
-        <a href="/categories/{{ . }}/" id="{{ . }}"><li>{{ . }}</li></a>
-        {{ end }}
-      </ul>
-      {{ end }}
-      {{ with .Params.tags }}
-      <ul>
-        {{ range . }}
-        <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
-        {{ end }}
-      </ul>
-      {{ end }}
-  </div>
-
-<style>
-  header:after {
-    background: linear-gradient(30deg, rgb(161, 229, 226), rgb(161, 198, 229));
-    z-index: -2;
-  }
-  header:before {
-    background: linear-gradient(30deg, rgba(161, 229, 226, .7), rgba(161, 198, 229, .7)),url('/img/{{ .Params.img }}-700.jpeg') no-repeat center/cover;
-    z-index: -1;
-    animation: fadeIn 1.5s ease 0s 1 normal;
-  }
-  h2 {
-    color: var(--dim);
-    font-size: 3rem;
-    margin: 3rem 0 2rem;
-    position: relative;
-    padding-left: 4rem;
-    font-weight: 700;
-  }
-  h2::before,h2::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 2rem 1.2rem 0 1.2rem;
-    position:absolute;
-  }
-  h2::before {
-    border-color: var(--light) transparent transparent transparent;
-    top: 1.5rem;
-    left: 0rem;
-  }
-  h2::after {
-    border-color: var(--dim) transparent transparent transparent;
-    top: 1rem;
-    left: 1rem;
-  }
-</style>
+  <header class="{{ with .Params.categories }}{{ range . }}{{ . }}{{ end }}{{ end }}">
+    {{ if .PrevInSection }}
+      <a rel="prev" href="{{ .PrevInSection.RelPermalink }}" id="prev-post"></a>
+    {{ end }}
+    {{ if .NextInSection }}
+      <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
+    {{ end }}
+    <h1 itemprop="name" id="title" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
+    <span id="description">{{ .Description }}</span>
+    <style>
+      header:after {
+        background: url('/img/{{ .Params.img }}-700.jpeg') no-repeat center/cover;
+      }
+    </style>
+  </header>
 {{ end }}
 
 {{ define "main" }}
-<main id="{{ with .Params.categories }}{{ range . }}{{ . }}{{ end }}{{ end }}">
-{{ partial "breadcrumbs.html" . }}
+<main class="{{ with .Params.categories }}{{ range . }}{{ . }}{{ end }}{{ end }}">
+  <div id="post-meta">
+    {{ partial "breadcrumbs.html" . }}
+      <div>
+        {{ with .Params.tags }}
+          <ul id="post-tag">
+            {{ range . }}
+              <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
+            {{ end }}
+          </ul>
+        {{ end }}
+        ・
+        <time itemprop="datePublished" datetime='{{ .Date.Format "2006-01-02" }}'>
+          {{ .Date.Format "2006/01/02" }}
+        </time>
+    </div>
+  </div>
 
 <section id="main-section" itemprop="articleBody">
   {{ if isset .Params "img" }}
-  <picture deta-original="/img/{{ .Params.img }}" deta-alt="{{ .Params.img }}" id="thumbnail">
-    <source type="image/webp" srcset="/img/{{ .Params.img }}-100.webp" data-srcset="/img/{{ .Params.img }}-700.webp" />
-    <img class="lazyestload" src="/img/{{ .Params.img }}-100.jpeg" data-src="/img/{{ .Params.img }}-700.jpeg" alt="{{ .Params.img }}" />
+  <picture id="thumbnail" deta-original="/img/{{ .Params.img }}" deta-alt="{{ .Params.img }}">
+    <source type="image/webp" srcset="/img/{{ .Params.img }}-700.webp" />
+    <img src="/img/{{ .Params.img }}-700.jpeg" alt="{{ .Params.img }}" />
   </picture>
   {{ end }}
   {{ .Content }}
