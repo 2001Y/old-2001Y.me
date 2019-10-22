@@ -96,12 +96,6 @@ body
   -webkit-font-smoothing subpixel-antialiased
   -moz-osx-font-smoothing unset
 
-main
-  font-size 
-  width 100vw
-  margin 0 auto
-  padding .5rem
-
 @keyframes fadeIn
   from
     opacity: 0;
@@ -115,12 +109,20 @@ header,footer
   background linear-gradient(30deg, #a1e5e2, #a1c6e5)
 
 header
-  margin-bottom 2rem
   height 24rem
+  
+main
+  font-size 
+  width 100vw
+  margin auto
+  padding 2em
+  
+@media screen and (max-width: 870px)
+  main
+    padding 1em
 
 footer
   padding 5rem 0
-  margin-top: 2rem
 
 #title
   animation: fadeIn 1.5s ease 0s 1 normal;

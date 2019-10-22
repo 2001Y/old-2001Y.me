@@ -32,30 +32,9 @@
       <header>
         {{ block "header" . }}
         {{ end }}
-      </header>
-      <main>
-        <nav id="header-category">
-          <ul>
-            <li>
-              <a href="/blog">Home</a>
-            </li>
-            <li>
-              <a href="/categories/web">Web</a>
-            </li>
-            <li>
-              <a href="/categories/apple">Apple</a>
-            </li>
-            <li>
-              <a href="/categories/camera">Camera</a>
-            </li>
-            <li>
-              <a href="/categories/other">Other</a>
-            </li>
-          </ul>
-        </nav>
-        {{ block "main" . }}
-        {{ end }}
-      </main>
+      </header>      
+      {{ block "main" . }}
+      {{ end }}
       <footer>
         {{ block "footer" . }}
         {{ end }}

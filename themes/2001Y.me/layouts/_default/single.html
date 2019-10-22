@@ -7,7 +7,7 @@
   <meta property="og:description" content="{{ .Description }}">
   <meta property="og:image" content="https://2001y.me/img/{{ .Params.img }}-700.jpeg">
   <meta property="og:url" content="https:{{ $.Permalink }}">
-  <meta property="og:type" content="article">q
+  <meta property="og:type" content="article">
 
   <meta property="fb:app_id" content="app">
 
@@ -39,7 +39,7 @@
       {{ with .Params.categories }}
       <ul>
         {{ range . }}
-        <a href="/categories/{{ . }}/"><li>{{ . }}</li></a>
+        <a href="/categories/{{ . }}/" id="{{ . }}"><li>{{ . }}</li></a>
         {{ end }}
       </ul>
       {{ end }}
@@ -52,22 +52,6 @@
       {{ end }}
   </div>
 
-{{ $light := "#c3c3c3" }}
-{{ $dim := "#bbbbbb" }}
-
-{{ if (in .Params.categories "Web") }}
-  {{ $dim := "#a1c6e5" }}
-  {{ $light := "#a1d7e5" }}
-{{end}}
-{{ if (in .Params.categories "Apple") }}
-  {{ $dim := "#e6a2d8" }}
-  {{ $light := "#e3a2e6" }}
-{{end}}
-{{ if (in .Params.categories "Camera") }}
-  {{ $dim := "#d8e6a2" }}
-  {{ $light := "#e6e3a2" }}
-{{end}}
-
 <style>
   header:after {
     background: linear-gradient(30deg, rgb(161, 229, 226), rgb(161, 198, 229));
@@ -79,7 +63,7 @@
     animation: fadeIn 1.5s ease 0s 1 normal;
   }
   h2 {
-    color: {{ $dim }};
+    color: var(--dim);
     font-size: 3rem;
     margin: 3rem 0 2rem;
     position: relative;
@@ -95,12 +79,12 @@
     position:absolute;
   }
   h2::before {
-    border-color: {{ $light }} transparent transparent transparent;
+    border-color: var(--light) transparent transparent transparent;
     top: 1.5rem;
     left: 0rem;
   }
   h2::after {
-    border-color: {{ $dim }} transparent transparent transparent;
+    border-color: var(--dim) transparent transparent transparent;
     top: 1rem;
     left: 1rem;
   }
@@ -108,6 +92,7 @@
 {{ end }}
 
 {{ define "main" }}
+<main id="{{ with .Params.categories }}{{ range . }}{{ . }}{{ end }}{{ end }}">
 {{ partial "breadcrumbs.html" . }}
 
 <section id="main-section" itemprop="articleBody">
@@ -188,4 +173,5 @@
     lightbox.classList.remove('open');
   }
 </script>
+</main>
 {{ end }}
