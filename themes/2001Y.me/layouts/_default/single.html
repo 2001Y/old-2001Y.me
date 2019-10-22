@@ -51,7 +51,7 @@
         {{ with .Params.tags }}
           <ul id="post-tag">
             {{ range . }}
-              <a href="/tags/{{ . }}/"><li>{{ . }}</li></a>
+              <li><a href="/tags/{{ . }}/">{{ . }}</a></li>
             {{ end }}
           </ul>
         {{ end }}
@@ -133,9 +133,14 @@
       lightbox.classList.remove('close');
     }
   }
-  lightbox.addEventListener('scroll', OpenClose);
-  lightbox.onclick = OpenClose;
-  function OpenClose() {
+  window.addEventListener('scroll', Close);
+  lightbox.onclick = Close;
+  document.onkeydown = function(e) {
+    if (e.keyCode == 27) {
+      Close();
+    }
+  };
+  function Close() {
     lightbox.classList.add('close');
     lightbox.classList.remove('open');
   }

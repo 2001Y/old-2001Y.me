@@ -3,3 +3,13 @@
 <div class="youtube" style="background-image: url(//i.ytimg.com/vi/{{ index .Params 0 }}/maxresdefault.jpg);" data-title="{{ range $gistJ.items }}{{ .snippet.title }}{{ end }}" data-iframe="<iframe src=&quot;//youtube.com/embed/{{ index .Params 0 }}?autoplay=1&quot; allow=&quot;autoplay&quot; allowfullscreen ></iframe>">
 
 </div>
+
+<script>
+    let youtube = document.querySelectorAll(".youtube");
+    for (let i = 0; i < youtube.length; ++i) {
+      youtube[i].onclick = function () {
+        let iframe = this.getAttribute("data-iframe");
+        this.innerHTML = iframe;
+      }
+    }
+</script>

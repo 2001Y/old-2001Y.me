@@ -33,7 +33,7 @@ body
   left: 0;
   content: '';
   width: 100%;
-  height: .06em;
+  height: .1em;
   background: var(--light)
   transform: scale(0, 1);
   transition: transform .3s;
@@ -55,11 +55,13 @@ body
   margin-bottom 1em
   display flex
   justify-content:space-between;
+  @media screen and (max-width: 870px)
+    display block
   
-#post-tag
+#post-tag,#post-tag li
   display inline
   
-#post-tag li:after
+#post-tag li:not(:last-of-type):after
   content ", "
 
 #breadcrumbs li
@@ -75,6 +77,8 @@ header
   flex-direction: column;
   flex-wrap: wrap
   padding 2em
+  @media screen and (max-width: 870px)
+    padding 1em
 
 header:before,header:after
   content: "";
