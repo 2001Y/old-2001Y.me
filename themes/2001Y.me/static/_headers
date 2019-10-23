@@ -1,7 +1,7 @@
 /
  Strict-Transport-Security: max-age=63072000;includeSubDomains; preload
  Accept-Encoding: gzip, deflate, br
- Cache-Control: max-age=10000, immutable;
+ Cache-Control: max-age=604800, immutable;
  Content-type: text/html; charset=utf-8
  Content-Security-Policy: default-src https:
  X-Frame-Options: DENY

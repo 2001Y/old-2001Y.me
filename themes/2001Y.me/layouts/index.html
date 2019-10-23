@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-  <html lang="jp" itemscope itemtype="http://schema.org/Blog">
+  <html lang="jp">
   <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex,nofollow,noarchive">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//2001y.me">
     <meta itemprop="author" content="2001Y">
-    <meta name="theme-color" content="#a1d7e5">
     <link rel="icon" href="/svg.svg" type="image/vnd.microsoft.icon">
     <link rel="shortcut icon" href="/svg.svg" type="image/vnd.microsoft.icon">
-    <title>2001Y  Portfolio</title>
+    <meta name="theme-color" content="#a1d7e5">
+    <title>2001Y Portfolio</title>
     <style>
       {{ readFile "/themes/2001Y.me/static/style/portfolio.css" | safeCSS }}
-      body {
-        background: linear-gradient(rgba(250, 250, 250, .2), rgba(250, 250, 250, .2)), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABhJREFUCB1jYMAG/v//7wPCIDkmbApQxAAZ7QaVaX9fAwAAAABJRU5ErkJggg==) repeat,linear-gradient(30deg, rgba(161,229,226,.7), rgba(161,198,229,.7)),url(bg.jpg) no-repeat center/cover;
-        background-attachment: fixed;
+      body{
+          background: linear-gradient(rgba(250, 250, 250, .2), rgba(250, 250, 250, .2)), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABhJREFUCB1jYMAG/v//7wPCIDkmbApQxAAZ7QaVaX9fAwAAAABJRU5ErkJggg==) repeat,linear-gradient(30deg, rgba(161,229,226,.7), rgba(161,198,229,.7)) fixed,url(bg.jpg) no-repeat center/cover fixed;
       }
     </style>
   </head>
@@ -56,7 +55,7 @@
     <div class="element" data-emergence="hidden">
       <h2>Blog　<a href="/blog">more</a></h2>
       <ul id="blog-list">
-        {{ range first 5 (where .Data.Pages "Type" "blog") }}
+        {{ range first 5 (where $.Site.RegularPages "Section" "blog") }}
           <a href="{{ .RelPermalink }}">
             <li>
               {{ .Title }}
@@ -69,11 +68,11 @@
     <div class="element" data-emergence="hidden">
       <h2>Works　<a href="/works">more</a></h2>
       <ul id="work">
-        {{ range first 5 (where .Data.Pages "Type" "works") }}
+        {{ range first 5 (where $.Site.RegularPages "Section" "works") }}
           <a href="{{ .RelPermalink }}">
             <li>
               {{ if and (.Params.img) (ne .Params.img "") }}
-                <img src="img/{{ .Params.img }}" alt="thumbnail"/>
+                <img src="{{ .Params.img }}" alt="thumbnail"/>
               {{ end }}
             </li>
           </a>
@@ -86,7 +85,7 @@
       </footer>
     </section>
     <script src="/lazyestload.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/emergence.js/1.1.2/emergence.min.js"></script>
+    <script src="/emergence.min.js"></script>
     <script>
       emergence.init({reset: false,elemCushion: .6,offsetTop: 10});
     </script>

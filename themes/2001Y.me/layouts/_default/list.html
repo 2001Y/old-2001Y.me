@@ -1,9 +1,6 @@
 {{ define "head" }}
-  <meta name="description" content="ページの概要が入ります。" >
-  {{ with .Params.img }}
-    <meta property="og:image" content="" />
-    <meta name="twitter:image" content="" />
-  {{ end }}
+  <meta name="description" content="Apple,カメラをはじめとした2001Yのブログです。" >
+  <meta name="theme-color" content="#a1d7e5"/>
 {{ end }}
 
 {{ define "title" }}
@@ -24,7 +21,7 @@
       </svg>
       <div id="parapara-nav">
         <a href="/" class="no-barba">Portfolio</a>
-        <a href="/blog" class="attention">Blog</a>
+        <span class="attention">Blog</span>
         <a href="/contact" class="no-barba">Contact</a>
       </div>
     </section>
