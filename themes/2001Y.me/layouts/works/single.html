@@ -1,0 +1,14 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+        <style>
+      {{ readFile "/themes/2001Y.me/static/style/blog.css" | safeCSS }}
+    </style>
+</head>
+<header>
+  <h1>{{ .Title }}</h1>
+</header>
+<main>
+  <img src="{{ .Params.img }}" alt="{{ .Params.img }}" />
+  {{ .Content }}
+</main>

@@ -9,7 +9,7 @@
   
 .Camera
   --light: #d8e6a2;
-  --dim: #e6e3a2;
+  --dim: #bab885;
   
 .Other
   --light: #c3c3c3;
@@ -136,19 +136,7 @@ iframe
 #next-post:after
   transform: rotate(45deg);
 
-#prev-post:hover + #next-post + h1:before,#prev-post:hover + h1:before
-  content: attr(data-prev-post)"\A";
-
-#next-post:hover + h1:before
-  content: attr(data-next-post)"\A";
-
-#next-post:hover + #title,#prev-post:hover + #title,#prev-post:hover + #next-post + #title
-  animation fadeInOut 1s ease 0s 1 forwards
-
-#next-post:hover + #title + #description,#prev-post:hover + #title + #description,#prev-post:hover + #next-post + #title + #description
-  animation fadeOut .3s ease 0s 1 forwards
-
-@keyframes fadeInOut
+@keyframes fadeIn
   from
     opacity: 0;
   to
@@ -165,10 +153,6 @@ h1,h2,h3,h4,h5
   
 h3,h4,h5,h6,p
   font-family 'M PLUS Rounded 1c', sans-serif
-
-h1
-  height 1.5em
-  overflow hidden
 
 h1:before
   white-space: pre;
@@ -341,6 +325,16 @@ main source,main picture img,.youtube
 
 .twitter-tweet
   margin auto
+  
+@media (prefers-color-scheme dark)
+  body,main
+    background #363434
+  body,main,h2,h3,h4,h5,h6
+    color #e4e4e4;
+  header:before,footer
+    filter grayscale(.1)
+  #lightbox
+    background url("/load.svg") no-repeat center,rgba(0,0,0,0.3)
 
 //Highlight
 

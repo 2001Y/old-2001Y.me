@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <html lang="ja" itemscope itemtype="http://schema.org/Blog">
-  <head>
+  <head prefix="og: http://ogp.me/ns# blog: http://ogp.me/ns/blog#">
     <meta charset="utf-8">
     <meta name="robots" content="index,follow,archive">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,6 +9,7 @@
     <meta itemprop="author" content="2001Y">
     <link rel="icon" href="/svg.svg" type="image/vnd.microsoft.icon">
     <link rel="shortcut icon" href="/svg.svg" type="image/vnd.microsoft.icon">
+    <meta name="robots" content="max-image-preview:large">
     {{ range .AlternativeOutputFormats -}}
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}

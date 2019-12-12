@@ -15,13 +15,13 @@ pygmentsCodefences = true
 pygmentsStyle = "monokai"
 relativeURLs = true
 
-
 [author]
   author = "2001Y"
   profile = "自己紹介"
   image = "path/to/profile/image.png"
 
 [params]
+  dateformat = "2006/1/2"
   localeOgp = "ja"
   description = "トップページ用の説明文"
   fbAppId = "facebookのAppIDを入れる"

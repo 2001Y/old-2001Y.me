@@ -17,6 +17,11 @@
   <meta name="theme-color" content="#a1d7e5"/>
 
   <base target="_blank">
+<!-- 
+  {{ range .AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+  {{ end }} -->
+
 {{ end }}
 
 {{ define "title" }}
@@ -35,8 +40,8 @@
     {{ if .NextInSection }}
       <a rel="next" href="{{ .NextInSection.RelPermalink }}" id="next-post"></a>
     {{ end }}
-    <h1 itemprop="name" id="title" {{ if .PrevInSection }}data-prev-post="{{ .PrevInSection.Title }}"{{ end }} {{ if .NextInSection }}data-next-post="{{ .NextInSection.Title }}"{{ end }}>{{ .Title }}</h1>
-    <span id="description">{{ .Description }}</span>
+    <h1 itemprop="name" id="title">{{ .Params.h1 }}</h1>
+    <span id="description">{{ .Params.sub }}</span>
     <style>
       header:after {
         background: url('/img/{{ .Params.img }}-700.jpeg') no-repeat center/cover;
@@ -50,6 +55,18 @@
   <div id="post-meta">
     {{ partial "breadcrumbs.html" . }}
       <div>
+
+        {{ if .Params.Date }}
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
+            {{ .Date.Format ( .Site.Params.dateformat | default "2006年1月2日") }}
+          </time>
+          {{ if ne (.Date.Format ( .Site.Params.dateformat | default "2006年1月2日")) (.Lastmod.Format ( .Site.Params.dateformat | default "2006年1月2日"))}}
+            <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}">
+              {{ .Lastmod.Format ( .Site.Params.dateformat | default "2006年1月2日") }}
+            </time>
+    {{ end }}
+{{ end }}
+
         {{ with .Params.tags }}
           <ul id="post-tag">
             {{ range . }}

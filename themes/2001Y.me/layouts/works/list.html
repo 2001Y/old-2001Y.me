@@ -1,0 +1,81 @@
+{{ define "head" }}
+  <meta name="description" content="Apple,カメラをはじめとした2001Yのブログです。" >
+  <meta name="theme-color" content="#a1d7e5"/>
+{{ end }}
+
+{{ define "title" }}
+  {{ .Title }}
+{{ end }}
+
+{{ define "style" }}
+  {{ readFile "/themes/2001Y.me/static/style/list.css" | safeCSS }}
+{{ end }}
+
+{{ define "header" }}
+  <header>
+    <section id="title">
+      <h1 itemprop="name">2001Y</h1>
+      <svg viewBox="0 0 10 8.7" fill="#fff" id="logo">
+        <path d="m10 0h-2l-4 6.9 1 1.8"/>
+        <path d="m7 0h-7l3.5 6.1"/>
+      </svg>
+      <div id="parapara-nav">
+        <a href="/" class="no-barba">Portfolio</a>
+        <span class="attention">Blog</span>
+        <a href="/contact" class="no-barba">Contact</a>
+      </div>
+    </section>
+  </header>
+{{ end}}
+
+{{ define "main" }}
+<main>
+  <nav id="header-category">
+    <ul>
+      <li>
+        <a href="/blog">Home</a>
+      </li>
+      <li>
+        <a href="/categories/web">Web</a>
+      </li>
+      <li>
+        <a href="/categories/apple">Apple</a>
+      </li>
+      <li>
+        <a href="/categories/camera">Camera</a>
+      </li>
+      <li>
+        <a href="/categories/other">Other</a>
+      </li>
+    </ul>
+  </nav>
+  <section id="main-section">
+    {{ range .Paginator.Pages }}
+      <article>
+        <a href='{{ .Permalink }}'>
+          {{ if and (.Params.img) (ne .Params.img "") }}
+          <picture>
+            <source type="image/webp" srcset="/img/{{ .Params.img }}-500-tmb.webp" class="post-img"/>
+            <img src="/img/{{ .Params.img }}-500-tmb.jpeg" alt="{{ .Title }}" class="post-img" />
+          </picture>
+          {{ end }}
+          <div class="post-color {{ range .Params.categories }}{{ . }}{{ end }}"></div>
+          <div class="post-data">
+            <span class="post-title">
+              {{ .Title }}
+            </span>
+            <time class="post-time">
+              {{ .Date.Format "2006/01/02" }}
+            </time>
+            <span class="post-category">
+              {{ if .Params.categories }}{{ range .Params.categories }}{{ . }}{{ end }}{{ end }}
+            </span>
+          </div>
+        </a>
+      </article>
+    {{ end }}
+  </section>
+
+{{ partial "paginator.html" . }}
+</main>
+{{ end }}

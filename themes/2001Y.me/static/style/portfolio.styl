@@ -167,6 +167,31 @@ header
   width: 19vw
   margin: 0 .5em
   
+#hover
+  width 100vw
+  height 100vh
+  position fixed
+  top 0
+  left 0
+  background rgba(0, 0, 0, .3)
+  transition .3s
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+#iframe
+  width 50vw
+  height 60vh
+  border-radius 20px
+  
+.close
+  opacity: 0;
+  visibility: hidden;
+.open
+  opacity: 1;
+  visibility: visible;
+  
 .element
   opacity 1
   transition 1s

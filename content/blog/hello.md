@@ -1,6 +1,8 @@
 ---
-title: はじまり
-description: Hugoで1からブログを作る。
+title: はじまり - Hugoで1からブログを作る。
+description: 新たにブログを作り直しました！どうにも納得のいくブログを作れず、1から作り直すことにしました。以前のブログについては全てまとめる予定です。
+h1: はじまり
+sub: Hugoで1からブログを作る。
 date: 2019-10-22T01:56:57+09:00
 img: hello-tmb
 categories: ["Other"]
